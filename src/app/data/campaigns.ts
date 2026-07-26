@@ -1,4 +1,4 @@
-﻿export interface CampaignDonation {
+export interface CampaignDonation {
   initials: string;
   name: string;
   amount: number;
@@ -45,7 +45,7 @@ export interface Campaign {
 export const campaigns: Campaign[] = [
   {
     id: 'urgent-medical-emergency',
-    title: 'Urgent Medical Emergency Fund',
+    title: 'Help Pooja Fight Cancer',
     image: '/images/medicalhelp.png',
     videoUrl: '/videos/medical-emergency.mp4',
     gallery: ['/images/medicalhelp.png', '/images/patient.png', '/images/commandhospital.png'],

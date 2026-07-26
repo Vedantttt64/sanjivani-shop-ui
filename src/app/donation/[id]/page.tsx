@@ -502,19 +502,23 @@ export default function CampaignPage() {
 
       {/* Title ABOVE the Reel */}
       <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
-        <div className="mb-4 inline-flex items-center gap-1.5 rounded-2xl border border-[#FFE2D1] bg-[#FFF0E6] px-3 py-1.5">
-          <span className="h-1.5 w-1.5 animate-ping rounded-full bg-[#E87B35]" />
-          <span className="text-xs font-bold text-[#E87B35]">
-            {campaign.urgency === 'Urgent' ? 'Emergency ' : ''}{campaign.category} Campaign
-          </span>
-        </div>
+        {!(campaign.id === 'urgent-medical-emergency' || campaign.id === 'chest-pain-patient') && (
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-2xl border border-[#FFE2D1] bg-[#FFF0E6] px-3 py-1.5">
+            <span className="h-1.5 w-1.5 animate-ping rounded-full bg-[#E87B35]" />
+            <span className="text-xs font-bold text-[#E87B35]">
+              {campaign.urgency === 'Urgent' ? 'Emergency ' : ''}{campaign.category} Campaign
+            </span>
+          </div>
+        )}
         <h1 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl lg:text-4xl">
           {campaign.title}
         </h1>
-        <div className="mt-3 flex items-center gap-2.5 text-sm font-medium text-slate-600">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-sm font-bold text-emerald-700">S</div>
-          <span>Verified Sanjivani Beneficiary</span>
-        </div>
+        {!(campaign.id === 'urgent-medical-emergency' || campaign.id === 'chest-pain-patient') && (
+          <div className="mt-3 flex items-center gap-2.5 text-sm font-medium text-slate-600">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-sm font-bold text-emerald-700">S</div>
+            <span>Verified Sanjivani Beneficiary</span>
+          </div>
+        )}
       </div>
 
       {/* Main Two-Column Layout */}
