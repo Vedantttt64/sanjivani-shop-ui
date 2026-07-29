@@ -18,7 +18,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Ahilyanagar",
     marathiName: "अहिल्यानगर",
     headquarters: "Ahilyanagar (Ahmednagar)",
-    image: "/images/banner/b1.JPG",
+    image: "/assets/districts/maharashtra/ahilyanagar.jpg",
     cx: 204.7,
     cy: 300.8,
     link: "/district/ahilyanagar"
@@ -28,7 +28,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Akola",
     marathiName: "अकोला",
     headquarters: "Akola",
-    image: "/images/banner/b2.jpg",
+    image: "/assets/districts/maharashtra/akola.jpg",
     cx: 434,
     cy: 157.3,
     link: "/district/akola"
@@ -38,7 +38,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Amravati",
     marathiName: "अमरावती",
     headquarters: "Amravati",
-    image: "/images/banner/b3.jpg",
+    image: "/assets/districts/maharashtra/amravati.jpg",
     cx: 468.1,
     cy: 121.9,
     link: "/district/amravati"
@@ -48,7 +48,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Chhatrapati Sambhajinagar",
     marathiName: "छत्रपती संभाजीनगर",
     headquarters: "Chhatrapati Sambhajinagar (Aurangabad)",
-    image: "/images/banner/b5.jpg",
+    image: "/assets/districts/maharashtra/chhatrapatisambhajinagar.jpg",
     cx: 269,
     cy: 223.7,
     link: "/district/chhatrapatisambhajinagar"
@@ -58,7 +58,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Beed",
     marathiName: "बीड",
     headquarters: "Beed",
-    image: "/images/food1.jpg",
+    image: "/assets/districts/maharashtra/beed.jpg",
     cx: 309.8,
     cy: 316.1,
     link: "/district/beed"
@@ -68,7 +68,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Bhandara",
     marathiName: "भंडारा",
     headquarters: "Bhandara",
-    image: "/images/infrastr.jpeg",
+    image: "/assets/districts/maharashtra/bhandara.jpg",
     cx: 669.2,
     cy: 124.8,
     link: "/district/bhandara"
@@ -78,7 +78,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Buldhana",
     marathiName: "बुलढाणा",
     headquarters: "Buldhana",
-    image: "/images/oldage1.jpg",
+    image: "/assets/districts/maharashtra/buldhana.jpg",
     cx: 363.8,
     cy: 174.8,
     link: "/district/buldhana"
@@ -88,7 +88,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Chandrapur",
     marathiName: "चंद्रपूर",
     headquarters: "Chandrapur",
-    image: "/images/plant.jpg",
+    image: "/assets/districts/maharashtra/chandrapur.jpg",
     cx: 635,
     cy: 216.9,
     link: "/district/chandrapur"
@@ -98,7 +98,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Dhule",
     marathiName: "धुळे",
     headquarters: "Dhule",
-    image: "/images/rahul1.png",
+    image: "/assets/districts/maharashtra/dhule.jpg",
     cx: 198.2,
     cy: 124.1,
     link: "/district/dhule"
@@ -108,7 +108,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Gadchiroli",
     marathiName: "गडचिरोली",
     headquarters: "Gadchiroli",
-    image: "/images/skill.jpeg",
+    image: "/assets/districts/maharashtra/gadchiroli.jpg",
     cx: 717.9,
     cy: 247.4,
     link: "/district/gadchiroli"
@@ -118,7 +118,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Gondia",
     marathiName: "गोंदिया",
     headquarters: "Gondia",
-    image: "/images/women.jpg",
+    image: "/assets/districts/maharashtra/gondia.jpg",
     cx: 710.8,
     cy: 122.8,
     link: "/district/gondia"
@@ -128,7 +128,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Hingoli",
     marathiName: "हिंगोली",
     headquarters: "Hingoli",
-    image: "/images/covid19.jpg",
+    image: "/assets/districts/maharashtra/hingoli.jpg",
     cx: 420.1,
     cy: 266.5,
     link: "/district/hingoli"
@@ -138,7 +138,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Jalgaon",
     marathiName: "जळगाव",
     headquarters: "Jalgaon",
-    image: "/images/babu.jpeg",
+    image: "/assets/districts/maharashtra/jalgaon.jpg",
     cx: 292.6,
     cy: 150,
     link: "/district/jalgaon"
@@ -148,7 +148,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Jalna",
     marathiName: "जालना",
     headquarters: "Jalna",
-    image: "/images/banner/b1.JPG",
+    image: "/assets/districts/maharashtra/jalna.jpg",
     cx: 335.8,
     cy: 233,
     link: "/district/jalna"
@@ -158,7 +158,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Kolhapur",
     marathiName: "कोल्हापूर",
     headquarters: "Kolhapur",
-    image: "/images/banner/b2.jpg",
+    image: "/assets/districts/maharashtra/kolhapur.jpg",
     cx: 168.1,
     cy: 543.2,
     link: "/district/kolhapur"
@@ -168,7 +168,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Latur",
     marathiName: "लातूर",
     headquarters: "Latur",
-    image: "/images/Explore/Latur.png",
+    image: "/assets/districts/maharashtra/latur.jpg",
     cx: 397.5,
     cy: 373.4,
     link: "/district/latur"
@@ -178,7 +178,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Mumbai City",
     marathiName: "मुंबई शहर",
     headquarters: "Mumbai",
-    image: "/images/Explore/Mumbai.png",
+    image: "/assets/districts/maharashtra/mumbaicity.jpg",
     cx: 52,
     cy: 322,
     labelX: -5,
@@ -191,7 +191,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Mumbai Suburban",
     marathiName: "मुंबई उपनगर",
     headquarters: "Bandra East",
-    image: "/images/Explore/Mumbai.png",
+    image: "/assets/districts/maharashtra/mumbaisuburban.jpg",
     cx: 48,
     cy: 298,
     labelX: -10,
@@ -204,7 +204,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Nagpur",
     marathiName: "नागपूर",
     headquarters: "Nagpur",
-    image: "/images/banner/b3.jpg",
+    image: "/assets/districts/maharashtra/nagpur.jpg",
     cx: 595.3,
     cy: 122.1,
     link: "/district/nagpur"
@@ -214,7 +214,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Nanded",
     marathiName: "नांदेड",
     headquarters: "Nanded",
-    image: "/images/banner/b5.jpg",
+    image: "/assets/districts/maharashtra/nanded.jpg",
     cx: 478.2,
     cy: 307,
     link: "/district/nanded"
@@ -224,7 +224,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Nandurbar",
     marathiName: "नंदुरबार",
     headquarters: "Nandurbar",
-    image: "/images/food1.jpg",
+    image: "/assets/districts/maharashtra/nandurbar.jpg",
     cx: 166.6,
     cy: 89.5,
     link: "/district/nandurbar"
@@ -234,7 +234,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Nashik",
     marathiName: "नाशिक",
     headquarters: "Nashik",
-    image: "/images/infrastr.jpeg",
+    image: "/assets/districts/maharashtra/nashik.jpg",
     cx: 159,
     cy: 205.5,
     link: "/district/nashik"
@@ -244,7 +244,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Dharashiv",
     marathiName: "धाराशिव",
     headquarters: "Dharashiv (Osmanabad)",
-    image: "/images/oldage1.jpg",
+    image: "/assets/districts/maharashtra/dharashiv.jpg",
     cx: 333.8,
     cy: 389.9,
     link: "/district/dharashiv"
@@ -254,7 +254,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Palghar",
     marathiName: "पालघर",
     headquarters: "Palghar",
-    image: "/images/Explore/Palghar.png",
+    image: "/assets/districts/maharashtra/palghar.jpg",
     cx: 68.1,
     cy: 247.1,
     link: "/district/palghar"
@@ -264,7 +264,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Parbhani",
     marathiName: "परभणी",
     headquarters: "Parbhani",
-    image: "/images/plant.jpg",
+    image: "/assets/districts/maharashtra/parbhani.jpg",
     cx: 390,
     cy: 289.3,
     link: "/district/parbhani"
@@ -274,7 +274,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Pune",
     marathiName: "पुणे",
     headquarters: "Pune",
-    image: "/images/babu.jpeg",
+    image: "/assets/districts/maharashtra/pune.jpg",
     cx: 172.7,
     cy: 347.3,
     link: "/district/pune"
@@ -284,7 +284,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Raigad",
     marathiName: "रायगड",
     headquarters: "Alibag",
-    image: "/images/Explore/Raigad.png",
+    image: "/assets/districts/maharashtra/raigad.jpg",
     cx: 83.4,
     cy: 361.1,
     link: "/district/raigad"
@@ -294,7 +294,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Ratnagiri",
     marathiName: "रत्नागिरी",
     headquarters: "Ratnagiri",
-    image: "/images/Explore/Ratnagiri.png",
+    image: "/assets/districts/maharashtra/ratnagiri.jpg",
     cx: 101.1,
     cy: 469.5,
     link: "/district/ratnagiri"
@@ -304,7 +304,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Sangli",
     marathiName: "सांगली",
     headquarters: "Sangli",
-    image: "/images/Explore/Sangli.png",
+    image: "/assets/districts/maharashtra/sangli.jpg",
     cx: 212.3,
     cy: 479.5,
     link: "/district/sangli"
@@ -314,7 +314,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Satara",
     marathiName: "सातारा",
     headquarters: "Satara",
-    image: "/images/Explore/Satara.png",
+    image: "/assets/districts/maharashtra/satara.jpg",
     cx: 170.6,
     cy: 437.8,
     link: "/district/satara"
@@ -324,7 +324,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Sindhudurg",
     marathiName: "सिंधुदुर्ग",
     headquarters: "Oros",
-    image: "/images/Explore/Sindhudurg.png",
+    image: "/assets/districts/maharashtra/sindhudurg.jpg",
     cx: 129.2,
     cy: 572.5,
     link: "/district/sindhudurg"
@@ -334,7 +334,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Solapur",
     marathiName: "सोलापूर",
     headquarters: "Solapur",
-    image: "/images/Explore/Solapur.png",
+    image: "/assets/districts/maharashtra/solapur.jpg",
     cx: 287.1,
     cy: 418.6,
     link: "/district/solapur"
@@ -344,7 +344,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Thane",
     marathiName: "ठाणे",
     headquarters: "Thane",
-    image: "/images/Explore/Thane.png",
+    image: "/assets/districts/maharashtra/thane.jpg",
     cx: 87,
     cy: 283.1,
     link: "/district/thane"
@@ -354,7 +354,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Wardha",
     marathiName: "वर्धा",
     headquarters: "Wardha",
-    image: "/images/rahul1.png",
+    image: "/assets/districts/maharashtra/wardha.jpg",
     cx: 567,
     cy: 151.6,
     link: "/district/wardha"
@@ -364,7 +364,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Washim",
     marathiName: "वाशिम",
     headquarters: "Washim",
-    image: "/images/skill.jpeg",
+    image: "/assets/districts/maharashtra/washim.jpg",
     cx: 433.4,
     cy: 199.8,
     link: "/district/washim"
@@ -374,7 +374,7 @@ export const maharashtraDistrictsData: DistrictInfo[] = [
     name: "Yavatmal",
     marathiName: "यवतमाळ",
     headquarters: "Yavatmal",
-    image: "/images/women.jpg",
+    image: "/assets/districts/maharashtra/yavatmal.jpg",
     cx: 529.3,
     cy: 219.9,
     link: "/district/yavatmal"

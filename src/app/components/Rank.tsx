@@ -49,7 +49,7 @@ export default function Rank() {
   };
 
   return (
-    <section className="bg-[#f2f1f9] pt-12 pb-14 px-4 sm:px-6 md:px-10">
+    <section className="bg-[#f2f1f9] pt-8 pb-8 px-4 sm:px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-10">

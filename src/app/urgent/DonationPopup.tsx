@@ -10,7 +10,7 @@ interface DonationPopupProps {
 }
 
 export default function DonationPopup({ isOpen, onClose, onDonate }: DonationPopupProps) {
-  const [donationTab, setDonationTab] = useState<'once' | 'monthly'>('once');
+  const [donationTab, setDonationTab] = useState<'once' | 'monthly'>('monthly');
   const [selectedAmount, setSelectedAmount] = useState(9999);
   const [customAmount, setCustomAmount] = useState('9999');
 
@@ -52,16 +52,14 @@ export default function DonationPopup({ isOpen, onClose, onDonate }: DonationPop
           <div className="flex items-center justify-center mb-4">
             <div
               onClick={() => setDonationTab(donationTab === 'monthly' ? 'once' : 'monthly')}
-              className="relative flex h-8 w-[90px] cursor-pointer items-center justify-center rounded-[16px] bg-[#E87B35] p-1 shadow-[inset_0_1px_3px_rgba(0,0,0,0.15)] select-none transition-colors"
+              className="relative flex h-10 w-[140px] cursor-pointer items-center rounded-full bg-[#E87B35] p-1 shadow-[inset_0_1px_3px_rgba(0,0,0,0.15)] select-none transition-colors"
             >
               {/* Sliding knob */}
               <div
-                className={`absolute z-10 h-6 w-6 rounded-full bg-white shadow-md transition-all ${donationTab === 'monthly' ? 'translate-x-14' : 'translate-x-0'}`}
+                className={`absolute z-10 h-8 w-8 rounded-full bg-white shadow-md transition-all duration-200 ${donationTab === 'once' ? 'translate-x-[100px]' : 'translate-x-0'}`}
               />
               {/* Text */}
-              <span
-                className="text-xs font-semibold text-white relative z-0"
-              >
+              <span className="w-full text-center text-sm font-black text-white relative z-0">
                 {donationTab === 'monthly' ? 'Monthly' : 'Once'}
               </span>
             </div>
@@ -82,7 +80,7 @@ export default function DonationPopup({ isOpen, onClose, onDonate }: DonationPop
                   setSelectedAmount(amt);
                   setCustomAmount(amt.toString());
                 }}
-                className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold transition-all ${selectedAmount === amt ? 'border-2 border-[#16836A] bg-[#16836A] text-white' : 'border border-slate-200 bg-white text-slate-700'}`}
+                className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold transition-all ${selectedAmount === amt ? 'border-2 border-[#E87B35] bg-[#E87B35] text-white shadow-md' : 'border border-slate-200 bg-white text-slate-700 hover:border-[#E87B35]/40'}`}
               >
                 ₹{amt.toLocaleString('en-IN')}
               </button>
@@ -118,9 +116,9 @@ export default function DonationPopup({ isOpen, onClose, onDonate }: DonationPop
           {/* Terms */}
           <p className="text-xs text-gray-400 mt-4 text-center leading-relaxed">
             By proceeding, you are agreeing to Sanjivani's{' '}
-            <span className="text-[#16836A] font-semibold">Terms of Use</span>,{' '}
-            <span className="text-[#16836A] font-semibold">Privacy Policy</span>, and{' '}
-            <span className="text-[#16836A] font-semibold">Cookie Policy</span>
+            <span className="text-[#E87B35] font-semibold">Terms of Use</span>,{' '}
+            <span className="text-[#E87B35] font-semibold">Privacy Policy</span>, and{' '}
+            <span className="text-[#E87B35] font-semibold">Cookie Policy</span>
           </p>
         </div>
       </div>

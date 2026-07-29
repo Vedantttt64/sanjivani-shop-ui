@@ -33,6 +33,13 @@ export default function Navbar() {
       router.push('/');
     }
   };
+  const redirectToStartPage = () => {
+    setMenuOpen(false);
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('selectedState');
+    }
+    router.push('/');
+  };
 
   /* Nav items data — mirrors IconSection for the mobile drawer */
   const navItems = [
@@ -59,7 +66,7 @@ export default function Navbar() {
 
           {/* Logo & Selected State */}
           <div className="flex items-center gap-2">
-            <div className="flex-shrink-0 cursor-pointer" onClick={redirectToHome}>
+            <div className="flex-shrink-0 cursor-pointer" onClick={redirectToStartPage}>
               <Image
                 src="/images/sanjivani-logo.png"
                 alt="sanjivani-logo"
@@ -122,7 +129,7 @@ export default function Navbar() {
             width={80}
             height={55}
             className="object-contain cursor-pointer"
-            onClick={redirectToHome}
+            onClick={redirectToStartPage}
           />
           <button
             onClick={() => setMenuOpen(false)}

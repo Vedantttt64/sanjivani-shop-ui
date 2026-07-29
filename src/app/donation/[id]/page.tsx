@@ -68,7 +68,7 @@ function TransactionPopup({
   onClose: () => void;
   onDonate: (amount: number, isMonthly: boolean) => void;
 }) {
-  const [tab, setTab] = useState<'once' | 'monthly'>('once');
+  const [tab, setTab] = useState<'once' | 'monthly'>('monthly');
   const [selectedAmount, setSelectedAmount] = useState(9999);
   const [customAmount, setCustomAmount] = useState('9999');
 
@@ -97,10 +97,12 @@ function TransactionPopup({
           <div className="mb-5 flex items-center justify-center">
             <div
               onClick={() => setTab(tab === 'monthly' ? 'once' : 'monthly')}
-              className="relative flex h-9 w-[100px] cursor-pointer items-center justify-center rounded-full bg-[#E87B35] p-1 shadow-inner select-none"
+              className="relative flex h-10 w-[140px] cursor-pointer items-center rounded-full bg-[#E87B35] p-1 shadow-inner select-none"
             >
-              <div className={`absolute z-10 h-7 w-7 rounded-full bg-white shadow-md transition-all duration-200 ${tab === 'monthly' ? 'translate-x-8' : '-translate-x-8'}`} />
-              <span className="relative z-0 text-xs font-semibold text-white">{tab === 'monthly' ? 'Monthly' : 'Once'}</span>
+              <div className={`absolute z-10 h-8 w-8 rounded-full bg-white shadow-md transition-all duration-200 ${tab === 'once' ? 'translate-x-[100px]' : 'translate-x-0'}`} />
+              <span className="w-full text-center text-sm font-black text-white relative z-0">
+                {tab === 'monthly' ? 'Monthly' : 'Once'}
+              </span>
             </div>
           </div>
           <div className="h-px bg-slate-100" />
@@ -112,8 +114,8 @@ function TransactionPopup({
                 onClick={() => { setSelectedAmount(amt); setCustomAmount(amt.toString()); }}
                 className={`cursor-pointer rounded-full px-4 py-2.5 text-sm font-semibold transition-all ${
                   selectedAmount === amt
-                    ? 'border-2 border-[#16836A] bg-[#16836A] text-white shadow-md'
-                    : 'border border-slate-200 bg-white text-slate-700 hover:border-[#16836A]/40'
+                    ? 'border-2 border-[#E87B35] bg-[#E87B35] text-white shadow-md'
+                    : 'border border-slate-200 bg-white text-slate-700 hover:border-[#E87B35]/40'
                 }`}
               >
                 &#8377;{amt.toLocaleString('en-IN')}
@@ -136,9 +138,9 @@ function TransactionPopup({
           </button>
           <p className="mt-4 text-center text-[11px] leading-relaxed text-slate-400">
             By proceeding, you agree to Sanjivani&apos;s{' '}
-            <span className="font-semibold text-[#16836A]">Terms of Use</span>,{' '}
-            <span className="font-semibold text-[#16836A]">Privacy Policy</span>, and{' '}
-            <span className="font-semibold text-[#16836A]">Cookie Policy</span>
+            <span className="font-semibold text-[#E87B35]">Terms of Use</span>,{' '}
+            <span className="font-semibold text-[#E87B35]">Privacy Policy</span>, and{' '}
+            <span className="font-semibold text-[#E87B35]">Cookie Policy</span>
           </p>
         </div>
       </div>
@@ -254,30 +256,40 @@ function DocumentsSection({ documents }: { documents: string[] }) {
       <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
         {/* Header */}
         <div className="mb-4 flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50">
-            <FileText size={16} className="text-emerald-600" />
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50">
+            <FileText size={22} className="text-emerald-600" />
           </div>
           <h3 className="text-sm font-bold uppercase tracking-wider text-slate-800">
             Documents &amp; Reports
           </h3>
-          <span className="ml-auto rounded-full bg-amber-50 px-2.5 py-0.5 text-[10px] font-bold text-amber-600 border border-amber-200">
+          <span className="ml-auto rounded-full bg-amber-50 px-3.5 py-1 text-xs font-bold text-amber-600 border border-amber-200">
             PENDING
           </span>
         </div>
 
         {/* Pending notice */}
         <div className="mb-5 flex items-start gap-2 rounded-xl bg-amber-50 border border-amber-100 px-3 py-2.5">
-          <ShieldCheck size={14} className="text-amber-500 shrink-0 mt-0.5" />
-          <p className="text-xs font-medium text-amber-700">
+          <ShieldCheck size={32} className="text-[#E87B35] shrink-0 mt-0.5" />
+          <p className="text-xs font-medium text-[#E87B35]">
             Medical documents are being collected and will be verified by the Sanjivani team shortly.
           </p>
         </div>
 
-        {/* Placeholder doc cards */}
-        <div className="grid grid-cols-3 gap-3">
-          <BlankDocPlaceholder index={0} />
-          <BlankDocPlaceholder index={1} />
-          <BlankDocPlaceholder index={2} />
+        {/* Single placeholder doc card */}
+        <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 p-6" style={{ minHeight: 200 }}>
+          {/* Paper icon */}
+          <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-20 opacity-40">
+            <rect x="4" y="4" width="72" height="88" rx="6" fill="white" stroke="#CBD5E1" strokeWidth="2" />
+            <path d="M52 4v20h20" stroke="#CBD5E1" strokeWidth="2" fill="none" />
+            <line x1="16" y1="42" x2="64" y2="42" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" />
+            <line x1="16" y1="54" x2="64" y2="54" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" />
+            <line x1="16" y1="66" x2="48" y2="66" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" />
+            <line x1="16" y1="78" x2="56" y2="78" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+          <div className="mt-4 text-center">
+            <p className="text-sm font-bold text-slate-400 uppercase tracking-wider">Medical Documents &amp; Reports</p>
+            <p className="mt-1.5 text-xs text-slate-300 font-medium">Will be uploaded soon</p>
+          </div>
         </div>
       </div>
     );
@@ -287,8 +299,8 @@ function DocumentsSection({ documents }: { documents: string[] }) {
     <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
       {/* Header */}
       <div className="mb-4 flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50">
-          <FileText size={16} className="text-emerald-600" />
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50">
+          <FileText size={22} className="text-emerald-600" />
         </div>
         <h3 className="text-sm font-bold uppercase tracking-wider text-slate-800">
           Documents &amp; Reports
@@ -406,18 +418,16 @@ function DocumentsSection({ documents }: { documents: string[] }) {
 export default function CampaignPage() {
   const params = useParams();
   const router = useRouter();
+  const id = typeof params?.id === 'string' ? params.id : Array.isArray(params?.id) ? params.id[0] : '';
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(id !== 'urgent-medical-emergency');
   const [galleryIdx, setGalleryIdx] = useState(0);
-
   const [showTransaction, setShowTransaction] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
   const [donationAmount, setDonationAmount] = useState(0);
   const [campaignState, setCampaignState] = useState<Campaign | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
-
-  const id = typeof params?.id === 'string' ? params.id : Array.isArray(params?.id) ? params.id[0] : '';
   const baseCampaign = campaignsData.find((c) => c.id === id);
 
   useEffect(() => {
@@ -482,7 +492,7 @@ export default function CampaignPage() {
 
       {/* Top Navigation */}
       <div className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <div className={`mx-auto flex items-center justify-between gap-4 py-3 ${campaign.id === 'urgent-medical-emergency' ? 'max-w-[1400px] px-2 sm:px-4' : 'max-w-7xl px-4 sm:px-6'}`}>
           <button
             onClick={() => router.back()}
             className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
@@ -501,28 +511,14 @@ export default function CampaignPage() {
       </div>
 
       {/* Title ABOVE the Reel */}
-      <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
-        {!(campaign.id === 'urgent-medical-emergency' || campaign.id === 'chest-pain-patient') && (
-          <div className="mb-4 inline-flex items-center gap-1.5 rounded-2xl border border-[#FFE2D1] bg-[#FFF0E6] px-3 py-1.5">
-            <span className="h-1.5 w-1.5 animate-ping rounded-full bg-[#E87B35]" />
-            <span className="text-xs font-bold text-[#E87B35]">
-              {campaign.urgency === 'Urgent' ? 'Emergency ' : ''}{campaign.category} Campaign
-            </span>
-          </div>
-        )}
+      <div className={`mx-auto ${campaign.id === 'urgent-medical-emergency' ? 'max-w-[1400px] px-2 pt-4 sm:px-4 pb-0' : 'max-w-7xl px-4 pt-6 sm:px-6'}`}>
         <h1 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl lg:text-4xl">
           {campaign.title}
         </h1>
-        {!(campaign.id === 'urgent-medical-emergency' || campaign.id === 'chest-pain-patient') && (
-          <div className="mt-3 flex items-center gap-2.5 text-sm font-medium text-slate-600">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-sm font-bold text-emerald-700">S</div>
-            <span>Verified Sanjivani Beneficiary</span>
-          </div>
-        )}
       </div>
 
       {/* Main Two-Column Layout */}
-      <div className="mx-auto mt-6 max-w-7xl px-4 sm:px-6">
+      <div className={`mx-auto ${campaign.id === 'urgent-medical-emergency' ? 'mt-2 max-w-[1400px] px-2 sm:px-4' : 'mt-6 max-w-7xl px-4 sm:px-6'}`}>
         <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
 
           {/* LEFT COLUMN */}
@@ -542,18 +538,32 @@ export default function CampaignPage() {
                     onClick={togglePlay}
                     className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute bottom-4 right-4 z-20 flex gap-2">
-                    <button onClick={togglePlay} className="flex h-9 w-9 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-md hover:bg-black/75 transition" aria-label={isPlaying ? 'Pause' : 'Play'}>
-                      {isPlaying ? <Pause size={18} /> : <Play size={18} className="translate-x-0.5" />}
-                    </button>
-                    <button onClick={toggleMute} className="flex h-9 w-9 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-md hover:bg-black/75 transition" aria-label={isMuted ? 'Unmute' : 'Mute'}>
-                      {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-                    </button>
+                  <div className="absolute bottom-4 right-4 z-20 flex gap-2 items-center">
+                    {campaign.verified && (
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#16836A] text-white shadow-md">
+                        <ShieldCheck size={26} />
+                      </div>
+                    )}
+                    {campaign.id !== 'urgent-medical-emergency' && (
+                      <>
+                        <button onClick={togglePlay} className="flex h-9 w-9 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-md hover:bg-black/75 transition" aria-label={isPlaying ? 'Pause' : 'Play'}>
+                          {isPlaying ? <Pause size={18} /> : <Play size={18} className="translate-x-0.5" />}
+                        </button>
+                        <button onClick={toggleMute} className="flex h-9 w-9 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-md hover:bg-black/75 transition" aria-label={isMuted ? 'Unmute' : 'Mute'}>
+                          {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                        </button>
+                      </>
+                    )}
                   </div>
                   <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
               ) : (
                 <div className="relative mx-auto aspect-video w-full max-w-xl overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
+                  {campaign.verified && (
+                    <div className="absolute bottom-4 right-4 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-[#16836A] text-white shadow-md">
+                      <ShieldCheck size={26} />
+                    </div>
+                  )}
                   <Image src={gallery[galleryIdx]} alt={campaign.title} fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 600px" />
                   {gallery.length > 1 && (
                     <>
@@ -578,19 +588,20 @@ export default function CampaignPage() {
             <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-xl sm:p-6 lg:hidden">
               <div className="flex items-end justify-between mb-2">
                 <div>
-                  <span className="text-xl font-black text-[#16836A]">{fmt(campaign.raisedAmount)}</span>
+                  <span className="text-xl font-black text-[#E87B35]">{fmt(campaign.raisedAmount)}</span>
                   <span className="block text-xs text-slate-500">raised of {fmt(campaign.goalAmount)}</span>
                 </div>
                 <span className="text-sm font-bold text-slate-700">{progress}%</span>
               </div>
               <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-200">
-                <div className="h-full rounded-full bg-[#16836A] transition-all duration-500" style={{ width: `${progress}%` }} />
+                <div className="h-full rounded-full bg-[#E87B35] transition-all duration-500" style={{ width: `${progress}%` }} />
               </div>
               <div className="mt-3 flex justify-between text-xs font-semibold text-slate-500">
                 <span className="flex items-center gap-1"><Users size={14} /> {campaign.supporters} Supporters</span>
                 <span className="flex items-center gap-1"><Clock size={14} /> {campaign.daysLeft} Days Left</span>
               </div>
-              <button onClick={openDonation} className="mt-4 w-full rounded-full bg-[#E87B35] py-3.5 text-center font-extrabold text-white shadow-lg transition hover:bg-[#D96B26] active:scale-[0.98]">
+              <button onClick={openDonation} className="mt-4 w-full relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
+                <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
                 DONATE NOW
                 <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>
               </button>
@@ -609,13 +620,20 @@ export default function CampaignPage() {
             {/* 4. Latest Updates */}
             {campaign.updates.length > 0 && (
               <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-                <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-slate-800">Latest Updates</h3>
+                <div className="mb-4 flex items-center justify-between gap-2">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-slate-800">Latest Updates</h3>
+                  <span className="rounded-full bg-amber-50 px-3.5 py-1 text-xs font-bold text-amber-600 border border-amber-200">
+                    PENDING
+                  </span>
+                </div>
                 <div className="space-y-3">
                   {campaign.updates.map((u, i) => (
                     <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
                       <div className="flex items-center justify-between text-xs text-slate-500">
-                        <span className="font-semibold">{u.date}</span>
-                        <span>{u.author}</span>
+                        <span className="font-semibold text-slate-500">{u.date}</span>
+                        <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-200 uppercase tracking-wider">
+                          {u.author}
+                        </span>
                       </div>
                       <p className="mt-2 text-sm leading-6 text-slate-700">{u.content}</p>
                     </div>
@@ -631,9 +649,15 @@ export default function CampaignPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-bold text-slate-600">
-                    {campaign.campaignerName.split(' ').map(w => w[0]).join('').slice(0, 2)}
-                  </div>
+                  {campaign.campaignerName.startsWith('Sanjivani') ? (
+                    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-slate-50 border border-slate-100 p-0.5">
+                      <Image src="/images/sanjivani-logo.png" alt="Sanjivani Logo" fill className="object-contain" />
+                    </div>
+                  ) : (
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-bold text-slate-600">
+                      {campaign.campaignerName.split(' ').map(w => w[0]).join('').slice(0, 2)}
+                    </div>
+                  )}
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Campaigner Details</span>
@@ -652,9 +676,15 @@ export default function CampaignPage() {
 
               <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-50 text-sm font-bold text-orange-600">
-                    {campaign.beneficiaryName.split(' ').map(w => w[0]).join('').slice(0, 2)}
-                  </div>
+                  {campaign.beneficiaryName.startsWith('Sanjivani') ? (
+                    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-slate-50 border border-slate-100 p-0.5">
+                      <Image src="/images/sanjivani-logo.png" alt="Sanjivani Logo" fill className="object-contain" />
+                    </div>
+                  ) : (
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-50 text-sm font-bold text-orange-600">
+                      {campaign.beneficiaryName.split(' ').map(w => w[0]).join('').slice(0, 2)}
+                    </div>
+                  )}
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Beneficiary Details</span>
@@ -663,8 +693,10 @@ export default function CampaignPage() {
                       </span>
                     </div>
                     <p className="mt-1 text-sm font-bold text-slate-900">{campaign.beneficiaryName}</p>
-                    <p className="text-xs text-slate-500">{campaign.beneficiaryRelation}</p>
-                    <p className="mt-0.5 text-xs text-slate-500">{campaign.beneficiaryStatus}</p>
+                    <p className="mt-0.5 flex items-center gap-1 text-xs text-slate-500"><MapPin size={11} /> {campaign.campaignerLocation}</p>
+                    <button className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#E87B35] hover:underline">
+                      <Mail size={11} /> Contact
+                    </button>
                   </div>
                 </div>
               </div>
@@ -731,8 +763,8 @@ export default function CampaignPage() {
 
               <div id="donate-section" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#16836A]" />
-                  <span className="text-2xl font-black text-[#16836A]">{progress}%</span>
+                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#E87B35]" />
+                  <span className="text-2xl font-black text-[#E87B35]">{progress}%</span>
                 </div>
                 <p className="text-xs text-slate-500">funded in {campaign.daysLeft} days</p>
 
@@ -743,7 +775,7 @@ export default function CampaignPage() {
                 <p className="mt-1 text-sm font-semibold text-[#E87B35]">{campaign.supporters} Donors</p>
 
                 <div className="mt-4 h-2.5 w-full overflow-hidden rounded-full bg-slate-100">
-                  <div className="h-full rounded-full bg-[#16836A] transition-all duration-700" style={{ width: `${progress}%` }} />
+                  <div className="h-full rounded-full bg-[#E87B35] transition-all duration-700" style={{ width: `${progress}%` }} />
                 </div>
 
                 <p className="mt-4 flex items-center gap-1.5 text-xs text-slate-500">
@@ -751,7 +783,8 @@ export default function CampaignPage() {
                   <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-slate-300 text-[10px] text-slate-400">i</span>
                 </p>
 
-                <button onClick={openDonation} className="mt-4 w-full rounded-full bg-[#E87B35] py-3.5 text-center font-extrabold text-white shadow-md transition hover:bg-[#D96B26] active:scale-[0.98]">
+                <button onClick={openDonation} className="mt-4 w-full relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
+                  <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
                   DONATE NOW
                   <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>
                 </button>

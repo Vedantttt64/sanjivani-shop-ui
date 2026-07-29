@@ -90,7 +90,7 @@ export const campaigns: Campaign[] = [
           'We are overwhelmed by the support. Thank you to everyone who has donated so far. Please continue sharing — every share brings hope.',
       },
     ],
-    campaignerName: 'Sanjivani NGO Trust',
+    campaignerName: 'Sanjivani NGO',
     campaignerLocation: 'Pune, Maharashtra',
     beneficiaryName: 'Mr. Rajesh Kumar',
     beneficiaryRelation: 'Patient (Self)',
@@ -136,16 +136,22 @@ export const campaigns: Campaign[] = [
         date: 'Today',
         author: 'Sanjivani Team',
         content:
-          'The patient has been admitted and the care plan is being prepared with the hospital team.',
+          'The patient has been stabilized in the ICU. The surgical team is on standby and the procedure will begin as soon as funding is secured.',
       },
       {
         date: '2 days ago',
-        author: 'Family member',
+        author: 'Hospital Staff',
         content:
-          'Thank you for the support and for helping us respond quickly to this emergency.',
+          'All pre-operative tests have been completed. The patient is responding well to initial medication but surgery remains urgent.',
+      },
+      {
+        date: '4 days ago',
+        author: 'Family Member',
+        content:
+          'We are overwhelmed by the support. Thank you to everyone who has donated so far. Please continue sharing — every share brings hope.',
       },
     ],
-    campaignerName: 'Sanjivani NGO Trust',
+    campaignerName: 'Sanjivani NGO',
     campaignerLocation: 'Pune, Maharashtra',
     beneficiaryName: 'Patient Family',
     beneficiaryRelation: 'Family of patient',
@@ -181,13 +187,25 @@ export const campaigns: Campaign[] = [
     impactPoints: ['Daily food distribution', 'Remote area access', 'Long-term community support'],
     updates: [
       {
-        date: 'Yesterday',
+        date: 'Today',
         author: 'Sanjivani Team',
         content:
-          'We have shortlisted a suitable vehicle and are now focused on closing the funding gap.',
+          'The patient has been stabilized in the ICU. The surgical team is on standby and the procedure will begin as soon as funding is secured.',
+      },
+      {
+        date: '2 days ago',
+        author: 'Hospital Staff',
+        content:
+          'All pre-operative tests have been completed. The patient is responding well to initial medication but surgery remains urgent.',
+      },
+      {
+        date: '4 days ago',
+        author: 'Family Member',
+        content:
+          'We are overwhelmed by the support. Thank you to everyone who has donated so far. Please continue sharing — every share brings hope.',
       },
     ],
-    campaignerName: 'Sanjivani NGO Trust',
+    campaignerName: 'Sanjivani NGO',
     campaignerLocation: 'Pune, Maharashtra',
     beneficiaryName: 'Sanjivani Food Program',
     beneficiaryRelation: 'Community initiative',
@@ -225,13 +243,25 @@ export const campaigns: Campaign[] = [
     impactPoints: ['Free health camps', 'Medicines and diagnostics', 'Preventive care outreach'],
     updates: [
       {
-        date: '3 days ago',
+        date: 'Today',
         author: 'Sanjivani Team',
         content:
-          'Our latest medical camp served more than 500 patients with consultations and medicines.',
+          'The patient has been stabilized in the ICU. The surgical team is on standby and the procedure will begin as soon as funding is secured.',
+      },
+      {
+        date: '2 days ago',
+        author: 'Hospital Staff',
+        content:
+          'All pre-operative tests have been completed. The patient is responding well to initial medication but surgery remains urgent.',
+      },
+      {
+        date: '4 days ago',
+        author: 'Family Member',
+        content:
+          'We are overwhelmed by the support. Thank you to everyone who has donated so far. Please continue sharing — every share brings hope.',
       },
     ],
-    campaignerName: 'Sanjivani NGO Trust',
+    campaignerName: 'Sanjivani NGO',
     campaignerLocation: 'Pune, Maharashtra',
     beneficiaryName: 'Community Health Program',
     beneficiaryRelation: 'Public health initiative',
@@ -268,13 +298,25 @@ export const campaigns: Campaign[] = [
     impactPoints: ['Birthday cakes and gifts', 'Community celebration', 'Joy for children'],
     updates: [
       {
-        date: '5 days ago',
+        date: 'Today',
         author: 'Sanjivani Team',
         content:
-          'A small birthday celebration was organized for children at the care center this week.',
+          'The patient has been stabilized in the ICU. The surgical team is on standby and the procedure will begin as soon as funding is secured.',
+      },
+      {
+        date: '2 days ago',
+        author: 'Hospital Staff',
+        content:
+          'All pre-operative tests have been completed. The patient is responding well to initial medication but surgery remains urgent.',
+      },
+      {
+        date: '4 days ago',
+        author: 'Family Member',
+        content:
+          'We are overwhelmed by the support. Thank you to everyone who has donated so far. Please continue sharing — every share brings hope.',
       },
     ],
-    campaignerName: 'Sanjivani NGO Trust',
+    campaignerName: 'Sanjivani NGO',
     campaignerLocation: 'Pune, Maharashtra',
     beneficiaryName: 'Underprivileged Children',
     beneficiaryRelation: 'Community children',
@@ -309,13 +351,25 @@ export const campaigns: Campaign[] = [
     impactPoints: ['Rural connectivity', 'Safer travel', 'Access to schools and hospitals'],
     updates: [
       {
-        date: '1 week ago',
+        date: 'Today',
         author: 'Sanjivani Team',
         content:
-          'The first stretch of road work has begun and materials are being arranged.',
+          'The patient has been stabilized in the ICU. The surgical team is on standby and the procedure will begin as soon as funding is secured.',
+      },
+      {
+        date: '2 days ago',
+        author: 'Hospital Staff',
+        content:
+          'All pre-operative tests have been completed. The patient is responding well to initial medication but surgery remains urgent.',
+      },
+      {
+        date: '4 days ago',
+        author: 'Family Member',
+        content:
+          'We are overwhelmed by the support. Thank you to everyone who has donated so far. Please continue sharing — every share brings hope.',
       },
     ],
-    campaignerName: 'Sanjivani NGO Trust',
+    campaignerName: 'Sanjivani NGO',
     campaignerLocation: 'Pune, Maharashtra',
     beneficiaryName: 'Rural Village Community',
     beneficiaryRelation: 'Village panchayat',

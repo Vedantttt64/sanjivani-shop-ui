@@ -17,12 +17,12 @@ export default function Download() {
   }; 
 
   return (
-  <div className='bg-[#f2f1f9] pt-6 pb-10 px-4'>
+  <div className='bg-[#f2f1f9] pt-2 pb-4 px-4'>
     <motion.section
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-white rounded-xl shadow-lg border p-6 sm:p-8 flex flex-col items-center text-center gap-6 max-w-2xl w-[95%] mx-auto"
+      className="bg-white rounded-xl shadow-lg border p-6 sm:p-8 flex flex-col items-center text-center gap-4 max-w-2xl sm:max-w-6xl w-[95%] mx-auto"
       >
       <div className="w-full flex flex-col items-center">
         <div className="flex items-center gap-3 mb-4 justify-center">
@@ -32,48 +32,30 @@ export default function Download() {
           </h2>
         </div>
 
-        <p className="text-gray-700 mb-6 text-sm sm:text-base md:text-lg">
+        <p className="text-gray-700 mb-2 text-sm sm:text-base md:text-lg">
           <span className="font-semibold text-slate-600">To Engage in current projects and support the needy</span>
         </p>
-
-        <div className="flex w-full max-w-md border rounded-lg overflow-hidden shadow-sm">
-          <div className="flex items-center px-3 sm:px-4 bg-gray-100 border-r text-gray-700 font-medium text-sm sm:text-base">
-            🇮🇳 +91
-          </div>
-          <input
-            type="tel"
-            placeholder="Enter Mobile number"
-            className="flex-grow px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
-            value={mobile}
-            onChange={(e) => setMobile(e.target.value)}
-          />
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={handleSubmit}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold transition-all"
-          >
-            GET APP LINK
-          </motion.button>
-        </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-2 w-full">
-        <div className="flex flex-col sm:flex-row items-center gap-3">
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-            <Image src="/images/google-pay.png" alt="Google Play" width={140} height={44} className="w-36 sm:w-40" />
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-            <Image src="/images/app-store.png" alt="App Store" width={140} height={44} className="w-36 sm:w-40" />
-          </motion.div>
-        </div>
-
+      <div className="flex flex-row items-center justify-center gap-6 mt-2 w-full">
+        {/* QR Code on the left side */}
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ type: 'spring', stiffness: 300 }}
-          className="border rounded-xl overflow-hidden shrink-0"
+          className="border rounded-xl overflow-hidden shrink-0 shadow-sm"
         >
-          <Image src="/images/qr-code.jpeg" alt="QR Code" width={100} height={100} className="w-24 sm:w-28 md:w-32" />
+          <Image src="/images/qr-code.jpeg" alt="QR Code" width={100} height={100} className="w-20 sm:w-24 md:w-28" />
         </motion.div>
+
+        {/* Store links side-by-side on the right side */}
+        <div className="flex flex-row items-center gap-3">
+          <motion.div whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <Image src="/images/google-pay.png" alt="Google Play" width={140} height={44} className="w-28 sm:w-36 md:w-40" />
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <Image src="/images/app-store.png" alt="App Store" width={140} height={44} className="w-28 sm:w-36 md:w-40" />
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   </div>

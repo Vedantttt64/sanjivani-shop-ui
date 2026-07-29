@@ -185,7 +185,7 @@ export default function DonationPage() {
                             <span className="font-semibold text-slate-500">{progress}% funded</span>
                           </div>
                           <div className="h-2 rounded-full bg-slate-100">
-                            <div className="h-2 rounded-full bg-emerald-600" style={{ width: `${progress}%` }} />
+                            <div className="h-2 rounded-full bg-[#E87B35]" style={{ width: `${progress}%` }} />
                           </div>
                         </div>
 
@@ -215,13 +215,13 @@ export default function DonationPage() {
                         <div className="mt-auto flex gap-3">
                           <button
                             onClick={() => router.push(`/donation/${item.id}`)}
-                            className="flex-1 rounded-full bg-slate-900 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
+                            className="flex-1 rounded-full bg-[#F8F4EA] hover:bg-[#F2EADA] border border-[#E9DFCB] px-4 py-3 text-sm font-bold text-[#9A7A56] transition"
                           >
                             View campaign
                           </button>
                           <Link
                             href={`/donation/${item.id}`}
-                            className="inline-flex items-center justify-center rounded-full border border-slate-200 px-4 py-3 text-sm font-bold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                            className="inline-flex items-center justify-center rounded-full bg-[#E87B35] hover:bg-[#D96B26] px-4 py-3 text-sm font-bold text-white transition shadow-sm"
                           >
                             Donate
                           </Link>
@@ -286,7 +286,7 @@ export default function DonationPage() {
                           <span className="font-semibold text-slate-500">{progress}% funded</span>
                         </div>
                         <div className="h-2 rounded-full bg-slate-100">
-                          <div className="h-2 rounded-full bg-emerald-600" style={{ width: `${progress}%` }} />
+                          <div className="h-2 rounded-full bg-[#E87B35]" style={{ width: `${progress}%` }} />
                         </div>
                         <div className="mt-2 flex items-center justify-between text-xs text-slate-500">
                           <span>Goal {formatAmount(item.goalAmount)}</span>
@@ -297,13 +297,13 @@ export default function DonationPage() {
                       <div className="flex gap-3">
                         <button
                           onClick={() => router.push(`/donation/${item.id}`)}
-                          className="flex-1 rounded-full bg-slate-900 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
+                          className="flex-1 rounded-full bg-[#F8F4EA] hover:bg-[#F2EADA] border border-[#E9DFCB] px-4 py-3 text-sm font-bold text-[#9A7A56] transition"
                         >
                           Open story
                         </button>
                         <button
                           onClick={() => router.push(`/donation/${item.id}`)}
-                          className="rounded-full border border-slate-200 px-4 py-3 text-sm font-bold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                          className="rounded-full bg-[#E87B35] hover:bg-[#D96B26] px-4 py-3 text-sm font-bold text-white transition shadow-sm"
                         >
                           Donate
                         </button>

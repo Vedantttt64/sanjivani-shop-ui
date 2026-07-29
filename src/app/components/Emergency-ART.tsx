@@ -13,18 +13,12 @@ const ContactSection = () => {
     >
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-0 items-center">
         
-        <div className="lg:col-span-3 lg:pl-16">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
-            Emergency
-          </h1>
-          <div className="inline-block bg-white px-3 sm:px-4 py-2 rounded-md">
-            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-800">
+        <div className="lg:col-span-3 flex flex-col items-center justify-center text-center">
+          <div className="inline-block bg-white px-4 sm:px-5 py-2.5 rounded-xl shadow-md">
+            <span className="text-xl sm:text-2xl lg:text-[32px] font-extrabold text-purple-800 tracking-wide">
               Accident Response Team
             </span>
           </div>
-          <p className="mt-6 text-base sm:text-lg lg:text-xl text-white max-w-lg text-center lg:text-left">
-            24 X 7 Emergency Response Team available to help
-          </p>
         </div>
 
         <form className="lg:col-span-2 bg-transparent rounded-lg p-4 sm:p-6 space-y-4 text-white font-semibold shadow-lg w-full">

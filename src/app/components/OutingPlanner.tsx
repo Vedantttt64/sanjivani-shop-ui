@@ -38,23 +38,20 @@ export default function OutingPlanner() {
       <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
       {/* Main Grid Content Container */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-4 md:py-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-4 md:py-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
         
         {/* Left Side: Copywriting Content */}
-        <div className="lg:col-span-6 text-white space-y-6">
+        <div className="lg:col-span-6 text-white space-y-2">
           <div className="space-y-3">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-md">
-              Let's Discuss your
+              Let's discuss your
             </h2>
             <div className="inline-block bg-white px-5 py-2.5 rounded-xl shadow-lg border border-purple-100">
               <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-purple-700 uppercase tracking-wide">
-                Weekend Outing Plan
+                Weekend Social Plan
               </span>
             </div>
           </div>
-          <p className="text-sm sm:text-base md:text-lg text-slate-200 font-medium max-w-lg leading-relaxed drop-shadow-sm">
-            Our support team can help in Weekend Outing Planning.
-          </p>
         </div>
 
         {/* Right Side: Interactive Discussion Form */}

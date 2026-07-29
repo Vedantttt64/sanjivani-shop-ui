@@ -1,16 +1,19 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { Mail, MapPin, Phone, Facebook, Twitter, Youtube, Instagram } from 'lucide-react';
 
 export default function Footer() {
+  const router = useRouter();
   return (
-    <footer className="bg-[url(/images/Vehicle/footer.jpg)] bg-no-repeat bg-cover text-white font-bold py-5 px-6 md:px-20">
-      <div className="bg-black opacity-40 pt-5 pr-1 pb-2 pl-7">
+    <>
+      <footer className="bg-[#0B132A] text-white font-bold py-5 px-6 md:px-20">
+        <div className="bg-black opacity-40 pt-5 pr-1 pb-2 pl-7">
 
 
-      
-      <div className="z-100 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
+        
+        <div className="z-100 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
 
         <div>
           <h2 className="text-5x4 font-bold mb-2">
@@ -138,5 +141,17 @@ export default function Footer() {
       </div>
       </div>
     </footer>
+
+    {/* Floating Donate Button */}
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 md:bottom-6 md:right-6 md:left-auto md:translate-x-0 z-50">
+      <button
+        onClick={() => router.push('/donation')}
+        className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] px-16 md:px-6 py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100"
+      >
+        <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
+        DONATE
+      </button>
+    </div>
+  </>
   );
 }

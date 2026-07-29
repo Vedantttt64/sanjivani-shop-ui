@@ -212,12 +212,12 @@ export default function CampaignDetailMobile({ campaign }: { campaign: CampaignP
           </div>
 
           <div className="space-y-4 p-4">
-            <div className="flex items-center justify-between text-sm font-bold text-emerald-700">
+            <div className="flex items-center justify-between text-sm font-bold text-[#E87B35]">
               <span>{currency(campaign.raised)} raised</span>
               <span>{percentage}% funded</span>
             </div>
             <progress
-              className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-emerald-600 [&::-moz-progress-bar]:bg-emerald-600"
+              className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-[#E87B35] [&::-moz-progress-bar]:bg-[#E87B35]"
               value={percentage}
               max={100}
             />

@@ -185,12 +185,12 @@ export default function MapLandingPage() {
           </div>
         </div>
 
-        <div className="w-full max-w-[95vw] md:w-auto h-[90vh] min-h-[500px] max-h-[calc(100vh-80px)] aspect-[972/820] flex items-center justify-center relative overflow-hidden group">
+        <div className="w-[98vw] max-w-[98vw] md:w-auto md:max-w-none h-[70vh] sm:h-[95vh] min-h-0 sm:min-h-[750px] max-h-[70vh] sm:max-h-[95vh] md:max-h-[calc(100vh-100px)] aspect-[972/820] flex items-center justify-center relative overflow-hidden group">
 
           {/* SVG Map Canvas */}
           <svg
             viewBox="-180 -50 972 820"
-            className="w-full h-full drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out"
+            className="w-full h-full scale-[1.18] sm:scale-100 origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out"
             xmlns="http://www.w3.org/2000/svg"
           >
             {/* Map Paths — base layer (all states) */}

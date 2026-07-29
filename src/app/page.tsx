@@ -35,12 +35,11 @@ function MainHomePage() {
   return (
     <div className="relative z-10 pt-11 overflow-x-hidden bg-[#f2f1f9]">
       <Appbar />
-      <div className="w-full h-[280px] sm:h-[450px] md:h-[570px] bg-[#f2f1f9] relative overflow-hidden">
+      <div className="w-full aspect-[375/180] sm:aspect-[1280/570] max-h-[570px] bg-[#f2f1f9] relative overflow-hidden">
         <iframe
           src="/ngo-banner-next/assets/menu-below-slider.html"
           title="NGO Banner Next"
-          className="w-full h-full border-0"
-          style={{ height: '570px', minHeight: '100%' }}
+          className="absolute inset-0 w-full h-full border-0"
         />
         {/* Mask any white bleed at iframe bottom */}
         <div className="absolute bottom-0 left-0 w-full h-4 bg-[#f2f1f9]" />

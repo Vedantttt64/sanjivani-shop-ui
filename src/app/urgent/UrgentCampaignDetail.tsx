@@ -316,13 +316,13 @@ export default function UrgentCampaignDetail({ campaign }: { campaign: CampaignP
             <div className="card p-6 bg-white shadow-md border border-[#E2E8F0] rounded-2xl space-y-5">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-gray-500 uppercase tracking-wide">Progress</span>
-                <span className="text-sm font-extrabold text-[#16836A]">{campaign.percent} Funded</span>
+                <span className="text-sm font-extrabold text-[#E87B35]">{campaign.percent} Funded</span>
               </div>
 
               {/* Progress bar */}
               <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                 <progress
-                  className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-100 [&::-webkit-progress-value]:bg-[#16836A] [&::-moz-progress-bar]:bg-[#16836A]"
+                  className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-100 [&::-webkit-progress-value]:bg-[#E87B35] [&::-moz-progress-bar]:bg-[#E87B35]"
                   value={Math.min(100, parseInt(campaign.percent, 10) || 0)}
                   max={100}
                 />
@@ -486,14 +486,14 @@ export default function UrgentCampaignDetail({ campaign }: { campaign: CampaignP
             by {activeDetails.campaignerName}
           </p>
 
-          <div className="flex justify-between items-center text-xs font-bold text-[#16836A]">
+          <div className="flex justify-between items-center text-xs font-bold text-[#E87B35]">
             <span>{campaign.raised} Raised</span>
             <span>{campaign.percent}</span>
           </div>
 
           <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
             <progress
-              className="h-1.5 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-100 [&::-webkit-progress-value]:bg-[#16836A] [&::-moz-progress-bar]:bg-[#16836A]"
+              className="h-1.5 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-100 [&::-webkit-progress-value]:bg-[#E87B35] [&::-moz-progress-bar]:bg-[#E87B35]"
               value={Math.min(100, parseInt(campaign.percent, 10) || 0)}
               max={100}
             />
