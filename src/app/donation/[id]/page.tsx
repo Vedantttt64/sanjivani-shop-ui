@@ -527,7 +527,7 @@ export default function CampaignPage() {
             {/* 1. Video Reel / Image Gallery */}
             <div className="px-1 sm:px-2">
               {hasVideo ? (
-                <div className="relative mx-auto w-full max-w-[340px] aspect-[9/16] bg-black rounded-[28px] overflow-hidden shadow-2xl border-4 border-slate-900">
+                <div className="relative mx-auto w-full max-w-[450px] aspect-[3/4] bg-black rounded-[28px] overflow-hidden shadow-2xl border-4 border-slate-900">
                   <video
                     ref={videoRef}
                     src={campaign.videoUrl}
@@ -558,7 +558,7 @@ export default function CampaignPage() {
                   <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
               ) : (
-                <div className="relative mx-auto aspect-video w-full max-w-xl overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
+                <div className="relative w-full max-w-full h-[324px] sm:h-[380px] overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
                   {campaign.verified && (
                     <div className="absolute bottom-4 right-4 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-[#16836A] text-white shadow-md">
                       <ShieldCheck size={26} />
@@ -600,7 +600,7 @@ export default function CampaignPage() {
                 <span className="flex items-center gap-1"><Users size={14} /> {campaign.supporters} Supporters</span>
                 <span className="flex items-center gap-1"><Clock size={14} /> {campaign.daysLeft} Days Left</span>
               </div>
-              <button onClick={openDonation} className="mt-4 w-full relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
+              <button onClick={openDonation} className="mt-4 w-fit px-12 mx-auto flex flex-col items-center justify-center relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
                 <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
                 DONATE NOW
                 <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>
@@ -783,7 +783,7 @@ export default function CampaignPage() {
                   <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-slate-300 text-[10px] text-slate-400">i</span>
                 </p>
 
-                <button onClick={openDonation} className="mt-4 w-full relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
+                <button onClick={openDonation} className="mt-4 w-fit px-10 mx-auto flex flex-col items-center justify-center relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
                   <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
                   DONATE NOW
                   <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>
