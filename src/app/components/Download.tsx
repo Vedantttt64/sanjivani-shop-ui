@@ -32,19 +32,19 @@ export default function Download() {
           </h2>
         </div>
 
-        <p className="text-slate-700 mb-2 text-base sm:text-lg md:text-xl w-full">
-          <span className="font-extrabold text-slate-600">To Engage in current projects and support the needy</span>
+        <p className="text-slate-700 mb-0 text-base sm:text-lg md:text-xl w-full">
+          <span className="font-extrabold text-slate-600">To join Sanjivani NGO Team</span>
         </p>
       </div>
 
-      <div className="flex flex-row items-center justify-start sm:justify-center gap-8 mt-4 w-full px-2 sm:px-6">
+      <div className="flex flex-row items-center justify-start sm:justify-center gap-8 mt-1 w-full px-2 sm:px-6">
         {/* QR Code on the left side */}
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ type: 'spring', stiffness: 300 }}
           className="border rounded-xl overflow-hidden shrink-0 shadow-sm"
         >
-          <Image src="/images/qr-code.jpeg" alt="QR Code" width={160} height={160} className="w-28 sm:w-36 md:w-40" />
+          <Image src="/images/qr-code.jpeg" alt="QR Code" width={240} height={240} className="w-36 sm:w-44 md:w-48" />
         </motion.div>
 
         {/* Store links stacked vertically on the right side */}

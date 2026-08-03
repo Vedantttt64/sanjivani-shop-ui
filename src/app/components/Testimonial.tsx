@@ -25,7 +25,7 @@ export default function Testimonial() {
           <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="relative w-32 h-40 sm:w-40 sm:h-56 rounded-xl overflow-hidden flex-shrink-0"
+            className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
               src="/images/rahul1.png"

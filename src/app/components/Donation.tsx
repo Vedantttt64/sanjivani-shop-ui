@@ -60,8 +60,8 @@ export default function DonationPage() {
 
   return (
     <div className="flex flex-col bg-[#f2f1f9] pt-0 pb-6 md:pt-0 md:pb-6">
-      <div className="px-4 md:px-10">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
+      <div className="w-full">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8 px-4 md:px-10">
           Our Projects
         </h2>
 
@@ -77,7 +77,7 @@ export default function DonationPage() {
 
           <div
             ref={scrollRef}
-            className="flex gap-6 px-8 scroll-smooth overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+            className="flex gap-4 px-4 scroll-smooth overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-pl-4 scroll-pr-4"
           >
             {campaigns.map((item) => {
               // NGO_APP style campaign card for all campaigns
@@ -85,7 +85,7 @@ export default function DonationPage() {
               return (
                 <div
                   key={item.id}
-                  className="relative h-[400px] w-[300px] flex-shrink-0 overflow-hidden rounded-2xl shadow-lg cursor-pointer group snap-start"
+                  className="relative h-[400px] w-[calc(100vw-32px)] sm:w-[300px] flex-shrink-0 overflow-hidden rounded-2xl shadow-lg cursor-pointer group snap-center"
                   onClick={() => router.push(`/donation/${item.id}`)}
                 >
                   {/* Image */}
@@ -137,7 +137,6 @@ export default function DonationPage() {
 
                     {/* Content overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/90 to-transparent">
-                      <p className="text-xs font-semibold text-white mb-1">{item.daysLeft} days left</p>
                       <h3 className="text-base font-bold text-white mb-3 leading-tight line-clamp-2">{item.title}</h3>
 
                       {/* Progress */}
@@ -153,8 +152,9 @@ export default function DonationPage() {
                         />
                       </div>
 
-                      <div className="flex items-center justify-between text-xs text-gray-300 mb-3">
+                      <div className="flex items-center justify-between text-xs text-gray-300 mb-3 font-semibold">
                         <span>{item.donors} Supporters</span>
+                        <span>{item.daysLeft} days left</span>
                       </div>
 
                       <button

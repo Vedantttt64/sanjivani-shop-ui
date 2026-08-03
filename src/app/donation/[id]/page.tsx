@@ -106,10 +106,14 @@ function TransactionPopup({
           <div className="mb-5 flex items-center justify-center">
             <div
               onClick={() => setTab(tab === 'monthly' ? 'once' : 'monthly')}
-              className="relative flex h-10 w-[140px] cursor-pointer items-center rounded-full bg-[#E87B35] p-1 shadow-inner select-none"
+              className="relative flex h-10 w-[140px] cursor-pointer items-center rounded-full bg-[#E87B35] p-1 shadow-inner select-none transition-colors"
             >
-              <div className={`absolute z-10 h-8 w-8 rounded-full bg-white shadow-md transition-all duration-200 ${tab === 'once' ? 'translate-x-[100px]' : 'translate-x-0'}`} />
-              <span className="w-full text-center text-[15px] font-bold text-white relative z-0 uppercase tracking-wider">
+              {/* Sliding knob */}
+              <div
+                className={`absolute z-10 h-8 w-8 rounded-full bg-white shadow-md transition-all duration-200 ${tab === 'once' ? 'translate-x-[100px]' : 'translate-x-0'}`}
+              />
+              {/* Text */}
+              <span className={`w-full text-center text-[15px] font-bold text-white relative z-0 uppercase tracking-wider ${tab === 'monthly' ? 'pl-5' : ''}`}>
                 {tab === 'monthly' ? 'Monthly' : 'Once'}
               </span>
             </div>
@@ -952,7 +956,13 @@ export default function CampaignPage() {
       </div>
 
       {/* Sticky floating donate button */}
-      <FloatingDonateBar title={campaign.title} onDonateClick={openDonation} />
+      <FloatingDonateBar title={campaign.title} onDonateClick={() => {
+        if (campaign.id === 'urgent-medical-emergency') {
+          openDonation();
+        } else {
+          router.push('/donation/urgent-medical-emergency');
+        }
+      }} />
 
       {/* Transaction Popup */}
       <TransactionPopup

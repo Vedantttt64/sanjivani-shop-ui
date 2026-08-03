@@ -102,7 +102,7 @@ export default function OutingPlanner() {
                   background: 'linear-gradient(to right, #f97316, #ec4899)',
                 }}
               >
-                {submitted ? 'Submitted Successfully' : 'Submit'}
+                {submitted ? 'Submitted Successfully' : 'CALL ME'}
               </button>
             </div>
             

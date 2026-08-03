@@ -76,12 +76,12 @@ const Explore = () => {
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto px-10 scrollbar-hide scroll-smooth snap-x snap-mandatory"
+          className="flex gap-4 overflow-x-auto px-4 scrollbar-hide scroll-smooth snap-x snap-mandatory scroll-pl-4 scroll-pr-4"
         >
           {countries.map(({ name, image }) => (
             <div
               key={name}
-              className="min-w-[210px] max-w-[180px] h-57 rounded-2xl overflow-hidden shadow-md bg-white snap-start"
+              className="w-[calc(100vw-32px)] sm:w-[210px] sm:min-w-[210px] flex-shrink-0 h-57 rounded-2xl overflow-hidden shadow-md bg-white snap-center"
             >
               <Image
                 src={image}

@@ -56,12 +56,12 @@ export default function Portfo() {
 
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto scroll-smooth no-scrollbar gap-4 px-4 snap-x snap-mandatory"
+          className="flex overflow-x-auto scroll-smooth no-scrollbar gap-4 px-4 snap-x snap-mandatory scroll-pl-4 scroll-pr-4"
         >
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="relative w-[250px] sm:w-[280px] md:w-[300px] flex-shrink-0 group rounded-lg overflow-hidden snap-start"
+              className="relative w-[calc(100vw-32px)] sm:w-[280px] md:w-[300px] flex-shrink-0 group rounded-lg overflow-hidden snap-center"
             >
               <div className="relative w-full aspect-[4/5]">
                 <Image

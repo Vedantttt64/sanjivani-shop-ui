@@ -159,7 +159,6 @@ export default function DonationPage() {
                           </span>
                         </div>
                         <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur">
-                          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">{item.daysLeft} days left</p>
                           <p className="mt-1 text-lg font-black text-slate-900">{item.title}</p>
                         </div>
                       </div>
@@ -269,9 +268,6 @@ export default function DonationPage() {
                           {item.badge}
                         </span>
                       </div>
-                      <div className="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-slate-600 shadow-sm">
-                        {item.daysLeft} days left
-                      </div>
                     </div>
 
                     <div className="space-y-4 p-5">
@@ -288,9 +284,13 @@ export default function DonationPage() {
                         <div className="h-2 rounded-full bg-slate-100">
                           <div className="h-2 rounded-full bg-[#E87B35]" style={{ width: `${progress}%` }} />
                         </div>
-                        <div className="mt-2 flex items-center justify-between text-xs text-slate-500">
+                        <div className="mt-2 flex items-center justify-between text-xs text-slate-500 font-semibold">
                           <span>Goal {formatAmount(item.goalAmount)}</span>
-                          <span>{item.supporters} supporters</span>
+                          <div className="flex gap-2">
+                            <span>{item.supporters} supporters</span>
+                            <span>•</span>
+                            <span>{item.daysLeft} days left</span>
+                          </div>
                         </div>
                       </div>
 
