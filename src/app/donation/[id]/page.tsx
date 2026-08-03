@@ -29,6 +29,14 @@ import type { Campaign, CampaignDonation } from '../../data/campaigns';
 import ShareButtons from '../../components/ShareButtons';
 import { FaWhatsapp, FaFacebook, FaTwitter } from 'react-icons/fa';
 
+/* Helper: get YouTube ID */
+const getYouTubeId = (url?: string) => {
+  if (!url) return '';
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : '';
+};
+
 /* Helper: format INR */
 const fmt = (v: number) =>
   new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(v);
@@ -205,7 +213,7 @@ function PaymentSimulatorModal({ amount, onComplete }: { amount: number; onCompl
    ============================================== */
 function FloatingDonateBar({ onDonateClick }: { title: string; onDonateClick: () => void }) {
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 md:bottom-6 md:right-6 md:left-auto md:translate-x-0 z-50">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 md:bottom-6 md:right-28 md:left-auto md:translate-x-0 z-50">
       <button
         onClick={onDonateClick}
         className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] px-16 md:px-6 py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100"
@@ -540,16 +548,25 @@ export default function CampaignPage() {
                       </span>
                     )}
                   </div>
-                  <video
-                    ref={videoRef}
-                    src={campaign.videoUrl}
-                    autoPlay
-                    muted={isMuted}
-                    loop
-                    playsInline
-                    onClick={togglePlay}
-                    className="w-full h-full object-cover object-top"
-                  />
+                  {campaign.videoUrl && (campaign.videoUrl.includes('youtube.com') || campaign.videoUrl.includes('youtu.be')) ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${getYouTubeId(campaign.videoUrl)}?autoplay=1&mute=0&loop=1&playlist=${getYouTubeId(campaign.videoUrl)}`}
+                      className="w-full h-full object-cover"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <video
+                      ref={videoRef}
+                      src={campaign.videoUrl}
+                      autoPlay
+                      muted={isMuted}
+                      loop
+                      playsInline
+                      onClick={togglePlay}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  )}
                   {/* Bottom Left controls */}
                   <div className="absolute bottom-4 left-4 z-20 flex gap-2 items-center">
                     {campaign.id !== 'urgent-medical-emergency' && (

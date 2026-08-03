@@ -220,7 +220,7 @@ export default function OurJourney() {
   }, [activeIndex]);
 
   return (
-    <section className="relative w-full bg-[#f2f1f9] text-black font-sans overflow-hidden pt-0 pb-6 md:pt-0 md:pb-8">
+    <section className="relative w-full bg-[#f2f1f9] text-black font-sans overflow-hidden pt-0 pb-0 md:pt-0 md:pb-0">
       <div className="absolute inset-0 opacity-5 bg-[url('/images/bg1.jpg')] bg-cover bg-center" />
 
       <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 pt-0 pb-4 md:pt-0 md:pb-4 gap-10 md:gap-16">
@@ -272,7 +272,7 @@ export default function OurJourney() {
         </AnimatePresence>
       </div>
 
-      <div className="relative w-full flex flex-col items-center mt-2 pb-6 sm:pb-8 md:pb-10 z-20">
+      <div className="relative w-full flex flex-col items-center mt-2 pb-1 sm:pb-1 md:pb-2 z-20">
         <div className="flex gap-3 sm:gap-4 mb-3 sm:mb-4">
           <button
             onClick={goPrev}

@@ -154,7 +154,7 @@ export default function Footer() {
       </footer>
 
       {/* Floating Donate Button */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 md:bottom-6 md:right-6 md:left-auto md:translate-x-0 z-50">
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 md:bottom-6 md:right-28 md:left-auto md:translate-x-0 z-50">
         <button
           onClick={() => router.push('/donation')}
           className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] px-16 md:px-6 py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100"
