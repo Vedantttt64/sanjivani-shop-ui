@@ -220,10 +220,10 @@ export default function OurJourney() {
   }, [activeIndex]);
 
   return (
-    <section className="relative w-full bg-[#f2f1f9] text-black font-sans overflow-hidden pt-0 pb-16 md:pt-0 md:pb-14">
+    <section className="relative w-full bg-[#f2f1f9] text-black font-sans overflow-hidden pt-0 pb-6 md:pt-0 md:pb-8">
       <div className="absolute inset-0 opacity-5 bg-[url('/images/bg1.jpg')] bg-cover bg-center" />
 
-      <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 py-4 gap-10 md:gap-16">
+      <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 pt-0 pb-4 md:pt-0 md:pb-4 gap-10 md:gap-16">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -272,19 +272,19 @@ export default function OurJourney() {
         </AnimatePresence>
       </div>
 
-      <div className="absolute bottom-0 w-full flex flex-col items-center pb-6 sm:pb-8 md:pb-10 z-20">
+      <div className="relative w-full flex flex-col items-center mt-2 pb-6 sm:pb-8 md:pb-10 z-20">
         <div className="flex gap-3 sm:gap-4 mb-3 sm:mb-4">
           <button
             onClick={goPrev}
             aria-label="Previous timeline event"
-            className="p-2 sm:p-3 rounded-full bg-gray-200 hover:bg-orange-500 hover:text-white transition shadow-md"
+            className="p-2 sm:p-3 rounded-full bg-gray-200 text-black hover:bg-orange-500 hover:text-white transition shadow-md"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={goNext}
             aria-label="Next timeline event"
-            className="p-2 sm:p-3 rounded-full bg-gray-200 hover:bg-orange-500 hover:text-white transition shadow-md"
+            className="p-2 sm:p-3 rounded-full bg-gray-200 text-black hover:bg-orange-500 hover:text-white transition shadow-md"
           >
             <ChevronRight size={20} />
           </button>

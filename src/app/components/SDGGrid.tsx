@@ -26,14 +26,14 @@ const goals = [
 
 export default function SDGGrid() {
   return (
-    <div className="bg-[#f2f1f9] pt-16 pb-8 px-4 sm:px-6 md:px-10">
+    <div className="bg-[#f2f1f9] pt-6 pb-8 px-4 sm:px-6 md:px-10">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-indigo-900 tracking-tight">
             Sustainable Development Goals
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-600 font-medium">
-            Sanjivani NGO actively aligns its initiatives and portfolios with the United Nations Sustainable Development Goals to construct a better tomorrow.
+            Sanjivani NGO actively aligns its initiatives and portfolios with the United Nations Sustainable Development Goals to build a better tomorrow.
           </p>
         </div>
 

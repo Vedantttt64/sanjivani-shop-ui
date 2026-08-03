@@ -6,11 +6,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const cardData = [
   { title: 'Education', image: '/images/banner/b2.jpg', buttonText: 'PROJECTS' },
-  { title: 'Children', image: '/images/banner/b3.jpg', buttonText: 'PROJECTS' },
-  { title: 'Old Age', image: '/images/oldage1.jpg', buttonText: 'PROJECTS' },
-  { title: 'Electricity & Power', image: '/images/banner/b5.jpg', buttonText: 'PROJECTS' },
-  { title: 'Food & Hunger', image: '/images/food1.jpg', buttonText: 'PROJECTS' },
-  { title: 'Infrastructure', image: '/images/infrastr.jpeg', buttonText: 'READ MORE' },
+  { title: 'Healthcare Support', image: '/images/banner/b3.jpg', buttonText: 'PROJECTS' },
+  { title: 'Elderly Care', image: '/images/oldage1.jpg', buttonText: 'PROJECTS' },
+  { title: 'Solar Energy', image: '/images/banner/b5.jpg', buttonText: 'PROJECTS' },
+  { title: 'Food Distribution', image: '/images/food1.jpg', buttonText: 'PROJECTS' },
+  { title: 'Rural Infrastructure', image: '/images/Infrastr.jpeg', buttonText: 'PROJECTS' },
 ];
 
 export default function Portfo() {
@@ -18,12 +18,18 @@ export default function Portfo() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollAmount = clientWidth;
-      scrollRef.current.scrollTo({
-        left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
-        behavior: 'smooth',
-      });
+      const container = scrollRef.current;
+      const firstChild = container.firstElementChild as HTMLElement;
+      if (firstChild) {
+        const cardWidth = firstChild.getBoundingClientRect().width;
+        const style = window.getComputedStyle(container);
+        const gap = parseFloat(style.columnGap || style.gap || '0') || 16;
+        const scrollAmount = cardWidth + gap;
+        container.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
@@ -38,24 +44,24 @@ export default function Portfo() {
           onClick={() => scroll('left')}
           className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow hover:bg-gray-100"
         >
-          <ChevronLeft size={24} />
+          <ChevronLeft size={24} className="text-black" />
         </button>
 
         <button
           onClick={() => scroll('right')}
           className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow hover:bg-gray-100"
         >
-          <ChevronRight size={24} />
+          <ChevronRight size={24} className="text-black" />
         </button>
 
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto scroll-smooth no-scrollbar gap-4 px-4"
+          className="flex overflow-x-auto scroll-smooth no-scrollbar gap-4 px-4 snap-x snap-mandatory"
         >
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="relative w-[250px] sm:w-[280px] md:w-[300px] flex-shrink-0 group rounded-lg overflow-hidden"
+              className="relative w-[250px] sm:w-[280px] md:w-[300px] flex-shrink-0 group rounded-lg overflow-hidden snap-start"
             >
               <div className="relative w-full aspect-[4/5]">
                 <Image
@@ -66,7 +72,7 @@ export default function Portfo() {
                   className="object-cover block group-hover:scale-105 transition-transform duration-500"
                 />
 
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex flex-col justify-end items-start p-6 text-white">
+                <div className="absolute inset-0 bg-black/45 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition duration-300 flex flex-col justify-end items-start p-6 text-white">
                   <p className="text-lg font-medium mb-4">{card.title}</p>
                   <button className="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100 transition">
                     {card.buttonText}

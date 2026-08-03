@@ -16,13 +16,13 @@ const ContactSection = () => {
         <div className="lg:col-span-3 flex flex-col items-center justify-center text-center">
           <div className="inline-block bg-white px-4 sm:px-5 py-2.5 rounded-xl shadow-md">
             <span className="text-xl sm:text-2xl lg:text-[32px] font-extrabold text-purple-800 tracking-wide">
-              Accident Response Team
+              Emergency Response Team
             </span>
           </div>
         </div>
 
-        <form className="lg:col-span-2 bg-transparent rounded-lg p-4 sm:p-6 space-y-4 text-white font-semibold shadow-lg w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4  ">
+        <form className="lg:col-span-2 bg-transparent rounded-lg pt-2 pb-4 px-4 sm:pt-3 sm:pb-6 sm:px-6 space-y-3 text-white font-semibold shadow-lg w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <input
                 type="text"
@@ -48,10 +48,10 @@ const ContactSection = () => {
             ></textarea>
           </div>
 
-          <div>
+          <div className="flex justify-center">
             <button
               type="submit"
-              className="w-full text-white font-bold py-3 rounded-md transition-transform hover:scale-105"
+              className="w-1/2 text-white font-bold py-2.5 rounded-md transition-transform hover:scale-105"
               style={{
                 background: 'linear-gradient(to right, #f97316, #ec4899)',
               }}

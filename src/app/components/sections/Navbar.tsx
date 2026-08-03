@@ -6,6 +6,21 @@ import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { X } from 'lucide-react'
 
+// Icon imports for mobile drawer to match desktop
+import { FaPlaneUp } from "react-icons/fa6"
+import { FaBriefcaseMedical } from "react-icons/fa"
+import { GoLaw } from "react-icons/go"
+import { FiPower } from "react-icons/fi"
+import { GiTeacher } from "react-icons/gi"
+import { PiStudentBold } from "react-icons/pi"
+import { PiPlantLight } from "react-icons/pi"
+import { GiBroom } from "react-icons/gi"
+import { MdBabyChangingStation } from "react-icons/md"
+import { MdOutlineSolarPower } from "react-icons/md"
+import { FaLaptopCode } from "react-icons/fa"
+import { FaPersonMilitaryRifle } from "react-icons/fa6"
+import { GiShipBow } from "react-icons/gi"
+
 export default function Navbar() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -57,6 +72,25 @@ export default function Navbar() {
     { title: 'Legal' },
     { title: 'Login' },
   ];
+
+  // Helper to map navigation titles to matching icons
+  const getIcon = (title: string) => {
+    const t = title.toLowerCase();
+    if (t === 'home') return <FaPersonMilitaryRifle size={18} />;
+    if (t === 'district') return <MdBabyChangingStation size={18} />;
+    if (t === 'air') return <FaPlaneUp size={18} />;
+    if (t === 'water') return <GiShipBow size={18} />;
+    if (t === 'food') return <PiPlantLight size={18} />;
+    if (t === 'cloths') return <GiBroom size={18} />;
+    if (t === 'shelter') return <PiStudentBold size={18} />;
+    if (t === 'solar') return <MdOutlineSolarPower size={18} />;
+    if (t === 'education') return <GiTeacher size={18} />;
+    if (t === 'work') return <FaLaptopCode size={18} />;
+    if (t === 'medical') return <FaBriefcaseMedical size={18} />;
+    if (t === 'legal') return <GoLaw size={18} />;
+    if (t === 'login') return <FiPower size={18} />;
+    return null;
+  };
 
   return (
     <>
@@ -126,14 +160,14 @@ export default function Navbar() {
           <Image
             src="/images/sanjivani-logo.png"
             alt="sanjivani-logo"
-            width={80}
-            height={55}
+            width={110}
+            height={75}
             className="object-contain cursor-pointer"
             onClick={redirectToStartPage}
           />
           <button
             onClick={() => setMenuOpen(false)}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition"
+            className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-red-500 hover:text-white active:bg-red-600 active:text-white transition"
             aria-label="Close menu"
           >
             <X size={18} />
@@ -141,7 +175,7 @@ export default function Navbar() {
         </div>
 
         {/* Nav list */}
-        <nav className="flex-1 overflow-y-auto py-3 px-2">
+        <nav className="flex-1 overflow-y-auto py-1.5 px-2 space-y-0.5">
           {navItems.map((item, i) => (
             <button
               key={i}
@@ -159,26 +193,17 @@ export default function Navbar() {
                   }
                 }
               }}
-              className="flex w-full items-center gap-3 px-4 py-3.5 rounded-xl text-left text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+              className="flex w-full items-center gap-3 px-4 py-2 rounded-xl text-left text-xs font-extrabold uppercase tracking-wider text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
             >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-500 text-xs font-bold">
-                {item.title[0]}
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-500 transition-colors">
+                {getIcon(item.title)}
               </span>
               {item.title}
             </button>
           ))}
         </nav>
-
-        {/* Drawer footer: Login */}
-        <div className="px-4 pb-6 pt-3 border-t border-slate-100">
-          <button
-            onClick={() => { setMenuOpen(false); redirectToLogin(); }}
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-400 to-blue-800 text-white font-semibold text-sm"
-          >
-            Login
-          </button>
-        </div>
       </div>
     </>
   );
 }
+

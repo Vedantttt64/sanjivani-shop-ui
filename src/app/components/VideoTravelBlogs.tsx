@@ -18,10 +18,18 @@ const VideoTravelBlogs = () => {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -300 : 300,
-        behavior: 'smooth',
-      });
+      const container = scrollRef.current;
+      const firstChild = container.firstElementChild as HTMLElement;
+      if (firstChild) {
+        const cardWidth = firstChild.getBoundingClientRect().width;
+        const style = window.getComputedStyle(container);
+        const gap = parseFloat(style.columnGap || style.gap || '0') || 16;
+        const scrollAmount = cardWidth + gap;
+        container.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
@@ -37,17 +45,17 @@ const VideoTravelBlogs = () => {
           className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
           aria-label="Scroll left"
         >
-          <ChevronLeft />
+          <ChevronLeft className="text-black" />
         </button>
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto px-8 scrollbar-hide scroll-smooth justify-start xl:justify-center"
+          className="flex gap-4 overflow-x-auto px-8 scrollbar-hide scroll-smooth justify-start xl:justify-center snap-x snap-mandatory"
         >
           {countries.map(({ name, image }) => (
             <div
               key={name}
-              className="min-w-[210px] max-w-[180px] h-57 rounded-2xl overflow-hidden shadow-md bg-white pb-3"
+              className="min-w-[210px] max-w-[180px] h-57 rounded-2xl overflow-hidden shadow-md bg-white pb-3 snap-start"
             >
               <Image
                 src={image}
@@ -66,7 +74,7 @@ const VideoTravelBlogs = () => {
           className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
           aria-label="Scroll right"
         >
-          <ChevronRight />
+          <ChevronRight className="text-black" />
         </button>
       </div>
     </section>

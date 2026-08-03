@@ -27,6 +27,7 @@ import {
 import { campaigns as campaignsData } from '../../data/campaigns';
 import type { Campaign, CampaignDonation } from '../../data/campaigns';
 import ShareButtons from '../../components/ShareButtons';
+import { FaWhatsapp, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 /* Helper: format INR */
 const fmt = (v: number) =>
@@ -100,7 +101,7 @@ function TransactionPopup({
               className="relative flex h-10 w-[140px] cursor-pointer items-center rounded-full bg-[#E87B35] p-1 shadow-inner select-none"
             >
               <div className={`absolute z-10 h-8 w-8 rounded-full bg-white shadow-md transition-all duration-200 ${tab === 'once' ? 'translate-x-[100px]' : 'translate-x-0'}`} />
-              <span className="w-full text-center text-sm font-black text-white relative z-0">
+              <span className="w-full text-center text-[15px] font-bold text-white relative z-0 uppercase tracking-wider">
                 {tab === 'monthly' ? 'Monthly' : 'Once'}
               </span>
             </div>
@@ -428,6 +429,7 @@ export default function CampaignPage() {
   const [donationAmount, setDonationAmount] = useState(0);
   const [campaignState, setCampaignState] = useState<Campaign | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
   const baseCampaign = campaignsData.find((c) => c.id === id);
 
   useEffect(() => {
@@ -503,16 +505,13 @@ export default function CampaignPage() {
             <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
               <ShieldCheck size={12} /> {campaign.category}
             </span>
-            {campaign.urgency === 'Urgent' && (
-              <span className="rounded-full bg-rose-50 px-3 py-1 text-xs font-bold text-rose-600">URGENT</span>
-            )}
           </div>
         </div>
       </div>
 
       {/* Title ABOVE the Reel */}
       <div className={`mx-auto ${campaign.id === 'urgent-medical-emergency' ? 'max-w-[1400px] px-2 pt-4 sm:px-4 pb-0' : 'max-w-7xl px-4 pt-6 sm:px-6'}`}>
-        <h1 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl lg:text-4xl">
+        <h1 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl lg:text-4xl text-center">
           {campaign.title}
         </h1>
       </div>
@@ -528,6 +527,19 @@ export default function CampaignPage() {
             <div className="px-1 sm:px-2">
               {hasVideo ? (
                 <div className="relative mx-auto w-full max-w-[450px] aspect-[3/4] bg-black rounded-[28px] overflow-hidden shadow-2xl border-4 border-slate-900">
+                  {/* Badges */}
+                  <div className="absolute top-0 left-0 right-0 flex justify-between items-start z-30">
+                    {campaign.verified && (
+                      <span className="bg-[#16836A] text-white font-extrabold text-[11px] px-4 py-2 rounded-br-xl shadow uppercase tracking-wider">
+                        VERIFIED
+                      </span>
+                    )}
+                    {campaign.urgency === 'Urgent' && (
+                      <span className="bg-[#DC2626] text-white font-extrabold text-[11px] px-4 py-2 rounded-bl-xl shadow uppercase tracking-wider">
+                        URGENT
+                      </span>
+                    )}
+                  </div>
                   <video
                     ref={videoRef}
                     src={campaign.videoUrl}
@@ -538,12 +550,8 @@ export default function CampaignPage() {
                     onClick={togglePlay}
                     className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute bottom-4 right-4 z-20 flex gap-2 items-center">
-                    {campaign.verified && (
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#16836A] text-white shadow-md">
-                        <ShieldCheck size={26} />
-                      </div>
-                    )}
+                  {/* Bottom Left controls */}
+                  <div className="absolute bottom-4 left-4 z-20 flex gap-2 items-center">
                     {campaign.id !== 'urgent-medical-emergency' && (
                       <>
                         <button onClick={togglePlay} className="flex h-9 w-9 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur-md hover:bg-black/75 transition" aria-label={isPlaying ? 'Pause' : 'Play'}>
@@ -555,29 +563,144 @@ export default function CampaignPage() {
                       </>
                     )}
                   </div>
+                  {/* Bottom Right Share button option */}
+                  <div className="absolute bottom-4 right-4 z-30 flex items-center">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShareOpen(!shareOpen);
+                      }}
+                      aria-label="Share campaign"
+                      title="Share campaign"
+                      className="rounded-full bg-white/90 shadow-lg p-2.5 transition hover:bg-white text-slate-700 active:scale-95"
+                    >
+                      <Share2 size={18} />
+                    </button>
+                    {shareOpen && (
+                      <div className="absolute right-0 bottom-14 z-40 w-48 bg-white border border-slate-200 rounded-xl shadow-2xl p-2.5 flex flex-col gap-1.5 animate-in fade-in slide-in-from-bottom-2 duration-150">
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-2 pb-1 border-b border-slate-100">
+                          Share to support
+                        </p>
+                        <button
+                          onClick={() => {
+                            const url = window.location.href;
+                            const title = campaign.title;
+                            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`, '_blank');
+                            setShareOpen(false);
+                          }}
+                          className="flex items-center gap-2 p-2 rounded-lg text-xs font-bold text-white bg-[#25D366] hover:bg-[#20ba59] transition-colors"
+                        >
+                          <FaWhatsapp size={14} />
+                          <span>WhatsApp</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            const url = window.location.href;
+                            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+                            setShareOpen(false);
+                          }}
+                          className="flex items-center gap-2 p-2 rounded-lg text-xs font-bold text-white bg-[#1877F2] hover:bg-[#1565d8] transition-colors"
+                        >
+                          <FaFacebook size={14} />
+                          <span>Facebook</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            const url = window.location.href;
+                            const title = campaign.title;
+                            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+                            setShareOpen(false);
+                          }}
+                          className="flex items-center gap-2 p-2 rounded-lg text-xs font-bold text-white bg-black hover:bg-slate-800 transition-colors"
+                        >
+                          <FaTwitter size={14} />
+                          <span>Twitter / X</span>
+                        </button>
+                      </div>
+                    )}
+                  </div>
                   <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
               ) : (
                 <div className="relative w-full max-w-full h-[324px] sm:h-[380px] overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
-                  {campaign.verified && (
-                    <div className="absolute bottom-4 right-4 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-[#16836A] text-white shadow-md">
-                      <ShieldCheck size={26} />
-                    </div>
-                  )}
+                  {/* Badges */}
+                  <div className="absolute top-0 left-0 right-0 flex justify-between items-start z-30">
+                    {campaign.verified && (
+                      <span className="bg-[#16836A] text-white font-extrabold text-[11px] px-4 py-2 rounded-br-xl shadow uppercase tracking-wider">
+                        VERIFIED
+                      </span>
+                    )}
+                    {campaign.urgency === 'Urgent' && (
+                      <span className="bg-[#DC2626] text-white font-extrabold text-[11px] px-4 py-2 rounded-bl-xl shadow uppercase tracking-wider">
+                        URGENT
+                      </span>
+                    )}
+                  </div>
                   <Image src={gallery[galleryIdx]} alt={campaign.title} fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 600px" />
                   {gallery.length > 1 && (
                     <>
                       <button onClick={() => setGalleryIdx((p) => (p - 1 + gallery.length) % gallery.length)} className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 shadow-md" aria-label="Previous image">
-                        <ChevronLeft size={22} className="text-slate-700" />
+                        <ChevronLeft size={22} className="text-black" />
                       </button>
                       <button onClick={() => setGalleryIdx((p) => (p + 1) % gallery.length)} className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 shadow-md" aria-label="Next image">
-                        <ChevronRight size={22} className="text-slate-700" />
+                        <ChevronRight size={22} className="text-black" />
                       </button>
                     </>
                   )}
-                  <div className="absolute left-4 top-4 flex gap-2 z-10">
-                    {campaign.badge && (
-                      <span className="rounded-md bg-[#16836A] px-3 py-1 text-xs font-bold text-white shadow">TAX BENEFITS ✓</span>
+                  {/* Bottom Right Share button option */}
+                  <div className="absolute bottom-4 right-4 z-30 flex items-center">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShareOpen(!shareOpen);
+                      }}
+                      aria-label="Share campaign"
+                      title="Share campaign"
+                      className="rounded-full bg-white/90 shadow-lg p-2.5 transition hover:bg-white text-slate-700 active:scale-95"
+                    >
+                      <Share2 size={18} />
+                    </button>
+                    {shareOpen && (
+                      <div className="absolute right-0 bottom-14 z-40 w-48 bg-white border border-slate-200 rounded-xl shadow-2xl p-2.5 flex flex-col gap-1.5 animate-in fade-in slide-in-from-bottom-2 duration-150">
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-2 pb-1 border-b border-slate-100">
+                          Share to support
+                        </p>
+                        <button
+                          onClick={() => {
+                            const url = window.location.href;
+                            const title = campaign.title;
+                            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`, '_blank');
+                            setShareOpen(false);
+                          }}
+                          className="flex items-center gap-2 p-2 rounded-lg text-xs font-bold text-white bg-[#25D366] hover:bg-[#20ba59] transition-colors"
+                        >
+                          <FaWhatsapp size={14} />
+                          <span>WhatsApp</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            const url = window.location.href;
+                            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+                            setShareOpen(false);
+                          }}
+                          className="flex items-center gap-2 p-2 rounded-lg text-xs font-bold text-white bg-[#1877F2] hover:bg-[#1565d8] transition-colors"
+                        >
+                          <FaFacebook size={14} />
+                          <span>Facebook</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            const url = window.location.href;
+                            const title = campaign.title;
+                            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+                            setShareOpen(false);
+                          }}
+                          className="flex items-center gap-2 p-2 rounded-lg text-xs font-bold text-white bg-black hover:bg-slate-800 transition-colors"
+                        >
+                          <FaTwitter size={14} />
+                          <span>Twitter / X</span>
+                        </button>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -585,22 +708,22 @@ export default function CampaignPage() {
             </div>
 
             {/* 2. Mobile progress + donate (hidden on desktop) */}
-            <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-xl sm:p-6 lg:hidden">
+            <div className="w-[92%] max-w-md mx-auto rounded-[24px] border border-slate-200 bg-white p-5 shadow-xl sm:p-6 lg:hidden">
               <div className="flex items-end justify-between mb-2">
                 <div>
                   <span className="text-xl font-black text-[#E87B35]">{fmt(campaign.raisedAmount)}</span>
-                  <span className="block text-xs text-slate-500">raised of {fmt(campaign.goalAmount)}</span>
+                  <span className="block text-xs font-bold text-slate-500 mt-0.5">raised of {fmt(campaign.goalAmount)}</span>
                 </div>
                 <span className="text-sm font-bold text-slate-700">{progress}%</span>
               </div>
               <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-200">
                 <div className="h-full rounded-full bg-[#E87B35] transition-all duration-500" style={{ width: `${progress}%` }} />
               </div>
-              <div className="mt-3 flex justify-between text-xs font-semibold text-slate-500">
+              <div className="mt-3 flex justify-between text-xs font-bold text-slate-500">
                 <span className="flex items-center gap-1"><Users size={14} /> {campaign.supporters} Supporters</span>
                 <span className="flex items-center gap-1"><Clock size={14} /> {campaign.daysLeft} Days Left</span>
               </div>
-              <button onClick={openDonation} className="mt-4 w-fit px-12 mx-auto flex flex-col items-center justify-center relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
+              <button onClick={openDonation} className="mt-4 w-fit px-12 mx-auto flex flex-col items-center justify-center relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:brightness-95 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
                 <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
                 DONATE NOW
                 <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>
@@ -622,9 +745,6 @@ export default function CampaignPage() {
               <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
                 <div className="mb-4 flex items-center justify-between gap-2">
                   <h3 className="text-sm font-bold uppercase tracking-wider text-slate-800">Latest Updates</h3>
-                  <span className="rounded-full bg-amber-50 px-3.5 py-1 text-xs font-bold text-amber-600 border border-amber-200">
-                    PENDING
-                  </span>
                 </div>
                 <div className="space-y-3">
                   {campaign.updates.map((u, i) => (
@@ -632,7 +752,7 @@ export default function CampaignPage() {
                       <div className="flex items-center justify-between text-xs text-slate-500">
                         <span className="font-semibold text-slate-500">{u.date}</span>
                         <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-200 uppercase tracking-wider">
-                          {u.author}
+                          {u.author.toUpperCase()}
                         </span>
                       </div>
                       <p className="mt-2 text-sm leading-6 text-slate-700">{u.content}</p>
@@ -783,7 +903,7 @@ export default function CampaignPage() {
                   <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-slate-300 text-[10px] text-slate-400">i</span>
                 </p>
 
-                <button onClick={openDonation} className="mt-4 w-fit px-10 mx-auto flex flex-col items-center justify-center relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
+                <button onClick={openDonation} className="mt-4 w-fit px-10 mx-auto flex flex-col items-center justify-center relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:brightness-95 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100">
                   <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
                   DONATE NOW
                   <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>

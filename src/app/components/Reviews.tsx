@@ -115,39 +115,39 @@ export default function Reviews() {
         <div className="w-full lg:w-[78%] relative flex items-center">
           <button
             onClick={prev}
-            className="absolute left-1 sm:-left-3 md:-left-5 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition z-10"
+            className="absolute left-0 sm:left-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
             aria-label="Previous review"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
           </button>
 
-          <div className="flex w-full gap-4 sm:gap-6 overflow-hidden items-stretch transition-all px-2">
+          <div className="flex w-full gap-4 sm:gap-6 overflow-hidden items-stretch transition-all px-10 sm:px-12">
             {reviews
               .slice(current, current + itemsPerPage)
               .map((review) => (
                 <div
                   key={review.id}
-                  className="flex-1 border rounded-lg bg-white shadow-sm p-3 sm:p-4 flex flex-col justify-between hover:shadow-md transition-all duration-300 min-w-0 min-h-[180px]"
+                  className="flex-1 border border-slate-100 rounded-2xl bg-white shadow-md p-5 sm:p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 min-w-0 min-h-[190px]"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                      <div className="flex items-center gap-3 min-w-0">
                         {review.avatar.startsWith("/") ? (
                           <img
                             src={review.avatar}
                             alt={review.name}
-                            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0"
+                            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shrink-0"
                           />
                         ) : (
-                          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-extrabold text-sm sm:text-base shrink-0">
                             {review.avatar}
                           </div>
                         )}
                         <div className="flex flex-col min-w-0">
-                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm truncate">
+                          <h3 className="font-extrabold text-slate-800 text-sm sm:text-base truncate">
                             {review.name}
                           </h3>
-                          <p className="text-[10px] sm:text-xs text-gray-500">
+                          <p className="text-xs text-slate-400 font-semibold">
                             {review.date}
                           </p>
                         </div>
@@ -155,11 +155,11 @@ export default function Reviews() {
                       <img
                         src="/images/owner.jpg"
                         alt="Owner"
-                        className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover shrink-0"
+                        className="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover shrink-0"
                       />
                     </div>
 
-                    <div className="flex gap-0.5 sm:gap-1 mt-2 sm:mt-3">
+                    <div className="flex gap-0.5 sm:gap-1 mt-3">
                       {Array(5)
                         .fill(0)
                         .map((_, i) => (
@@ -167,14 +167,14 @@ export default function Reviews() {
                             key={i}
                             className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${
                               i < review.rating
-                                ? "text-yellow-400 fill-yellow-400"
-                                : "text-gray-300"
+                                    ? "text-yellow-400 fill-yellow-400"
+                                    : "text-gray-300"
                             }`}
                           />
                         ))}
                     </div>
 
-                    <p className="mt-2 sm:mt-3 text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-4">
+                    <p className="mt-3 text-slate-600 text-[13px] sm:text-[14px] leading-relaxed font-medium line-clamp-4">
                       {review.text}
                     </p>
                   </div>
@@ -184,10 +184,10 @@ export default function Reviews() {
 
           <button
             onClick={next}
-            className="absolute right-2 sm:-right-3 md:-right-6 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition z-10"
+            className="absolute right-0 sm:right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
             aria-label="Next review"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
           </button>
         </div>
       </div>

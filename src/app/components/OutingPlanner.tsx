@@ -41,16 +41,11 @@ export default function OutingPlanner() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-4 md:py-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
         
         {/* Left Side: Copywriting Content */}
-        <div className="lg:col-span-6 text-white space-y-2">
-          <div className="space-y-3">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight uppercase drop-shadow-md">
-              Let's discuss your
-            </h2>
-            <div className="inline-block bg-white px-5 py-2.5 rounded-xl shadow-lg border border-purple-100">
-              <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-purple-700 uppercase tracking-wide">
-                Weekend Social Plan
-              </span>
-            </div>
+        <div className="lg:col-span-6 text-white flex flex-col items-center lg:items-start justify-center">
+          <div className="inline-block bg-white px-5 py-2.5 rounded-xl shadow-lg border border-purple-100">
+            <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-purple-700 uppercase tracking-wide">
+              Weekend Social Work
+            </span>
           </div>
         </div>
 
@@ -90,7 +85,7 @@ export default function OutingPlanner() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell us what's in your mind for outing"
+                placeholder="Tell us your weekend social work plan"
                 required
                 rows={4}
                 className="w-full bg-transparent border-2 border-white/60 rounded-xl px-4 py-3 text-white placeholder-white/80 focus:border-white focus:outline-none transition-colors duration-200 font-bold text-sm resize-none"
@@ -98,13 +93,18 @@ export default function OutingPlanner() {
             </div>
 
             {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={submitted}
-              className="w-full bg-gradient-to-r from-[#f97316] to-[#ec4899] hover:from-[#ea580c] hover:to-[#db2777] text-white font-extrabold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 tracking-wider uppercase text-sm"
-            >
-              {submitted ? 'Submitted Successfully' : 'Submit'}
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                disabled={submitted}
+                className="w-1/2 text-white font-bold py-2.5 rounded-md transition-transform hover:scale-105"
+                style={{
+                  background: 'linear-gradient(to right, #f97316, #ec4899)',
+                }}
+              >
+                {submitted ? 'Submitted Successfully' : 'Submit'}
+              </button>
+            </div>
             
           </form>
         </div>

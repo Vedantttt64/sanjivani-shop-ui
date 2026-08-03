@@ -59,7 +59,7 @@ export default function DonationPopup({ isOpen, onClose, onDonate }: DonationPop
                 className={`absolute z-10 h-8 w-8 rounded-full bg-white shadow-md transition-all duration-200 ${donationTab === 'once' ? 'translate-x-[100px]' : 'translate-x-0'}`}
               />
               {/* Text */}
-              <span className="w-full text-center text-sm font-black text-white relative z-0">
+              <span className="w-full text-center text-[15px] font-bold text-white relative z-0 uppercase tracking-wider">
                 {donationTab === 'monthly' ? 'Monthly' : 'Once'}
               </span>
             </div>

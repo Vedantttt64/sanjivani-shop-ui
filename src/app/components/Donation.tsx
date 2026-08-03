@@ -28,11 +28,18 @@ export default function DonationPage() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const amount = scrollRef.current.offsetWidth;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -amount : amount,
-        behavior: 'smooth',
-      });
+      const container = scrollRef.current;
+      const firstChild = container.firstElementChild as HTMLElement;
+      if (firstChild) {
+        const cardWidth = firstChild.getBoundingClientRect().width;
+        const style = window.getComputedStyle(container);
+        const gap = parseFloat(style.columnGap || style.gap || '0') || 24;
+        const scrollAmount = cardWidth + gap;
+        container.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
@@ -65,12 +72,12 @@ export default function DonationPage() {
             title="Scroll campaigns left"
             className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={24} className="text-black" />
           </button>
 
           <div
             ref={scrollRef}
-            className="flex gap-6 px-8 scroll-smooth overflow-x-auto scrollbar-hide"
+            className="flex gap-6 px-8 scroll-smooth overflow-x-auto scrollbar-hide snap-x snap-mandatory"
           >
             {campaigns.map((item) => {
               // NGO_APP style campaign card for all campaigns
@@ -78,7 +85,7 @@ export default function DonationPage() {
               return (
                 <div
                   key={item.id}
-                  className="relative h-[400px] w-[300px] flex-shrink-0 overflow-hidden rounded-2xl shadow-lg cursor-pointer group"
+                  className="relative h-[400px] w-[300px] flex-shrink-0 overflow-hidden rounded-2xl shadow-lg cursor-pointer group snap-start"
                   onClick={() => router.push(`/donation/${item.id}`)}
                 >
                   {/* Image */}
@@ -123,21 +130,21 @@ export default function DonationPage() {
                       }}
                       aria-label="Share campaign"
                       title="Share campaign"
-                      className="absolute right-4 top-4 z-10 rounded-full bg-white/20 p-2 backdrop-blur-md transition hover:bg-white/30"
+                      className="absolute right-4 top-[62px] z-10 rounded-full bg-white/70 backdrop-blur-sm shadow-sm p-2 transition hover:bg-white/90"
                     >
-                      <Share2 size={18} className="text-white" />
+                      <Share2 size={18} className="text-slate-700" />
                     </button>
 
                     {/* Content overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/90 to-transparent">
-                      <p className="text-xs text-gray-300 mb-1">{item.daysLeft} days left</p>
+                      <p className="text-xs font-semibold text-white mb-1">{item.daysLeft} days left</p>
                       <h3 className="text-base font-bold text-white mb-3 leading-tight line-clamp-2">{item.title}</h3>
 
                       {/* Progress */}
                       <div className="mb-3">
                         <div className="flex justify-between text-xs mb-1">
                           <span className="font-semibold text-white">₹{(item.raised / 1000).toFixed(0)}K Raised</span>
-                          <span className="text-gray-300">Goal: ₹{(item.goal / 1000).toFixed(0)}K</span>
+                          <span className="font-semibold text-white">Goal: ₹{(item.goal / 1000).toFixed(0)}K</span>
                         </div>
                         <progress
                           className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-700 [&::-webkit-progress-value]:bg-[#E87B35] [&::-moz-progress-bar]:bg-[#E87B35]"
@@ -172,7 +179,7 @@ export default function DonationPage() {
             title="Scroll campaigns right"
             className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={24} className="text-black" />
           </button>
         </div>
       </div>

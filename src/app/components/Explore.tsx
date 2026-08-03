@@ -3,11 +3,8 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-   
 
 const countries = [
-
-  
   { name: 'Sangli', image: '/images/Explore/Sangli.png' },
   { name: 'Satara', image: '/images/Explore/Satara.png' },
   { name: 'Solapur', image: '/images/Explore/Solapur.png' },
@@ -20,7 +17,7 @@ const countries = [
   { name: 'Latur', image: '/images/Explore/Latur.png' },
   { name: 'Dharashiv', image: '/images/Explore/Dharashiv.png' },
   { name: 'Parbhani', image: '/images/Explore/Parbhani.png' },
-   { name: 'Nanded', image: '/images/Explore/Nanded.png' },
+  { name: 'Nanded', image: '/images/Explore/Nanded.png' },
   { name: 'Beed', image: '/images/Explore/Beed.png' },
   { name: 'Jalna', image: '/images/Explore/Jalna.png' },
   { name: 'Chhatrapati Sambhaji Nagar', image: '/images/Explore/Sambhaji-Nagar.png' },
@@ -48,10 +45,18 @@ const Explore = () => {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -300 : 300,
-        behavior: 'smooth',
-      });
+      const container = scrollRef.current;
+      const firstChild = container.firstElementChild as HTMLElement;
+      if (firstChild) {
+        const cardWidth = firstChild.getBoundingClientRect().width;
+        const style = window.getComputedStyle(container);
+        const gap = parseFloat(style.columnGap || style.gap || '0') || 16;
+        const scrollAmount = cardWidth + gap;
+        container.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
@@ -66,17 +71,17 @@ const Explore = () => {
           onClick={() => scroll('left')}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
         >
-          <ChevronLeft />
+          <ChevronLeft className="text-black" />
         </button>
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto px-10 scrollbar-hide scroll-smooth"
+          className="flex gap-4 overflow-x-auto px-10 scrollbar-hide scroll-smooth snap-x snap-mandatory"
         >
           {countries.map(({ name, image }) => (
             <div
               key={name}
-              className="min-w-[210px] max-w-[180px] h-57 rounded-2xl overflow-hidden shadow-md bg-white"
+              className="min-w-[210px] max-w-[180px] h-57 rounded-2xl overflow-hidden shadow-md bg-white snap-start"
             >
               <Image
                 src={image}
@@ -85,7 +90,6 @@ const Explore = () => {
                 height={300}
                 className="w-full h-full object-cover"
               />
-              {/* <div className="text-center mt-2 font-semibold text-indigo-900">{name}</div> */}
             </div>
           ))}
         </div>
@@ -94,7 +98,7 @@ const Explore = () => {
           onClick={() => scroll('right')}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
         >
-          <ChevronRight />
+          <ChevronRight className="text-black" />
         </button>
       </div>
     </section>

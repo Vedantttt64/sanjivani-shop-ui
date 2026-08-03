@@ -22,7 +22,7 @@ const labelMapping: Record<string, LabelConfig> = {
   'pb': { x: 151, y: 152, labelX: 85, labelY: 140, hasCallout: true },
   'ut': { x: 232, y: 175, labelX: 95, labelY: 180, hasCallout: true },
   'hr': { x: 164, y: 195, labelX: 85, labelY: 220, hasCallout: true },
-  'dl': { x: 186, y: 210, labelX: 260, labelY: 190, hasCallout: true }, // Delhi
+  'dl': { x: 186, y: 210, labelX: 260, labelY: 185, hasCallout: true }, // Delhi
   'ch': { x: 179, y: 160, labelX: 85, labelY: 260, hasCallout: true }, // Chandigarh
 
   // Western States
@@ -30,15 +30,15 @@ const labelMapping: Record<string, LabelConfig> = {
   'gj': { x: 66, y: 355, labelX: 45, labelY: 370, hasCallout: true },
   'mh': { x: 180, y: 435, labelX: 110, labelY: 420, hasCallout: true },
   'ga': { x: 122, y: 512, labelX: 62, labelY: 512, hasCallout: true }, // Goa
-  'dd': { x: 54, y: 391, labelX: 14, labelY: 391, hasCallout: true },  // Daman & Diu
-  'dn': { x: 102, y: 405, labelX: 42, labelY: 405, hasCallout: true },  // Dadra & Nagar Haveli
+  'dd': { x: 54, y: 391, labelX: 14, labelY: 380, hasCallout: true },  // Daman & Diu
+  'dn': { x: 102, y: 405, labelX: 42, labelY: 408, hasCallout: true },  // Dadra & Nagar Haveli
 
   // Central States
   'mp': { x: 214, y: 319, labelX: 110, labelY: 340, hasCallout: true },
   'ct': { x: 296, y: 388, labelX: 390, labelY: 380, hasCallout: true },
 
   // Eastern States
-  'up': { x: 265, y: 245, labelX: 330, labelY: 215, hasCallout: true },
+  'up': { x: 265, y: 245, labelX: 330, labelY: 225, hasCallout: true },
   'br': { x: 369, y: 275, labelX: 450, labelY: 250, hasCallout: true },
   'jh': { x: 366, y: 327, labelX: 460, labelY: 290, hasCallout: true },
   'wb': { x: 412, y: 310, labelX: 480, labelY: 330, hasCallout: true },
@@ -49,10 +49,10 @@ const labelMapping: Record<string, LabelConfig> = {
   'tg': { x: 237, y: 457, labelX: 110, labelY: 470, hasCallout: true },
   'ap': { x: 263, y: 500, labelX: 115, labelY: 530, hasCallout: true },
   'ka': { x: 171, y: 519, labelX: 95, labelY: 580, hasCallout: true },
-  'kl': { x: 166, y: 615, labelX: 80, labelY: 630, hasCallout: true },
+  'kl': { x: 166, y: 615, labelX: 80, labelY: 640, hasCallout: true },
   'tn': { x: 211, y: 609, labelX: 115, labelY: 660, hasCallout: true },
   'py': { x: 268, y: 546, labelX: 328, labelY: 546, hasCallout: true }, // Puducherry
-  'ld': { x: 99, y: 627, labelX: 39, labelY: 627, hasCallout: true },  // Lakshadweep
+  'ld': { x: 99, y: 627, labelX: 39, labelY: 615, hasCallout: true },  // Lakshadweep
   'an': { x: 521, y: 609, labelX: 461, labelY: 609, hasCallout: true },  // Andaman & Nicobar
 
   // Northeastern States
@@ -190,7 +190,7 @@ export default function MapLandingPage() {
           {/* SVG Map Canvas */}
           <svg
             viewBox="-180 -50 972 820"
-            className="w-full h-full scale-[1.18] sm:scale-100 origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out"
+            className="w-full h-full scale-[1.18] sm:scale-[1.08] origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out"
             xmlns="http://www.w3.org/2000/svg"
           >
             {/* Map Paths — base layer (all states) */}
@@ -302,7 +302,7 @@ export default function MapLandingPage() {
                     y={labelY + 4}
                     textAnchor={textAnchor}
                     style={{
-                      fontSize: isHovered ? '14px' : '12px',
+                      fontSize: '12px',
                       fontWeight: 900,
                       fill: isHovered ? '#1e3a8a' : '#1e293b',
                       letterSpacing: '0.08em',

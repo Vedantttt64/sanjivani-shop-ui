@@ -108,7 +108,7 @@ const FaqSection = () => {
   return (
     <section className="bg-[#f2f1f9] pt-0 pb-2 px-5 md:px-10">
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-indigo-800 mb-6">
-        Frequently Asked Questions (FAQ’s)
+        Frequently Asked Questions
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-3">
