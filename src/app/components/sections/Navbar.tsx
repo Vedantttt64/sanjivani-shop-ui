@@ -104,8 +104,8 @@ export default function Navbar() {
               <Image
                 src="/images/sanjivani-logo.png"
                 alt="sanjivani-logo"
-                width={90}
-                height={70}
+                width={105}
+                height={80}
                 className="object-contain"
               />
             </div>
@@ -160,14 +160,14 @@ export default function Navbar() {
           <Image
             src="/images/sanjivani-logo.png"
             alt="sanjivani-logo"
-            width={110}
-            height={75}
+            width={130}
+            height={90}
             className="object-contain cursor-pointer"
             onClick={redirectToStartPage}
           />
           <button
             onClick={() => setMenuOpen(false)}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-red-500 hover:text-white active:bg-red-600 active:text-white transition"
+            className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-600 active:bg-red-700 transition"
             aria-label="Close menu"
           >
             <X size={18} />
@@ -175,7 +175,7 @@ export default function Navbar() {
         </div>
 
         {/* Nav list */}
-        <nav className="flex-1 overflow-y-auto py-1.5 px-2 space-y-0.5">
+        <nav className="flex-1 overflow-y-auto py-2 px-2 space-y-0.5">
           {navItems.map((item, i) => (
             <button
               key={i}
@@ -193,7 +193,7 @@ export default function Navbar() {
                   }
                 }
               }}
-              className="flex w-full items-center gap-3 px-4 py-2 rounded-xl text-left text-xs font-extrabold uppercase tracking-wider text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+              className="flex w-full items-center gap-3 px-4 py-1.5 rounded-xl text-left text-xs font-extrabold uppercase tracking-wider text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
             >
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-500 transition-colors">
                 {getIcon(item.title)}
