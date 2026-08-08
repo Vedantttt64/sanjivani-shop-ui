@@ -82,11 +82,9 @@ export default function Login() {
     };
 
     return (
-        <div className='bg-[#eeeeee] h-screen flex justify-center overflow-auto'>
-            <div className="w-[50%] lg:w-[75%] bg-[url('/images/login-bg.png')] bg-cover bg-center bg-no-repeat" >
-            </div>
-            <div className='h-full w-[50%] lg:w-[25%] px-3 lg:px-4 flex flex-col items-center justify-center'>
-                <form className='w-9/10 px-5 py-3 shadow-lg hover:shadow-2xl rounded-2xl bg-white flex flex-col items-center justify-center transition-shadow duration-150'>
+        <div className='bg-[#eeeeee] min-h-screen flex items-center justify-center p-4 overflow-auto'>
+            <div className='w-full max-w-sm flex flex-col items-center justify-center'>
+                <form className='w-full px-6 py-8 shadow-xl hover:shadow-2xl rounded-2xl bg-white flex flex-col items-center justify-center transition-shadow duration-150'>
                     <div className='text-center mb-1 flex flex-col justify-center items-center'>
                         <Link className='justify-center flex' href="/">
                             <img src="images/sanjivani-logo.png" className='w-[70%] h-auto' alt="Sanjivani Logo" />
@@ -96,8 +94,8 @@ export default function Login() {
 
                     {formType === "login" && (
                         <>
-                            <FormInput label="" icon='phone' type="tel" placeholder='Enter Mobile Number' value={authData.mobileNumber} onChange={(value) => handleDataChange('mobileNumber', value)} />
-                            <FormInput label="" icon='password' type="password" placeholder='Enter Password' value={authData.password} onChange={(value) => handleDataChange('password', value)} />
+                            <FormInput label="" icon='phone' type="tel" placeholder='Enter Mobile Number' inputStyle="placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-500" value={authData.mobileNumber} onChange={(value) => handleDataChange('mobileNumber', value)} />
+                            <FormInput label="" icon='password' type="password" placeholder='Enter Password' inputStyle="placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-500" value={authData.password} onChange={(value) => handleDataChange('password', value)} />
                         </>
                     )}
 
@@ -129,7 +127,7 @@ export default function Login() {
                     <div className='text-center w-full mt-3 flex justify-evenly'>
                         {formType === "login" ? (
                             <>
-                                <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("vendorRegister")}>volunteer</button>
+                                <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("volunteer")}>volunteer</button>
                                 <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("corporateRegister")}>Corporate Register ?</button>
                             </>
                         ) : (
