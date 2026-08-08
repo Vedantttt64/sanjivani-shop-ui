@@ -47,7 +47,7 @@ export const campaigns: Campaign[] = [
     id: 'urgent-medical-emergency',
     title: 'Help Pooja Fight Cancer',
     image: '/images/medicalhelp.png',
-    videoUrl: 'https://youtu.be/uFaGBQ4fS8E?si=P8MdzaNmgP0OesGN',
+    videoUrl: 'https://www.youtube.com/watch?v=uBiDSCmzXT8',
     gallery: ['/images/medicalhelp.png', '/images/patient.png', '/images/commandhospital.png'],
     category: 'Medical',
     badge: 'Tax Benefit',
