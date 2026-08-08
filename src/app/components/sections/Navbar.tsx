@@ -151,7 +151,7 @@ export default function Navbar() {
 
       {/* ── Mobile slide-in drawer ── */}
       <div
-        className={`fixed top-0 left-0 h-full w-[72vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
+        className={`fixed top-0 left-0 h-fit max-h-[95vh] rounded-br-3xl w-[72vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -160,8 +160,8 @@ export default function Navbar() {
           <Image
             src="/images/sanjivani-logo.png"
             alt="sanjivani-logo"
-            width={130}
-            height={90}
+            width={150}
+            height={100}
             className="object-contain cursor-pointer"
             onClick={redirectToStartPage}
           />
@@ -175,7 +175,7 @@ export default function Navbar() {
         </div>
 
         {/* Nav list */}
-        <nav className="flex-1 overflow-y-auto py-2 px-2 space-y-0.5">
+        <nav className="flex-1 overflow-y-auto py-2 px-2 pb-4 space-y-0.5">
           {navItems.map((item, i) => (
             <button
               key={i}

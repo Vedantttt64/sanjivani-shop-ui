@@ -23,9 +23,7 @@ export default function Testimonial() {
           gap-4 sm:gap-8 group overflow-hidden"
         >
           <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ repeat: Infinity, duration: 3 }}
-            className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-xl overflow-hidden flex-shrink-0"
+            className="relative w-full h-60 sm:w-64 sm:h-64 rounded-xl overflow-hidden flex-shrink-0"
           >
             <Image
               src="/images/rahul1.png"
@@ -35,17 +33,8 @@ export default function Testimonial() {
             />
           </motion.div>
 
-          <div className="relative text-center sm:text-left flex-1">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1.1 }}
-              transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-              className="absolute top-0 left-2 sm:left-0 text-orange-400"
-            >
-              <Quote className="w-6 h-6 sm:w-8 sm:h-8 opacity-70" />
-            </motion.div>
-
-            <div className="mt-8 sm:mt-0 sm:ml-10">
+          <div className="relative text-center sm:text-left flex-1 w-full">
+            <div className="mt-2 sm:mt-0 sm:ml-10">
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                 Rahul
               </h3>

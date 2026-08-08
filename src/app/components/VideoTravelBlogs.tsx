@@ -39,7 +39,7 @@ const VideoTravelBlogs = () => {
         Join Social Work Enthusiast Team
       </h2>
 
-      <div className="relative px-4">
+      <div className="relative px-12">
         <button
           onClick={() => scroll('left')}
           className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
@@ -50,19 +50,19 @@ const VideoTravelBlogs = () => {
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto px-4 scrollbar-hide scroll-smooth justify-start xl:justify-center snap-x snap-mandatory scroll-pl-4 scroll-pr-4"
+          className="flex gap-4 overflow-x-auto px-0 scrollbar-hide scroll-smooth justify-start xl:justify-center snap-x snap-mandatory scroll-pl-0 scroll-pr-0"
         >
           {countries.map(({ name, image }) => (
             <div
               key={name}
-              className="w-[calc(100vw-32px)] sm:w-[210px] sm:min-w-[210px] flex-shrink-0 h-57 rounded-2xl overflow-hidden shadow-md bg-white pb-3 snap-center"
+              className="w-full sm:w-[210px] sm:min-w-[210px] flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-white pb-3 snap-center"
             >
               <Image
                 src={image}
                 alt={name}
                 width={300}
                 height={300}
-                className="w-full h-48 object-cover"
+                className="w-full aspect-square object-cover"
               />
               <div className="text-center mt-2 font-semibold text-indigo-900">{name}</div>
             </div>

@@ -223,7 +223,7 @@ export default function OurJourney() {
     <section className="relative w-full bg-[#f2f1f9] text-black font-sans overflow-hidden pt-0 pb-0 md:pt-0 md:pb-0">
       <div className="absolute inset-0 opacity-5 bg-[url('/images/bg1.jpg')] bg-cover bg-center" />
 
-      <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 pt-0 pb-4 md:pt-0 md:pb-4 gap-10 md:gap-16">
+      <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 pt-0 pb-4 md:pt-0 md:pb-4 gap-4 sm:gap-6 md:gap-16">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -231,7 +231,7 @@ export default function OurJourney() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 80 }}
             transition={{ duration: 0.6 }}
-            className="w-full md:w-1/2 max-w-2xl space-y-4 sm:space-y-6 text-center md:text-left"
+            className="w-full md:w-1/2 max-w-2xl space-y-2 sm:space-y-6 text-center md:text-left"
           >
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
               {current.title}

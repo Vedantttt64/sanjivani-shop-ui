@@ -101,10 +101,10 @@ export default function Reviews() {
           />
         </div>
 
-        <div className="w-full lg:w-[78%] relative flex items-center">
+        <div className="w-full lg:w-[78%] relative flex items-center px-12">
           <button
             onClick={() => scroll('left')}
-            className="absolute left-2 sm:left-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
+            className="absolute left-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
             aria-label="Previous review"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
@@ -112,12 +112,12 @@ export default function Reviews() {
 
           <div
             ref={scrollRef}
-            className="flex w-full gap-4 sm:gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory px-12 sm:px-16 scroll-pl-12 sm:scroll-pl-16 scroll-pr-12 sm:scroll-pr-16 items-stretch"
+            className="flex w-full gap-4 sm:gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory px-0 scroll-pl-0 scroll-pr-0 items-stretch"
           >
             {reviews.map((review) => (
               <div
                 key={review.id}
-                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 border border-slate-100 rounded-2xl bg-white shadow-md p-5 sm:p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 snap-start min-w-[280px] min-h-[190px]"
+                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 border border-slate-100 rounded-2xl overflow-hidden bg-white shadow-md p-5 sm:p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 snap-center min-w-0 min-h-[190px]"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2">
@@ -174,7 +174,7 @@ export default function Reviews() {
 
           <button
             onClick={() => scroll('right')}
-            className="absolute right-2 sm:right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
+            className="absolute right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
             aria-label="Next review"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
