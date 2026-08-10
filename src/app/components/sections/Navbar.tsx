@@ -151,7 +151,7 @@ export default function Navbar() {
 
       {/* ── Mobile slide-in drawer ── */}
       <div
-        className={`fixed top-0 left-0 h-fit max-h-[95vh] rounded-br-3xl w-[72vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
+        className={`fixed top-0 left-0 h-fit max-h-[90vh] max-h-[90dvh] overflow-y-auto rounded-br-3xl w-[72vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

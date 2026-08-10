@@ -120,8 +120,8 @@ export default function Login() {
                         </>
                     )}
 
-                    <button type="button" onClick={handleClose} className='mt-5 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300 cursor-pointer'>
-                        {formType === 'login' ? 'login' : "register"}
+                    <button type="button" onClick={handleClose} className='mt-5 w-1/2 bg-blue-600 text-white py-2.5 rounded-md font-bold uppercase tracking-wide hover:bg-blue-700 transition duration-300 ease-in-out cursor-pointer hover:scale-105'>
+                        {formType === 'login' ? 'LOGIN' : "REGISTER"}
                     </button>
 
                     <div className='text-center w-full mt-3 flex justify-evenly'>
