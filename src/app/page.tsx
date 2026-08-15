@@ -35,7 +35,7 @@ function MainHomePage() {
   return (
     <div className="relative z-10 pt-11 overflow-x-hidden bg-[#f2f1f9]">
       <Appbar />
-      <div className="w-full aspect-[375/215] sm:aspect-[1280/585] max-h-[585px] bg-[#f2f1f9] relative overflow-hidden">
+      <div className="w-full aspect-[1280/719] bg-[#f2f1f9] relative overflow-hidden">
         <iframe
           src="/ngo-banner-next/assets/menu-below-slider.html"
           title="NGO Banner Next"

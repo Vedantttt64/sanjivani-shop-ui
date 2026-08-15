@@ -147,6 +147,80 @@ $(function() {
 });		
 
 </script>	
+<style type="text/css">
+  /* Override LayerSlider Carousel Indicators to compact circular white dots */
+  .ls-bottom-nav-wrapper {
+    position: absolute !important;
+    bottom: 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: fit-content !important;
+    max-width: 90% !important;
+    height: auto !important;
+    z-index: 1000 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .ls-bottom-slidebuttons {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    height: auto !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .ls-bottom-slidebuttons a {
+    display: inline-block !important;
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    max-width: 8px !important;
+    min-height: 8px !important;
+    max-height: 8px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    background-image: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex: 0 0 8px !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    text-indent: -9999px !important;
+    overflow: hidden !important;
+  }
+
+  .ls-bottom-slidebuttons a.ls-nav-active,
+  .ls-bottom-slidebuttons a:hover {
+    width: 10px !important;
+    height: 10px !important;
+    min-width: 10px !important;
+    max-width: 10px !important;
+    min-height: 10px !important;
+    max-height: 10px !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    background-image: none !important;
+    flex: 0 0 10px !important;
+    opacity: 1 !important;
+  }
+</style>
 </head>
 <body style="background: #f2f1f9; margin: 0; padding: 0;">
 <div class="theme-layout">
@@ -155,7 +229,7 @@ $(function() {
 <header class="below">
 	
 </header><!--header-->	
-	<div id="layerslider" style="width: 100%; height: 582px; margin: 0px auto; padding:0; ">
+	<div id="layerslider" style="width: 100%; height: 719px; margin: 0px auto; padding:0; ">
 	
 		<!-- Slide 1 (Left Padding - Copy of Slide 4) -->
 		<div class="ls-slide" data-ls="transition3d:75;timeshift:-1000;">			
