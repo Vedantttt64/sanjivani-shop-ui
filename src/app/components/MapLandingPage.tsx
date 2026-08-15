@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Info } from 'lucide-react';
 import { indiaMapData } from '../data/indiaMapData';
 
@@ -166,32 +167,56 @@ export default function MapLandingPage() {
   };
 
   return (
-    <div className="min-h-screen w-screen bg-[#f1f5f9] text-slate-800 flex flex-col overflow-y-auto relative">
+    <div className="h-screen min-h-screen w-screen bg-[#f1f5f9] text-slate-800 flex flex-col overflow-hidden relative">
       
       {/* Subtle light background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 pointer-events-none" />
 
+      {/* Responsive Style for Mobile State Labels — MOBILE ONLY, matches Tailwind's sm: (640px) breakpoint used below */}
+      <style>{`
+        .map-state-label-text {
+          font-size: 12px;
+        }
+        @media (max-width: 639px) {
+          .map-state-label-group {
+            display: none !important;
+          }
+        }
+      `}</style>
+
       {/* Main Map Presentation */}
-      <main className="flex-1 relative z-10 flex flex-col items-center justify-center px-4 py-2 md:px-8">
+      <main className="flex-1 relative z-10 flex flex-col items-center justify-start sm:justify-center px-3 py-2 sm:py-2 md:px-8 h-full max-h-screen overflow-hidden">
         
+        {/* Mobile-only SANJIVANI Logo — hidden at md (768px) and above, so tablet/laptop/desktop are untouched */}
+        <div className="flex md:hidden flex-col items-center pt-15 sm:pt-2 pb-2 sm:pb-1 shrink-0">
+          <Image
+            src="/images/sanjivani-logo.png"
+            alt="SANJIVANI Logo"
+            width={270}
+            height={150}
+            priority
+            className="object-contain h-35 w-auto drop-shadow-sm"
+          />
+        </div>
+
         {/* Select Region Badge */}
-        <div className="text-center mb-2 flex flex-col items-center">
+        <div className="text-center mt-6 sm:mt-0 mb-0 sm:mb-2 flex flex-col items-center shrink-0">
           {/* Dynamic Map Selection Hint Badge */}
-          <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 text-xs shadow-md transition-all duration-200">
+          <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3.5 py-1.5 text-[11px] sm:text-xs shadow-md transition-all duration-200 max-w-[92vw]">
             <Info className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span className="font-extrabold text-slate-700 uppercase tracking-wider">
+            <span className="font-extrabold text-slate-700 uppercase tracking-wider truncate">
               {hoveredLocation ? `${officialNames[hoveredLocation.id] || hoveredLocation.name} (Capital: ${hoveredLocation.capital})` : 'Select Region: Hover or Tap State'}
             </span>
           </div>
         </div>
 
-        <div className="w-[98vw] max-w-[98vw] md:w-auto md:max-w-none h-[70vh] sm:h-[95vh] min-h-0 sm:min-h-[750px] max-h-[70vh] sm:max-h-[95vh] md:max-h-[calc(100vh-100px)] aspect-[972/820] flex items-center justify-center relative overflow-hidden group">
+        <div className="w-[98vw] max-w-[98vw] md:w-auto md:max-w-none flex-1 min-h-0 sm:h-[95vh] sm:min-h-[750px] max-h-[calc(100vh-310px)] sm:max-h-[95vh] md:max-h-[calc(100vh-100px)] aspect-[972/820] flex items-center justify-center relative overflow-visible group mt-0 md:my-auto">
 
           {/* SVG Map Canvas */}
           <svg
             viewBox="-180 -50 972 820"
-            className="w-full h-full scale-[1.18] sm:scale-[1.08] origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out"
-            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full scale-[1.50] sm:scale-[1.50] origin-center -translate-y-4 sm:translate-y-0 drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out"
+            xmlns="http://www.w3.org/2000/svg" 
           >
             {/* Map Paths — base layer (all states) */}
             {indiaMapData.locations.map((loc) => {
@@ -256,7 +281,7 @@ export default function MapLandingPage() {
               );
             })()}
 
-            {/* Labels — always visible, with hover emphasis using callout style for all states */}
+            {/* Labels — desktop/tablet only; hidden on mobile via .map-state-label-group in the <style> block above */}
             {indiaMapData.locations.map((loc) => {
               const cfg = labelMapping[loc.id];
               if (!cfg) return null;
@@ -272,7 +297,7 @@ export default function MapLandingPage() {
               return (
                 <g
                   key={`callout-${loc.id}`}
-                  className="cursor-pointer"
+                  className="cursor-pointer map-state-label-group"
                   onMouseEnter={() => setHoveredLocation(loc)}
                   onMouseLeave={() => setHoveredLocation(null)}
                   onClick={() => handleStateClick(loc.name)}
@@ -301,8 +326,8 @@ export default function MapLandingPage() {
                     x={isLeft ? labelX - 6 : labelX + 6}
                     y={labelY + 4}
                     textAnchor={textAnchor}
+                    className="map-state-label-text"
                     style={{
-                      fontSize: '12px',
                       fontWeight: 900,
                       fill: isHovered ? '#1e3a8a' : '#1e293b',
                       letterSpacing: '0.08em',
