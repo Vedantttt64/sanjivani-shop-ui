@@ -63,7 +63,7 @@ export default function Navbar() {
     { title: 'Air' },
     { title: 'Water' },
     { title: 'Food' },
-    { title: 'Cloths' },
+    { title: 'Clothes' },
     { title: 'Shelter' },
     { title: 'Solar' },
     { title: 'Education' },
@@ -76,19 +76,19 @@ export default function Navbar() {
   // Helper to map navigation titles to matching icons
   const getIcon = (title: string) => {
     const t = title.toLowerCase();
-    if (t === 'home') return <FaPersonMilitaryRifle size={18} />;
-    if (t === 'district') return <MdBabyChangingStation size={18} />;
-    if (t === 'air') return <FaPlaneUp size={18} />;
-    if (t === 'water') return <GiShipBow size={18} />;
-    if (t === 'food') return <PiPlantLight size={18} />;
-    if (t === 'cloths') return <GiBroom size={18} />;
-    if (t === 'shelter') return <PiStudentBold size={18} />;
-    if (t === 'solar') return <MdOutlineSolarPower size={18} />;
-    if (t === 'education') return <GiTeacher size={18} />;
-    if (t === 'work') return <FaLaptopCode size={18} />;
-    if (t === 'medical') return <FaBriefcaseMedical size={18} />;
-    if (t === 'legal') return <GoLaw size={18} />;
-    if (t === 'login') return <FiPower size={18} />;
+    if (t === 'home') return <FaPersonMilitaryRifle size={20} />;
+    if (t === 'district') return <MdBabyChangingStation size={20} />;
+    if (t === 'air') return <FaPlaneUp size={20} />;
+    if (t === 'water') return <GiShipBow size={20} />;
+    if (t === 'food') return <PiPlantLight size={20} />;
+    if (t === 'clothes') return <GiBroom size={20} />;
+    if (t === 'shelter') return <PiStudentBold size={20} />;
+    if (t === 'solar') return <MdOutlineSolarPower size={20} />;
+    if (t === 'education') return <GiTeacher size={20} />;
+    if (t === 'work') return <FaLaptopCode size={20} />;
+    if (t === 'medical') return <FaBriefcaseMedical size={20} />;
+    if (t === 'legal') return <GoLaw size={20} />;
+    if (t === 'login') return <FiPower size={20} />;
     return null;
   };
 
@@ -151,7 +151,7 @@ export default function Navbar() {
 
       {/* ── Mobile slide-in drawer ── */}
       <div
-        className={`fixed top-0 left-0 h-fit max-h-[90vh] max-h-[90dvh] overflow-y-auto rounded-br-3xl w-[72vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
+        className={`fixed top-0 left-0 h-fit max-h-[90vh] max-h-[90dvh] overflow-y-auto rounded-br-3xl w-[58vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
