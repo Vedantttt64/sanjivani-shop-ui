@@ -173,21 +173,19 @@ export default function Navbar() {
         />
       )}
 
-      {/* ── Mobile slide-in drawer ── Fix 1+3: dvh height, explicit top/left/z, GPU compositing */}
       <div
-        className={`fixed top-0 left-0 rounded-br-3xl w-[72vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 left-0 rounded-br-3xl w-[60vw] max-w-[210px] z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         style={{
-          height: '100vh',      /* Fix 1 fallback */
-          // @ts-ignore
-          height: '100dvh',     /* Fix 1: dvh for iOS Safari dynamic toolbar */
+          height: 'auto',
+          maxHeight: '90dvh',
           transform: menuOpen ? 'translateX(0) translateZ(0)' : 'translateX(-100%) translateZ(0)', /* Fix 3: GPU compositing */
           WebkitTransform: menuOpen ? 'translateX(0) translateZ(0)' : 'translateX(-100%) translateZ(0)',
           overflowY: 'auto',
         }}
       >
         {/* Drawer header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
+        <div className="flex items-center justify-between px-3 py-3 border-b border-slate-100">
           <Image
             src="/images/sanjivani-logo.png"
             alt="sanjivani-logo"

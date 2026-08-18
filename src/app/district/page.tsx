@@ -45,21 +45,21 @@ function DistrictContent() {
 
   return (
     <div className="min-h-screen w-full bg-[#f8fafc] text-slate-800 flex flex-col font-sans relative overflow-x-hidden">
-      
+
       {/* Navbar with selectedState query context set */}
       <Navbar />
 
       {/* Main Container with top padding for fixed Navbar */}
       <main className="flex-1 relative z-10 pt-20 pb-16 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col items-center">
-        
+
         {/* Header / Selection Info Badge */}
         <div className="text-center mt-2 mb-4 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 text-xs text-slate-700 shadow-md backdrop-blur-md">
             <Info className="w-4 h-4 text-blue-600 shrink-0" />
             <span className="font-extrabold uppercase tracking-wider text-slate-800">
-              {hoveredDistrict 
-                ? `${hoveredDistrict.name} (${hoveredDistrict.marathiName}) • HQ: ${hoveredDistrict.headquarters}` 
-                : 'Select District: Hover or Tap on Map'}
+              {hoveredDistrict
+                ? `${hoveredDistrict.name} (${hoveredDistrict.marathiName}) • HQ: ${hoveredDistrict.headquarters}`
+                : 'Select Your District'}
             </span>
           </div>
         </div>
@@ -71,153 +71,150 @@ function DistrictContent() {
             className="w-full h-full drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500"
             xmlns="http://www.w3.org/2000/svg"
           >
-              {/* Base Layer for All Districts */}
-              {maharashtraDistrictsData.map((d, index) => {
-                const pathD = pathMap.get(d.id);
-                if (!pathD) return null;
+            {/* Base Layer for All Districts */}
+            {maharashtraDistrictsData.map((d, index) => {
+              const pathD = pathMap.get(d.id);
+              if (!pathD) return null;
 
-                const isHovered = hoveredDistrict?.id === d.id;
-                const anyHovered = hoveredDistrict !== null;
-                const colorClass = districtColorClasses[index % districtColorClasses.length];
+              const isHovered = hoveredDistrict?.id === d.id;
+              const anyHovered = hoveredDistrict !== null;
+              const colorClass = districtColorClasses[index % districtColorClasses.length];
 
-                return (
-                  <g key={d.id} className="group cursor-pointer">
-                    <path
-                      d={pathD}
-                      style={{
-                        transformOrigin: `${d.cx}px ${d.cy}px`,
-                        transition: 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease, opacity 0.3s ease',
-                        transform: isHovered ? 'scale(1.06)' : 'scale(1)',
-                        filter: isHovered
-                          ? 'drop-shadow(0 10px 20px rgba(15,23,42,0.18))'
-                          : 'none',
-                        opacity: anyHovered && !isHovered ? 0.45 : 1,
-                        stroke: isHovered ? '#0f172a' : undefined,
-                        strokeWidth: isHovered ? 2.5 : 1.2,
-                      }}
-                      className={`transition-all duration-300 ${colorClass} ${
-                        isHovered ? 'saturate-[1.3] brightness-[0.85]' : ''
-                      }`}
-                      onMouseEnter={() => setHoveredDistrict(d)}
-                      onMouseLeave={() => setHoveredDistrict(null)}
-                      onClick={() => {
-                        router.push(`/?state=Maharashtra&district=${encodeURIComponent(d.name)}`);
-                      }}
-                    />
-                  </g>
-                );
-              })}
-
-              {/* Elevated Layer for Hovered District (keeps original color + dark tone adjustment) */}
-              {hoveredDistrict && (() => {
-                const pathD = pathMap.get(hoveredDistrict.id);
-                if (!pathD) return null;
-                const index = maharashtraDistrictsData.findIndex(item => item.id === hoveredDistrict.id);
-                const colorClass = districtColorClasses[index % districtColorClasses.length];
-
-                return (
+              return (
+                <g key={d.id} className="group cursor-pointer">
                   <path
                     d={pathD}
                     style={{
-                      transformOrigin: `${hoveredDistrict.cx}px ${hoveredDistrict.cy}px`,
-                      transform: 'scale(1.06)',
-                      filter: 'drop-shadow(0 12px 24px rgba(15,23,42,0.22))',
-                      stroke: '#0f172a',
-                      strokeWidth: 2.5,
-                      pointerEvents: 'none',
+                      transformOrigin: `${d.cx}px ${d.cy}px`,
+                      transition: 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease, opacity 0.3s ease',
+                      transform: isHovered ? 'scale(1.06)' : 'scale(1)',
+                      filter: isHovered
+                        ? 'drop-shadow(0 10px 20px rgba(15,23,42,0.18))'
+                        : 'none',
+                      opacity: anyHovered && !isHovered ? 0.45 : 1,
+                      stroke: isHovered ? '#0f172a' : undefined,
+                      strokeWidth: isHovered ? 2.5 : 1.2,
                     }}
-                    className={`${colorClass} saturate-[1.3] brightness-[0.85] pointer-events-none`}
+                    className={`transition-all duration-300 ${colorClass} ${isHovered ? 'saturate-[1.3] brightness-[0.85]' : ''
+                      }`}
+                    onMouseEnter={() => setHoveredDistrict(d)}
+                    onMouseLeave={() => setHoveredDistrict(null)}
+                    onClick={() => {
+                      router.push(`/?state=Maharashtra&district=${encodeURIComponent(d.name)}`);
+                    }}
                   />
-                );
-              })()}
+                </g>
+              );
+            })}
 
-              {/* District Permanent Labels & Callout Leaders */}
-              {maharashtraDistrictsData.map((d) => {
-                const isHovered = hoveredDistrict?.id === d.id;
+            {/* Elevated Layer for Hovered District (keeps original color + dark tone adjustment) */}
+            {hoveredDistrict && (() => {
+              const pathD = pathMap.get(hoveredDistrict.id);
+              if (!pathD) return null;
+              const index = maharashtraDistrictsData.findIndex(item => item.id === hoveredDistrict.id);
+              const colorClass = districtColorClasses[index % districtColorClasses.length];
 
-                if (d.hasCallout && d.labelX !== undefined && d.labelY !== undefined) {
-                  // Leader-line callout for tiny/dense districts like Mumbai
-                  return (
-                    <g key={`label-${d.id}`} className="pointer-events-none">
-                      <line
-                        x1={d.cx}
-                        y1={d.cy}
-                        x2={d.labelX + 35}
-                        y2={d.labelY}
-                        stroke="#64748b"
-                        strokeWidth="1.2"
-                        strokeDasharray="2 2"
-                      />
-                      <circle cx={d.cx} cy={d.cy} r="3" className="fill-blue-600" />
-                      <g transform={`translate(${d.labelX}, ${d.labelY})`}>
-                        <rect
-                          x="-35"
-                          y="-14"
-                          width="70"
-                          height="24"
-                          rx="4"
-                          className="fill-white stroke-slate-300 shadow-md"
-                        />
-                        <text
-                          textAnchor="middle"
-                          y="-2"
-                          className="text-[9px] font-extrabold fill-slate-900 tracking-tight"
-                        >
-                          {d.name}
-                        </text>
-                        <text
-                          textAnchor="middle"
-                          y={8}
-                          className="text-[8px] font-semibold fill-blue-700"
-                        >
-                          {d.marathiName}
-                        </text>
-                      </g>
-                    </g>
-                  );
-                }
+              return (
+                <path
+                  d={pathD}
+                  style={{
+                    transformOrigin: `${hoveredDistrict.cx}px ${hoveredDistrict.cy}px`,
+                    transform: 'scale(1.06)',
+                    filter: 'drop-shadow(0 12px 24px rgba(15,23,42,0.22))',
+                    stroke: '#0f172a',
+                    strokeWidth: 2.5,
+                    pointerEvents: 'none',
+                  }}
+                  className={`${colorClass} saturate-[1.3] brightness-[0.85] pointer-events-none`}
+                />
+              );
+            })()}
 
-                // Standard inline district text label
+            {/* District Permanent Labels & Callout Leaders */}
+            {maharashtraDistrictsData.map((d) => {
+              const isHovered = hoveredDistrict?.id === d.id;
+
+              if (d.hasCallout && d.labelX !== undefined && d.labelY !== undefined) {
+                // Leader-line callout for tiny/dense districts like Mumbai
                 return (
-                  <g
-                    key={`label-${d.id}`}
-                    transform={`translate(${d.cx}, ${d.cy})`}
-                    className="pointer-events-none select-none"
-                  >
-                    <text
-                      textAnchor="middle"
-                      y="-1"
-                      className={`text-[10px] sm:text-[11px] font-black tracking-tight transition-all duration-300 ${
-                        isHovered ? 'fill-slate-950 scale-105' : 'fill-slate-900'
-                      }`}
-                      style={{
-                        paintOrder: 'stroke',
-                        stroke: '#ffffff',
-                        strokeWidth: '3.5px',
-                        strokeLinejoin: 'round',
-                      }}
-                    >
-                      {d.name}
-                    </text>
-                    <text
-                      textAnchor="middle"
-                      y={10}
-                      className={`text-[9px] font-bold transition-all duration-300 ${
-                        isHovered ? 'fill-blue-900' : 'fill-blue-700'
-                      }`}
-                      style={{
-                        paintOrder: 'stroke',
-                        stroke: '#ffffff',
-                        strokeWidth: '3px',
-                        strokeLinejoin: 'round',
-                      }}
-                    >
-                      {d.marathiName}
-                    </text>
+                  <g key={`label-${d.id}`} className="pointer-events-none">
+                    <line
+                      x1={d.cx}
+                      y1={d.cy}
+                      x2={d.labelX + 35}
+                      y2={d.labelY}
+                      stroke="#64748b"
+                      strokeWidth="1.2"
+                      strokeDasharray="2 2"
+                    />
+                    <circle cx={d.cx} cy={d.cy} r="3" className="fill-blue-600" />
+                    <g transform={`translate(${d.labelX}, ${d.labelY})`}>
+                      <rect
+                        x="-35"
+                        y="-14"
+                        width="70"
+                        height="24"
+                        rx="4"
+                        className="fill-white stroke-slate-300 shadow-md"
+                      />
+                      <text
+                        textAnchor="middle"
+                        y="-2"
+                        className="text-[9px] font-extrabold fill-slate-900 tracking-tight"
+                      >
+                        {d.name}
+                      </text>
+                      <text
+                        textAnchor="middle"
+                        y={8}
+                        className="text-[8px] font-semibold fill-blue-700"
+                      >
+                        {d.marathiName}
+                      </text>
+                    </g>
                   </g>
                 );
-              })}
-            </svg>
+              }
+
+              // Standard inline district text label
+              return (
+                <g
+                  key={`label-${d.id}`}
+                  transform={`translate(${d.cx}, ${d.cy})`}
+                  className="pointer-events-none select-none"
+                >
+                  <text
+                    textAnchor="middle"
+                    y="-1"
+                    className={`text-[10px] sm:text-[11px] font-black tracking-tight transition-all duration-300 ${isHovered ? 'fill-slate-950 scale-105' : 'fill-slate-900'
+                      }`}
+                    style={{
+                      paintOrder: 'stroke',
+                      stroke: '#ffffff',
+                      strokeWidth: '3.5px',
+                      strokeLinejoin: 'round',
+                    }}
+                  >
+                    {d.name}
+                  </text>
+                  <text
+                    textAnchor="middle"
+                    y={10}
+                    className={`text-[9px] font-bold transition-all duration-300 ${isHovered ? 'fill-blue-900' : 'fill-blue-700'
+                      }`}
+                    style={{
+                      paintOrder: 'stroke',
+                      stroke: '#ffffff',
+                      strokeWidth: '3px',
+                      strokeLinejoin: 'round',
+                    }}
+                  >
+                    {d.marathiName}
+                  </text>
+                </g>
+              );
+            })}
+          </svg>
         </div>
 
         {/* ── 2. District Cards Grid Section ── */}
@@ -265,7 +262,7 @@ function DistrictContent() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                  
+
                   {/* Badge */}
                   <span className="absolute top-3 right-3 bg-blue-600/90 text-white font-bold text-[10px] px-2.5 py-1 rounded-full backdrop-blur-md tracking-wider uppercase shadow">
                     DISTRICT
@@ -282,7 +279,7 @@ function DistrictContent() {
                       {district.marathiName}
                     </p>
                   </div>
-                  
+
                   <div className="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs text-slate-500">
                     <span>HQ: <strong className="text-slate-700 font-semibold">{district.headquarters}</strong></span>
                     <span className="text-blue-600 font-bold group-hover:translate-x-1 transition-transform">

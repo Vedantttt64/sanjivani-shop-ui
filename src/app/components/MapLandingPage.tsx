@@ -197,12 +197,12 @@ export default function MapLandingPage() {
           </div>
         </div>
 
-        <div className="w-full max-w-[98vw] relative group mt-16 sm:mt-4 flex items-start justify-center">
+        <div className="w-full max-w-[98vw] relative group mt-20 sm:mt-4 flex items-start justify-center">
 
           {/* SVG Map Canvas */}
           <svg
             viewBox="-180 -50 972 820"
-            className="w-full origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out scale-[1.32] sm:scale-[1.12]"
+            className="w-full origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out scale-[1.48] sm:scale-[1.12]"
             style={{ maxHeight: 'calc(100vh - 220px)' }}
           >
             {/* Map Paths — base layer (all states) */}
