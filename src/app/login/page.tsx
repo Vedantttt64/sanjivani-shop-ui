@@ -87,7 +87,7 @@ export default function Login() {
                 <form className='w-full px-6 py-8 shadow-xl hover:shadow-2xl rounded-2xl bg-white flex flex-col items-center justify-center transition-shadow duration-150'>
                     <div className='text-center mb-1 flex flex-col justify-center items-center'>
                         <Link className='justify-center flex' href="/">
-                            <img src="images/sanjivani-logo.png" className='w-[85%] h-auto' alt="Sanjivani Logo" />
+                            <img src="images/sanjivani-logo.png" className='w-[70%] h-auto' alt="Sanjivani Logo" />
                         </Link>
                         
                     </div>
@@ -120,47 +120,18 @@ export default function Login() {
                         </>
                     )}
 
-                    <div className="mt-5 w-full flex gap-4 justify-between">
+                    <button type="button" onClick={handleClose} className='mt-5 w-1/2 bg-blue-600 text-white py-2.5 rounded-md font-bold uppercase tracking-wide hover:bg-blue-700 transition duration-300 ease-in-out cursor-pointer hover:scale-105'>
+                        {formType === 'login' ? 'LOGIN' : "REGISTER"}
+                    </button>
+
+                    <div className='text-center w-full mt-3 flex justify-evenly'>
                         {formType === "login" ? (
                             <>
-                                <button
-                                    type="button"
-                                    onClick={handleClose}
-                                    className="flex-1 text-white py-2.5 rounded-md font-bold uppercase tracking-wide transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                    style={{
-                                        background: 'linear-gradient(to right, #f97316, #ec4899)',
-                                    }}
-                                >
-                                    LOGIN
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setFormType("corporateRegister")}
-                                    className="flex-1 bg-blue-600 text-white py-2.5 rounded-md font-bold uppercase tracking-wide hover:bg-blue-700 transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                >
-                                    REGISTER
-                                </button>
+                                <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("volunteer")}>volunteer</button>
+                                <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("corporateRegister")}>Corporate Register ?</button>
                             </>
                         ) : (
-                            <>
-                                <button
-                                    type="button"
-                                    onClick={handleClose}
-                                    className="flex-1 text-white py-2.5 rounded-md font-bold uppercase tracking-wide transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                    style={{
-                                        background: 'linear-gradient(to right, #f97316, #ec4899)',
-                                    }}
-                                >
-                                    REGISTER
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setFormType("login")}
-                                    className="flex-1 bg-blue-600 text-white py-2.5 rounded-md font-bold uppercase tracking-wide hover:bg-blue-700 transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                >
-                                    LOGIN
-                                </button>
-                            </>
+                            <button type="button" className='text-purple-600 text-sm cursor-pointer' onClick={() => setFormType("login")}>go to login</button>
                         )}
                     </div>
                 </form>
