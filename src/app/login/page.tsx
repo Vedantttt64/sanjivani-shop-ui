@@ -87,82 +87,121 @@ export default function Login() {
                 <form className='w-full px-6 py-8 shadow-xl hover:shadow-2xl rounded-2xl bg-white flex flex-col items-center justify-center transition-shadow duration-150'>
                     <div className='text-center mb-1 flex flex-col justify-center items-center'>
                         <Link className='justify-center flex' href="/">
-                            <img src="images/sanjivani-logo.png" className='w-[85%] h-auto' alt="Sanjivani Logo" />
+                            <img src="images/sanjivani-logo.png" className='w-[70%] h-auto' alt="Sanjivani Logo" />
                         </Link>
                         
                     </div>
 
                     {formType === "login" && (
                         <>
-                            <FormInput label="" icon='phone' type="tel" placeholder='Enter Mobile Number' inputStyle="placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-500" value={authData.mobileNumber} onChange={(value) => handleDataChange('mobileNumber', value)} />
-                            <FormInput label="" icon='password' type="password" placeholder='Enter Password' inputStyle="placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-500" value={authData.password} onChange={(value) => handleDataChange('password', value)} />
+                            <FormInput
+                                label=""
+                                icon="phone"
+                                type="tel"
+                                placeholder="ENTER MOBILE NUMBER"
+                                inputStyle="font-extrabold uppercase tracking-wider text-xs text-slate-700 placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-400"
+                                value={authData.mobileNumber}
+                                onChange={(value) => handleDataChange('mobileNumber', value)}
+                            />
+                            <FormInput
+                                label=""
+                                icon="password"
+                                type="password"
+                                placeholder="ENTER PASSWORD"
+                                inputStyle="font-extrabold uppercase tracking-wider text-xs text-slate-700 placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-400"
+                                value={authData.password}
+                                onChange={(value) => handleDataChange('password', value)}
+                            />
                         </>
                     )}
 
                     {formType === "volunteer" && (
                         <>
-                            <FormInput label="Full Name" icon='user' type="text" value={vendorRegister.name} onChange={(value) => handleVendorRegister('name', value)} />
-                            <FormInput label="Location" icon='user' type="text" value={vendorRegister.location} onChange={(value) => handleVendorRegister('location', value)} />
-                            <FormInput label="Phone Number" icon='phone' type="tel" value={vendorRegister.mobileNumber} onChange={(value) => handleVendorRegister('mobileNumber', value)} />
-                            <FormInput label="Email" icon='email' type="email" value={vendorRegister.emailAddress} onChange={(value) => handleVendorRegister('emailAddress', value)} />
-                            <FormInput label="Password" icon='password' type="password" value={vendorRegister.password} onChange={(value) => handleVendorRegister('password', value)} />
+                            <FormInput label="Full Name" icon='user' type="text" placeholder="Enter Full Name" value={vendorRegister.name} onChange={(value) => handleVendorRegister('name', value)} />
+                            <FormInput label="Location" icon='user' type="text" placeholder="Enter Location" value={vendorRegister.location} onChange={(value) => handleVendorRegister('location', value)} />
+                            <FormInput label="Phone Number" icon='phone' type="tel" placeholder="Enter Phone Number" value={vendorRegister.mobileNumber} onChange={(value) => handleVendorRegister('mobileNumber', value)} />
+                            <FormInput label="Email" icon='email' type="email" placeholder="Enter Email" value={vendorRegister.emailAddress} onChange={(value) => handleVendorRegister('emailAddress', value)} />
+                            <FormInput label="Password" icon='password' type="password" placeholder="Enter Password" value={vendorRegister.password} onChange={(value) => handleVendorRegister('password', value)} />
                         </>
                     )}
 
                     {formType === "corporateRegister" && (
                         <>
-                            <FormInput label="Company Name" icon='user' type="text" value={corporateRegister.companyName} onChange={(value) => handleCorporateRegister('companyName', value)} />
-                            <FormInput label="Company Location" icon='location' type="text" value={corporateRegister.companyLocation} onChange={(value) => handleCorporateRegister('companyLocation', value)} />
-                            <FormInput label="Admin Name" icon='user' type="text" value={corporateRegister.companyAdminName} onChange={(value) => handleCorporateRegister('companyAdminName', value)} />
-                            <FormInput label="Admin Mobile Number" icon='phone' type="tel" value={corporateRegister.companyAdminMobileNumber} onChange={(value) => handleCorporateRegister('companyAdminMobileNumber', value)} />
-                            <FormInput label="Admin Email Address" icon='email' type="email" value={corporateRegister.companyAdminEmailAddress} onChange={(value) => handleCorporateRegister('companyAdminEmailAddress', value)} />
-                            <FormInput label="Password" icon='password' type="password" value={corporateRegister.password} onChange={(value) => handleCorporateRegister('password', value)} />
+                            <FormInput label="Company Name" icon='user' type="text" placeholder="Enter Company Name" value={corporateRegister.companyName} onChange={(value) => handleCorporateRegister('companyName', value)} />
+                            <FormInput label="Company Location" icon='location' type="text" placeholder="Enter Company Location" value={corporateRegister.companyLocation} onChange={(value) => handleCorporateRegister('companyLocation', value)} />
+                            <FormInput label="Admin Name" icon='user' type="text" placeholder="Enter Admin Name" value={corporateRegister.companyAdminName} onChange={(value) => handleCorporateRegister('companyAdminName', value)} />
+                            <FormInput label="Admin Mobile Number" icon='phone' type="tel" placeholder="Enter Admin Mobile Number" value={corporateRegister.companyAdminMobileNumber} onChange={(value) => handleCorporateRegister('companyAdminMobileNumber', value)} />
+                            <FormInput label="Admin Email Address" icon='email' type="email" placeholder="Enter Admin Email Address" value={corporateRegister.companyAdminEmailAddress} onChange={(value) => handleCorporateRegister('companyAdminEmailAddress', value)} />
+                            <FormInput label="Password" icon='password' type="password" placeholder="Enter Password" value={corporateRegister.password} onChange={(value) => handleCorporateRegister('password', value)} />
                         </>
                     )}
 
-                    <div className="mt-5 w-full flex gap-4 justify-between">
-                        {formType === "login" ? (
-                            <>
-                                <button
-                                    type="button"
-                                    onClick={handleClose}
-                                    className="flex-1 text-white py-2.5 rounded-md font-bold uppercase tracking-wide transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                    style={{
-                                        background: 'linear-gradient(to right, #f97316, #ec4899)',
-                                    }}
-                                >
-                                    LOGIN
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setFormType("corporateRegister")}
-                                    className="flex-1 bg-blue-600 text-white py-2.5 rounded-md font-bold uppercase tracking-wide hover:bg-blue-700 transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                >
-                                    REGISTER
-                                </button>
-                            </>
-                        ) : (
-                            <>
-                                <button
-                                    type="button"
-                                    onClick={handleClose}
-                                    className="flex-1 text-white py-2.5 rounded-md font-bold uppercase tracking-wide transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                    style={{
-                                        background: 'linear-gradient(to right, #f97316, #ec4899)',
-                                    }}
-                                >
-                                    REGISTER
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setFormType("login")}
-                                    className="flex-1 bg-blue-600 text-white py-2.5 rounded-md font-bold uppercase tracking-wide hover:bg-blue-700 transition duration-300 ease-in-out cursor-pointer hover:scale-105 text-center"
-                                >
-                                    LOGIN
-                                </button>
-                            </>
-                        )}
-                    </div>
+                    {formType === "login" && (
+                        <div className="flex gap-4 w-full mt-5">
+                            <button
+                                type="button"
+                                onClick={handleClose}
+                                className="w-1/2 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
+                                style={{
+                                    background: 'linear-gradient(to right, #f97316, #ec4899)',
+                                }}
+                            >
+                                LOGIN
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setFormType("corporateRegister")}
+                                className="w-1/2 bg-[#1d4ed8] text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
+                            >
+                                REGISTER
+                            </button>
+                        </div>
+                    )}
+
+                    {formType === "volunteer" && (
+                        <div className="flex gap-4 w-full mt-5">
+                            <button
+                                type="button"
+                                onClick={handleClose}
+                                className="w-1/2 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
+                                style={{
+                                    background: 'linear-gradient(to right, #f97316, #ec4899)',
+                                }}
+                            >
+                                SUBMIT
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setFormType("login")}
+                                className="w-1/2 bg-slate-500 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
+                            >
+                                BACK
+                            </button>
+                        </div>
+                    )}
+
+                    {formType === "corporateRegister" && (
+                        <div className="flex gap-4 w-full mt-5">
+                            <button
+                                type="button"
+                                onClick={handleClose}
+                                className="w-1/2 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
+                                style={{
+                                    background: 'linear-gradient(to right, #f97316, #ec4899)',
+                                }}
+                            >
+                                REGISTER
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setFormType("login")}
+                                className="w-1/2 bg-[#1d4ed8] text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
+                            >
+                                LOGIN
+                            </button>
+                        </div>
+                    )}
+
                 </form>
             </div>
         </div>
