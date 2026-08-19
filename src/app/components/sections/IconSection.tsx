@@ -63,8 +63,8 @@ export default function IconSection() {
         {IconsData.map((data, index) => {
           const isSelected = selectedIndex === index;
           const labelClass = isSelected
-            ? 'text-xs font-medium text-blue-600'
-            : 'text-xs font-medium text-gray-600';
+            ? 'text-xs font-bold text-blue-600'
+            : 'text-xs font-bold text-black';
 
           return (
             <div
@@ -79,7 +79,7 @@ export default function IconSection() {
                sm:basis-auto sm:min-w-[56px] sm:max-w-none sm:flex-grow-0
                transition-all duration-300 ease-in-out
                hover:bg-blue-50
-               ${isSelected ? 'bg-blue-50 shadow-sm' : ''}
+               ${isSelected ? 'bg-blue-50 shadow-sm text-blue-600' : 'text-black'}
      
                flex-grow   
                sm:flex-grow-0 
