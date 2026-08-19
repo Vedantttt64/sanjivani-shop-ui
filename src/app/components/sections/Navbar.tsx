@@ -26,6 +26,24 @@ export default function Navbar() {
   const searchParams = useSearchParams();
   const stateFromParams = searchParams ? searchParams.get('state') : null;
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Fix 4 — Lock/unlock body scroll when mobile menu opens/closes (prevents iOS background scroll)
+  const openMenu = () => {
+    setMenuOpen(true);
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    }
+  };
+  const closeMenu = () => {
+    setMenuOpen(false);
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+  };
   const [activeState, setActiveState] = useState<string | null>(stateFromParams);
 
   // Sync state from sessionStorage client-side after initial mount to prevent SSR hydration mismatch
@@ -40,8 +58,8 @@ export default function Navbar() {
   }, [stateFromParams]);
 
   const redirectToLogin = () => router.push('/login');
-  const redirectToHome  = () => {
-    setMenuOpen(false);
+  const redirectToHome = () => {
+    closeMenu();
     if (activeState) {
       router.push(`/?state=${encodeURIComponent(activeState)}`);
     } else {
@@ -49,7 +67,7 @@ export default function Navbar() {
     }
   };
   const redirectToStartPage = () => {
-    setMenuOpen(false);
+    closeMenu();
     if (typeof window !== 'undefined') {
       sessionStorage.removeItem('selectedState');
     }
@@ -127,7 +145,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* Hamburger — mobile only */}
             <button
-              onClick={() => setMenuOpen(true)}
+              onClick={openMenu}
               className="sm:hidden flex flex-col justify-center items-center gap-[5px] w-9 h-9 rounded-lg hover:bg-slate-100 transition"
               aria-label="Open menu"
             >
@@ -141,22 +159,39 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* ── Mobile drawer backdrop ── */}
+      {/* ── Mobile drawer backdrop ── Fix 5: -webkit-backdrop-filter for iOS Safari blur support */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm sm:hidden"
-          onClick={() => setMenuOpen(false)}
+          className="fixed top-0 left-0 w-full z-[60] bg-black/40 backdrop-blur-sm sm:hidden"
+          style={{
+            height: '100vh',
+            // @ts-ignore
+            WebkitBackdropFilter: 'blur(4px)',
+            backdropFilter: 'blur(4px)',
+          }}
+          onClick={closeMenu}
         />
       )}
 
-      {/* ── Mobile slide-in drawer ── */}
       <div
+<<<<<<< HEAD
         className={`fixed top-0 left-0 h-fit max-h-[90vh] max-h-[90dvh] overflow-y-auto rounded-br-3xl w-[58vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
+=======
+        className={`fixed top-0 left-0 rounded-br-3xl w-[60vw] max-w-[210px] z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
+        style={{
+          height: 'auto',
+          maxHeight: '90dvh',
+          transform: menuOpen ? 'translateX(0) translateZ(0)' : 'translateX(-100%) translateZ(0)', /* Fix 3: GPU compositing */
+          WebkitTransform: menuOpen ? 'translateX(0) translateZ(0)' : 'translateX(-100%) translateZ(0)',
+          overflowY: 'auto',
+        }}
+>>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
       >
         {/* Drawer header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
+        <div className="flex items-center justify-between px-3 py-3 border-b border-slate-100">
           <Image
             src="/images/sanjivani-logo.png"
             alt="sanjivani-logo"
@@ -166,7 +201,7 @@ export default function Navbar() {
             onClick={redirectToStartPage}
           />
           <button
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
             className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-600 active:bg-red-700 transition"
             aria-label="Close menu"
           >
@@ -174,13 +209,16 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Nav list */}
-        <nav className="flex-1 overflow-y-auto py-2 px-2 pb-4 space-y-0.5">
+        {/* Nav list — Fix 2: -webkit-overflow-scrolling:touch for smooth iOS momentum scroll */}
+        <nav
+          className="flex-1 overflow-y-auto py-2 px-2 pb-4 space-y-0.5"
+          style={{ WebkitOverflowScrolling: 'touch' }}
+        >
           {navItems.map((item, i) => (
             <button
               key={i}
               onClick={() => {
-                setMenuOpen(false);
+                closeMenu();
                 if (typeof window !== 'undefined') {
                   const urlParams = new URLSearchParams(window.location.search);
                   const stateParam = urlParams.get('state') || sessionStorage.getItem('selectedState');

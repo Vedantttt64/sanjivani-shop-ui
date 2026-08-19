@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Info } from 'lucide-react';
+import Image from 'next/image';
 import { indiaMapData } from '../data/indiaMapData';
 
 // Types definition for clean modular structure
@@ -167,6 +168,7 @@ export default function MapLandingPage() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="h-screen min-h-screen w-screen bg-[#f1f5f9] text-slate-800 flex flex-col overflow-hidden relative">
       
       {/* Subtle light background gradient */}
@@ -196,27 +198,63 @@ export default function MapLandingPage() {
             height={150}
             priority
             className="object-contain h-35 w-auto drop-shadow-sm"
+=======
+    <div className="h-screen w-screen bg-[#f1f5f9] text-slate-800 flex flex-col overflow-hidden relative">
+
+      {/* Subtle light background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 pointer-events-none" />
+
+      <main className="flex-1 relative z-10 flex flex-col items-center justify-start px-4 pt-4 md:pt-1 pb-2 md:px-8 md:-mt-8">
+
+        {/* Sanjivani Logo */}
+        <div className="mb-2 md:mb-1">
+          <Image
+            src="/images/sanjivani-logo.png"
+            alt="Sanjivani Logo"
+            width={300}
+            height={300}
+            className="object-contain"
+            priority
+>>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
           />
         </div>
 
         {/* Select Region Badge */}
+<<<<<<< HEAD
         <div className="text-center mt-6 sm:mt-0 mb-0 sm:mb-2 flex flex-col items-center shrink-0">
+=======
+        <div className="text-center mb-0 pb-0 flex flex-col items-center z-20">
+>>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
           {/* Dynamic Map Selection Hint Badge */}
           <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3.5 py-1.5 text-[11px] sm:text-xs shadow-md transition-all duration-200 max-w-[92vw]">
             <Info className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+<<<<<<< HEAD
             <span className="font-extrabold text-slate-700 uppercase tracking-wider truncate">
               {hoveredLocation ? `${officialNames[hoveredLocation.id] || hoveredLocation.name} (Capital: ${hoveredLocation.capital})` : 'Select Region: Hover or Tap State'}
+=======
+            <span className="font-extrabold text-slate-700 uppercase tracking-wider">
+              {hoveredLocation ? `${officialNames[hoveredLocation.id] || hoveredLocation.name} (Capital: ${hoveredLocation.capital})` : 'Click your State to Join'}
+>>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
             </span>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="w-[98vw] max-w-[98vw] md:w-auto md:max-w-none flex-1 min-h-0 sm:h-[95vh] sm:min-h-[750px] max-h-[calc(100vh-310px)] sm:max-h-[95vh] md:max-h-[calc(100vh-100px)] aspect-[972/820] flex items-center justify-center relative overflow-visible group mt-0 md:my-auto">
+=======
+        <div className="w-full max-w-[98vw] relative group mt-20 sm:mt-4 flex items-start justify-center">
+>>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
 
           {/* SVG Map Canvas */}
           <svg
             viewBox="-180 -50 972 820"
+<<<<<<< HEAD
             className="w-full h-full scale-[1.50] sm:scale-[1.50] origin-center -translate-y-4 sm:translate-y-0 drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out"
             xmlns="http://www.w3.org/2000/svg" 
+=======
+            className="w-full origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out scale-[1.48] sm:scale-[1.12]"
+            style={{ maxHeight: 'calc(100vh - 220px)' }}
+>>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
           >
             {/* Map Paths — base layer (all states) */}
             {indiaMapData.locations.map((loc) => {
@@ -281,7 +319,11 @@ export default function MapLandingPage() {
               );
             })()}
 
+<<<<<<< HEAD
             {/* Labels — desktop/tablet only; hidden on mobile via .map-state-label-group in the <style> block above */}
+=======
+            {/* Labels — always visible, with hover emphasis using callout style for all states
+>>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
             {indiaMapData.locations.map((loc) => {
               const cfg = labelMapping[loc.id];
               if (!cfg) return null;
@@ -340,7 +382,7 @@ export default function MapLandingPage() {
                   </text>
                 </g>
               );
-            })}
+            })} */}
           </svg>
 
         </div>
