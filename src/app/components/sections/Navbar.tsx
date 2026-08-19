@@ -174,21 +174,8 @@ export default function Navbar() {
       )}
 
       <div
-<<<<<<< HEAD
-        className={`fixed top-0 left-0 h-fit max-h-[90vh] max-h-[90dvh] overflow-y-auto rounded-br-3xl w-[58vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${
-          menuOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-=======
-        className={`fixed top-0 left-0 rounded-br-3xl w-[60vw] max-w-[210px] z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 left-0 h-fit max-h-[90vh] max-h-[90dvh] overflow-y-auto rounded-br-3xl w-[58vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
-        style={{
-          height: 'auto',
-          maxHeight: '90dvh',
-          transform: menuOpen ? 'translateX(0) translateZ(0)' : 'translateX(-100%) translateZ(0)', /* Fix 3: GPU compositing */
-          WebkitTransform: menuOpen ? 'translateX(0) translateZ(0)' : 'translateX(-100%) translateZ(0)',
-          overflowY: 'auto',
-        }}
->>>>>>> 14f67caba4e75bea1862508b4f480e215c231e10
       >
         {/* Drawer header */}
         <div className="flex items-center justify-between px-3 py-3 border-b border-slate-100">
