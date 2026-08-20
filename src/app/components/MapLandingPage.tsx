@@ -166,44 +166,77 @@ export default function MapLandingPage() {
     router.push(`/?state=${encodeURIComponent(stateName)}`);
   };
 
+  const ctaText = hoveredLocation
+    ? `${officialNames[hoveredLocation.id] || hoveredLocation.name} (Capital: ${hoveredLocation.capital})`
+    : 'Click Your State to Join';
+
   return (
-    <div className="h-screen w-screen bg-[#f1f5f9] text-slate-800 flex flex-col overflow-hidden relative">
+    <div className="h-screen w-screen bg-[#f1f5f9] md:bg-[#f5f5f5] text-slate-800 flex flex-col overflow-hidden relative">
 
-      {/* Subtle light background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 pointer-events-none" />
+      {/* Background — original on mobile, neutral on desktop */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 md:bg-gradient-to-br md:from-white md:via-[#f8f8f8] md:to-[#f0f0f0] pointer-events-none" />
 
-      <main className="flex-1 relative z-10 flex flex-col items-center justify-start px-4 pt-4 md:pt-1 pb-2 md:px-8 md:-mt-8">
+      <main className="flex-1 relative z-10 flex flex-col items-center justify-start px-4 pt-4 md:pt-0 pb-2 md:px-0 md:flex-row md:items-stretch md:justify-center md:gap-0 h-full max-h-screen overflow-hidden">
 
-        {/* Sanjivani Logo */}
-        <div className="mb-2 md:mb-1">
+        {/* Mobile Logo */}
+        <div className="mb-2 md:hidden">
           <Image
             src="/images/sanjivani-logo.png"
             alt="Sanjivani Logo"
             width={400}
             height={300}
-            className="object-contain w-52 sm:w-72 md:w-[320px] h-auto"
+            className="object-contain w-52 sm:w-72 h-auto"
             priority
           />
         </div>
 
-        {/* Select Region Badge */}
-        <div className="text-center mb-0 pb-0 flex flex-col items-center z-20">
-          {/* Dynamic Map Selection Hint Badge */}
-          <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 text-xs shadow-md transition-all duration-200">
-            <Info className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span className="font-extrabold text-slate-700 uppercase tracking-wider">
-              {hoveredLocation ? `${officialNames[hoveredLocation.id] || hoveredLocation.name} (Capital: ${hoveredLocation.capital})` : 'Click Your State to Join'}
+        {/* Desktop Logo — left 50% column */}
+        <div className="hidden md:flex md:w-1/2 md:h-full items-center justify-center shrink-0 px-8">
+          <Image
+            src="/images/sanjivani-logo.png"
+            alt="Sanjivani Logo"
+            width={600}
+            height={400}
+            priority
+            className="w-[min(28vw,480px)] h-auto object-contain"
+          />
+        </div>
+
+        {/* Vertical divider between columns */}
+        <div className="hidden md:block w-px h-[85%] self-center bg-slate-300/70 shrink-0" aria-hidden="true" />
+
+        {/* Desktop CTA — centered on screen, above the vertical divider */}
+        <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-10 z-20">
+          <div className="inline-flex items-center gap-2.5 bg-white border border-slate-200/80 rounded-full px-5 py-2.5 text-sm shadow-[0_2px_12px_rgba(0,0,0,0.08)] transition-all duration-200">
+            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-blue-600 shrink-0">
+              <Info className="w-3 h-3 text-white" strokeWidth={2.5} />
+            </span>
+            <span className="font-bold text-[#1e3a8a] uppercase tracking-wide whitespace-nowrap">
+              {ctaText}
             </span>
           </div>
         </div>
 
-        <div className="w-full max-w-[98vw] relative group mt-28 sm:mt-4 flex items-start justify-center">
+        {/* Right column — map */}
+        <div className="w-full md:w-1/2 md:h-full flex flex-col items-center justify-start md:justify-center min-h-0 md:px-8">
+
+          {/* Mobile CTA — unchanged */}
+          <div className="md:hidden text-center mt-6 flex flex-col items-center z-0 shrink-0">
+            <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2.5 text-xs shadow-md transition-all duration-200">
+              <Info className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              <span className="font-extrabold text-slate-700 uppercase tracking-wider">
+                {ctaText}
+              </span>
+            </div>
+          </div>
+
+          <div className="w-full max-w-[98vw] md:max-w-none md:flex-1 md:min-h-0 relative group mt-28 sm:mt-4 md:mt-0 flex items-center justify-center overflow-visible">
 
           {/* SVG Map Canvas */}
           <svg
             viewBox="-180 -50 972 820"
-            className="w-full origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 ease-out scale-[1.6] sm:scale-[1.05]"
-            style={{ maxHeight: 'calc(100vh - 250px)' }}
+            className="w-full h-full origin-center drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] md:drop-shadow-[0_4px_16px_rgba(15,23,42,0.08)] select-none transition-transform duration-500 ease-out scale-[1.6] sm:scale-[1.05] md:scale-[1.25]"
+            style={{ maxHeight: 'calc(100vh - 140px)' }}
           >
             {/* Map Paths — base layer (all states) */}
             {indiaMapData.locations.map((loc) => {
@@ -331,7 +364,7 @@ export default function MapLandingPage() {
           </svg>
 
         </div>
-
+      </div>
       </main>
     </div>
   );
