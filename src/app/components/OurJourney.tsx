@@ -11,7 +11,7 @@ const timelineData = [
     title: 'OUR JOURNEY',
     subtitle: 'We Started NGO',
     description:
-      'After surving for 26 years in Indian Army, Shri Babu Torambe retired from Army and formed Sanjivani NGO in Pune.',
+      'After 26 years of service in Indian Army, Shri Babu Torambe retired from Army and formed Sanjivani NGO in Pune.',
     image: '/images/babu.jpeg',
     person: 'Shri. Babu Torambe',
     designation: 'Founder of Sanjivani NGO',
