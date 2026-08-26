@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sanjivani NGO",
   description: "Sanjivani NGO",
+  icons: {
+    icon: "/images/sanjivani-logo.png",
+    shortcut: "/images/sanjivani-logo.png",
+    apple: "/images/sanjivani-logo.png",
+  }
 };
 
 export default function RootLayout({
