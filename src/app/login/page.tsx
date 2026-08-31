@@ -1,209 +1,82 @@
 "use client"
 
-import React from 'react'
-import FormInput from '../components/ui/elements/FormInput';
-import DropDown, { DropDownOptions } from '../components/ui/elements/DropDown';
-import Link from 'next/link';
-import { login, LoginRequest } from '@/services/auth';
-import { registerVendor, RegisterVendorReq } from '@/services/vendor/registerVendor';
-import { registerCorporate, RegisterCorporateReq } from '@/services/corporate/registerCorporate';
+import React, { useState } from 'react'
+import { Phone } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import AuthCard from '../components/ui/auth/AuthCard'
+import AuthInput from '../components/ui/auth/AuthInput'
 
-const VendorRegisterInit: RegisterVendorReq = {
-    name: "",
-    location: "",
-    mobileNumber: "",
-    emailAddress: "",
-    password: "",
-}
+export default function LoginPage() {
+    const router = useRouter()
+    const [phone, setPhone] = useState('')
+    const [errors, setErrors] = useState<{ phone?: string; form?: string }>({})
+    const [loading, setLoading] = useState(false)
 
-const CorporateRegisterInit: RegisterCorporateReq = {
-    companyName: "",
-    companyLocation: "",
-    companyAdminName: "",
-    companyAdminMobileNumber: "",
-    companyAdminEmailAddress: "",
-    password: "",
-    role:"ROLE_CORPORATE"
-}
-
-const initState: LoginRequest = {
-    mobileNumber: "",
-    password: "",
-}
-
-export default function Login() {
-
-    const [authData, setAuthData] = React.useState(initState);
-    const [vendorRegister, setVendorRegister] = React.useState<RegisterVendorReq>(VendorRegisterInit);
-
-    const [corporateRegister, setCorporateRegister] = React.useState(CorporateRegisterInit);
-
-    const [formType, setFormType] = React.useState("login");
-
-    const handleDataChange = (field: keyof typeof authData, value: string) => {
-        setAuthData((prev: typeof authData) => ({
-            ...prev,
-            [field]: value,
-        }))
+    const validate = () => {
+        const errs: typeof errors = {}
+        if (!phone.trim()) errs.phone = 'Phone number is required.'
+        else if (!/^\+?[\d\s\-().]{7,15}$/.test(phone.trim()))
+            errs.phone = 'Enter a valid phone number.'
+        return errs
     }
 
-    const handleVendorRegister = (field: keyof typeof vendorRegister, value: string) => {
-        setVendorRegister((prev: typeof vendorRegister) => ({
-            ...prev,
-            [field]: value,
-        }))
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+        const errs = validate()
+        if (Object.keys(errs).length) { setErrors(errs); return }
+        setErrors({})
+        setLoading(true)
+
+        // Frontend-only: store phone and move to OTP verification
+        sessionStorage.setItem('otp_phone', phone.trim())
+        // TODO: real backend — call API to generate & send OTP to this number
+        setTimeout(() => {
+            router.push('/verify-otp')
+            setLoading(false)
+        }, 400)
     }
-
-    const handleCorporateRegister = (field: keyof typeof corporateRegister, value: string) => {
-        setCorporateRegister((prev: typeof corporateRegister) => ({
-            ...prev,
-            [field]: value,
-        }))
-    }
-
-    const handleClose = async () => {
-        if (formType === "login") {
-            console.log(authData);
-            const resp = await login(authData);
-            console.log("response : ", resp);
-        }
-
-        if (formType === "vendorRegister") {
-            console.log(vendorRegister);
-            const resp = await registerVendor(vendorRegister);
-            console.log(resp);
-        }
-
-        if (formType === "corporateRegister") {
-            console.log(corporateRegister);
-            const resp = await registerCorporate(corporateRegister);
-            console.log(resp);
-        }
-    };
 
     return (
-        <div className='bg-[#eeeeee] min-h-screen flex items-center justify-center p-4 overflow-auto'>
-            <div className='w-full max-w-sm flex flex-col items-center justify-center'>
-                <form className='w-full px-6 py-8 shadow-xl hover:shadow-2xl rounded-2xl bg-white flex flex-col items-center justify-center transition-shadow duration-150'>
-                    <div className='text-center mb-1 flex flex-col justify-center items-center'>
-                        <Link className='justify-center flex' href="/">
-                            <img src="images/sanjivani-logo.png" className='w-[70%] h-auto' alt="Sanjivani Logo" />
-                        </Link>
-                        
-                    </div>
-
-                    {formType === "login" && (
-                        <>
-                            <FormInput
-                                label=""
-                                icon="phone"
-                                type="tel"
-                                placeholder="ENTER MOBILE NUMBER"
-                                inputStyle="font-extrabold uppercase tracking-wider text-xs text-slate-700 placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-400"
-                                value={authData.mobileNumber}
-                                onChange={(value) => handleDataChange('mobileNumber', value)}
-                            />
-                            <FormInput
-                                label=""
-                                icon="password"
-                                type="password"
-                                placeholder="ENTER PASSWORD"
-                                inputStyle="font-extrabold uppercase tracking-wider text-xs text-slate-700 placeholder:font-extrabold placeholder:uppercase placeholder:tracking-wider placeholder:text-xs placeholder:text-slate-400"
-                                value={authData.password}
-                                onChange={(value) => handleDataChange('password', value)}
-                            />
-                        </>
-                    )}
-
-                    {formType === "volunteer" && (
-                        <>
-                            <FormInput label="Full Name" icon='user' type="text" placeholder="Enter Full Name" value={vendorRegister.name} onChange={(value) => handleVendorRegister('name', value)} />
-                            <FormInput label="Location" icon='user' type="text" placeholder="Enter Location" value={vendorRegister.location} onChange={(value) => handleVendorRegister('location', value)} />
-                            <FormInput label="Phone Number" icon='phone' type="tel" placeholder="Enter Phone Number" value={vendorRegister.mobileNumber} onChange={(value) => handleVendorRegister('mobileNumber', value)} />
-                            <FormInput label="Email" icon='email' type="email" placeholder="Enter Email" value={vendorRegister.emailAddress} onChange={(value) => handleVendorRegister('emailAddress', value)} />
-                            <FormInput label="Password" icon='password' type="password" placeholder="Enter Password" value={vendorRegister.password} onChange={(value) => handleVendorRegister('password', value)} />
-                        </>
-                    )}
-
-                    {formType === "corporateRegister" && (
-                        <>
-                            <FormInput label="Company Name" icon='user' type="text" placeholder="Enter Company Name" value={corporateRegister.companyName} onChange={(value) => handleCorporateRegister('companyName', value)} />
-                            <FormInput label="Company Location" icon='location' type="text" placeholder="Enter Company Location" value={corporateRegister.companyLocation} onChange={(value) => handleCorporateRegister('companyLocation', value)} />
-                            <FormInput label="Admin Name" icon='user' type="text" placeholder="Enter Admin Name" value={corporateRegister.companyAdminName} onChange={(value) => handleCorporateRegister('companyAdminName', value)} />
-                            <FormInput label="Admin Mobile Number" icon='phone' type="tel" placeholder="Enter Admin Mobile Number" value={corporateRegister.companyAdminMobileNumber} onChange={(value) => handleCorporateRegister('companyAdminMobileNumber', value)} />
-                            <FormInput label="Admin Email Address" icon='email' type="email" placeholder="Enter Admin Email Address" value={corporateRegister.companyAdminEmailAddress} onChange={(value) => handleCorporateRegister('companyAdminEmailAddress', value)} />
-                            <FormInput label="Password" icon='password' type="password" placeholder="Enter Password" value={corporateRegister.password} onChange={(value) => handleCorporateRegister('password', value)} />
-                        </>
-                    )}
-
-                    {formType === "login" && (
-                        <div className="flex gap-4 w-full mt-5">
-                            <button
-                                type="button"
-                                onClick={handleClose}
-                                className="w-1/2 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
-                                style={{
-                                    background: 'linear-gradient(to right, #f97316, #ec4899)',
-                                }}
-                            >
-                                LOGIN
-                            </button>
-                            <button
-                                type="button"
-                                onClick={() => setFormType("corporateRegister")}
-                                className="w-1/2 bg-[#1d4ed8] text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
-                            >
-                                REGISTER
-                            </button>
-                        </div>
-                    )}
-
-                    {formType === "volunteer" && (
-                        <div className="flex gap-4 w-full mt-5">
-                            <button
-                                type="button"
-                                onClick={handleClose}
-                                className="w-1/2 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
-                                style={{
-                                    background: 'linear-gradient(to right, #f97316, #ec4899)',
-                                }}
-                            >
-                                SUBMIT
-                            </button>
-                            <button
-                                type="button"
-                                onClick={() => setFormType("login")}
-                                className="w-1/2 bg-slate-500 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
-                            >
-                                BACK
-                            </button>
-                        </div>
-                    )}
-
-                    {formType === "corporateRegister" && (
-                        <div className="flex gap-4 w-full mt-5">
-                            <button
-                                type="button"
-                                onClick={handleClose}
-                                className="w-1/2 text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
-                                style={{
-                                    background: 'linear-gradient(to right, #f97316, #ec4899)',
-                                }}
-                            >
-                                REGISTER
-                            </button>
-                            <button
-                                type="button"
-                                onClick={() => setFormType("login")}
-                                className="w-1/2 bg-[#1d4ed8] text-white py-2.5 rounded-md font-bold transition-transform hover:scale-105 duration-300 cursor-pointer"
-                            >
-                                LOGIN
-                            </button>
-                        </div>
-                    )}
-
-                </form>
+        <AuthCard>
+            {/* Heading */}
+            <div className="text-center mb-6">
+                <h1 className="text-2xl md:text-3xl font-bold text-[#1a6e3c]">Welcome Back</h1>
+                <p className="text-sm md:text-base mt-1">
+                    <span className="text-orange-500">Please log in to continue</span>
+                    {' '}
+                    <span className="text-[#1a6e8c]">your healthcare journey.</span>
+                </p>
             </div>
-        </div>
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-6" noValidate>
+                {/* Phone Number */}
+                <AuthInput
+                    label="Phone Number"
+                    type="tel"
+                    placeholder="Enter your phone number"
+                    value={phone}
+                    onChange={(v) => { setPhone(v); setErrors((e) => ({ ...e, phone: undefined })) }}
+                    icon={<Phone size={16} />}
+                    inputMode="numeric"
+                    autoComplete="tel"
+                    error={errors.phone}
+                />
+
+                {/* Form-level error */}
+                {errors.form && (
+                    <p className="text-xs text-red-500 text-center" role="alert">{errors.form}</p>
+                )}
+
+                {/* Generate OTP button */}
+                <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full h-11 md:h-12 mt-2 md:mt-4 bg-[#1a6e3c] hover:bg-[#155930] disabled:opacity-60 text-white font-semibold rounded-md flex items-center justify-center gap-2 transition-colors duration-200 cursor-pointer"
+                >
+                    {loading ? 'Sending OTP…' : 'Generate OTP'}
+                </button>
+            </form>
+
+        </AuthCard>
     )
 }

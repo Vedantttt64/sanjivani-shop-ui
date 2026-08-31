@@ -17,3 +17,6 @@ Thumbs.db
 **/public/ngo-banner-next/assets/js/
 **/public/ngo-banner-next/assets/images/
 **/ngo-banner-next/node_modules/
+
+.kilo/
+current.txt
