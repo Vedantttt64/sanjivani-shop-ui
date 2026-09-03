@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import IconSection from './IconSection'
 import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -21,7 +21,7 @@ import { FaLaptopCode } from "react-icons/fa"
 import { FaPersonMilitaryRifle } from "react-icons/fa6"
 import { GiShipBow } from "react-icons/gi"
 
-export default function Navbar() {
+function NavbarContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const stateFromParams = searchParams ? searchParams.get('state') : null;
@@ -229,6 +229,14 @@ export default function Navbar() {
         </nav>
       </div>
     </>
+  );
+}
+
+export default function Navbar() {
+  return (
+    <Suspense fallback={null}>
+      <NavbarContent />
+    </Suspense>
   );
 }
 
