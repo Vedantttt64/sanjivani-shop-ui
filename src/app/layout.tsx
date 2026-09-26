@@ -17,10 +17,13 @@ export const metadata: Metadata = {
   title: "Sanjivani NGO",
   description: "Sanjivani NGO",
   icons: {
-    icon: "/images/sanjivani-logo.png",
-    shortcut: "/images/sanjivani-logo.png",
-    apple: "/images/sanjivani-logo.png",
-  }
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/images/sanjivani-logo.png", type: "image/png" },
+    ],
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/sanjivani-logo.png" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/images/sanjivani-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/sanjivani-logo.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >

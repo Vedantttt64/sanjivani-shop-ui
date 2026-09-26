@@ -50,10 +50,10 @@ function DistrictContent() {
       <Navbar />
 
       {/* Main Container with top padding for fixed Navbar */}
-      <main className="flex-1 relative z-10 pt-20 pb-16 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col items-center">
+      <main className="flex-1 relative z-10 pt-[88px] sm:pt-24 pb-6 sm:pb-16 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col items-center">
 
         {/* Header / Selection Info Badge */}
-        <div className="text-center mt-2 mb-4 flex flex-col items-center">
+        <div className="text-center mt-2 mb-2 sm:mb-4 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 text-xs text-slate-700 shadow-md backdrop-blur-md">
             <Info className="w-4 h-4 text-blue-600 shrink-0" />
             <span className="font-extrabold uppercase tracking-wider text-slate-800">
@@ -65,7 +65,7 @@ function DistrictContent() {
         </div>
 
         {/* ── 1. Interactive Maharashtra District Map (Plain Background, No Bounding Card) ── */}
-        <div className="w-full h-[550px] sm:h-[650px] md:h-[700px] flex items-center justify-center relative mb-12">
+        <div className="w-full h-[310px] sm:h-[650px] md:h-[700px] flex items-center justify-center relative mb-2 sm:mb-12">
           <svg
             viewBox="0 0 800 650"
             className="w-full h-full drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500"
