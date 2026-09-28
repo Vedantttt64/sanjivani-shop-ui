@@ -6,36 +6,36 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqData = [
   {
-    question: 'What payment methods are accepted?',
-    answer: 'We accept credit/debit cards, UPI, wallets, and net banking.',
+    question: 'What is Sanjivani and what causes does it support?',
+    answer: 'Sanjivani is a community platform supporting healthcare, education, elderly care, clean energy, food distribution, and social welfare causes.',
   },
   {
-    question: 'What are the advantages of online cabs booking?',
-    answer: 'Convenience, real-time tracking, safe payments, and 24/7 service.',
+    question: 'How can I donate to a campaign through Sanjivani?',
+    answer: 'Select any active campaign or cause from the home or donation page, click Donate Now, enter your desired contribution, and complete payment securely.',
   },
   {
-    question: 'What kind of cabs can you book from Sanjivani ?',
-    answer: 'Choose from sedans, SUVs, tempo travellers, and luxury cars.',
+    question: 'How is my donation used for the selected cause?',
+    answer: 'Your donation goes directly toward funding the specific cause or campaign you select, such as healthcare treatment, food, or educational resources.',
   },
   {
-    question: 'Why should you book cabs from Sanjivani?',
-    answer: 'Trusted by corporates, professional drivers, and transparent pricing.',
+    question: 'Can I choose a specific campaign or cause to donate to?',
+    answer: 'Yes, you can browse through individual campaign categories, urgent initiatives, or state-wise causes and contribute to the one you choose.',
   },
   {
-    question: 'Do I need to register on Sanjivani to book a cab online?',
-    answer: 'Registration helps in secure booking, tracking, and easy cancellations.',
+    question: 'Will I receive a confirmation or receipt after making a donation?',
+    answer: 'Yes, after successfully completing your donation, an instant digital confirmation with details of your contribution will be provided.',
   },
   {
-    question: 'How are tolls & taxes calculated?',
-    answer: 'Tolls are automatically added based on your route and trip duration.',
+    question: 'Is my payment and personal information secure?',
+    answer: 'Yes, all payments are processed through encrypted payment gateways, and your personal data is handled securely in accordance with data privacy practices.',
   },
   {
-    question: 'What if I need to cancel my trip?',
-    answer: 'Free cancellation up to 1 hour before pickup time. After that, minimal charges may apply.',
+    question: 'How can I volunteer or get involved with Sanjivani?',
+    answer: 'You can sign up as a volunteer on our registration page or reach out directly to join our ongoing community outreach programs.',
   },
   {
-    question: 'How can I make a booking?',
-    answer: 'Just login, choose route and cab, and pay securely to confirm your ride.',
+    question: 'How can I contact Sanjivani for more information or support?',
+    answer: 'You can contact us via email, phone, or our official contact details available on the website header and footer for any assistance.',
   },
 ];
 
@@ -97,13 +97,12 @@ const FaqItem = memo(({ item, index, isOpen, toggle }: FaqItemProps) => {
 
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const isMobile = useIsMobile();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
-  const faqsToShow = isMobile ? faqData.slice(0, 3) : faqData;
+  const faqsToShow = faqData;
 
   return (
     <section className="bg-[#f2f1f9] pt-0 pb-2 px-5 md:px-10">
