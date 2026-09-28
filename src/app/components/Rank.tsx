@@ -59,7 +59,7 @@ export default function Rank() {
         
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-indigo-900 tracking-tight">
-            India SDG Progress & Rankings
+            India's Global Rankings
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-600 font-medium">
             Track India's performance, scores, and global standing across the United Nations Sustainable Development Goals (SDGs).

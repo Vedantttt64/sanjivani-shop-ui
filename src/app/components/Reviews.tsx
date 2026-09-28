@@ -78,27 +78,17 @@ export default function Reviews() {
     <section className="w-full bg-[#f2f1f9] pb-12 pt-0 md:pb-16 md:pt-0 px-2 sm:px-4 md:px-6 lg:px-8 flex justify-center">
       <div className="max-w-[1400px] w-full flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
         <div className="w-full lg:w-[22%] flex flex-col items-center text-center lg:items-start lg:text-left lg:pl-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-800">
-            EXCELLENT
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight flex flex-col leading-tight">
+            <span>
+              <span className="text-[#4285F4]">G</span>
+              <span className="text-[#EA4335]">o</span>
+              <span className="text-[#FBBC05]">o</span>
+              <span className="text-[#4285F4]">g</span>
+              <span className="text-[#34A853]">l</span>
+              <span className="text-[#EA4335]">e</span>
+            </span>
+            <span className="text-indigo-800">Reviews</span>
           </h2>
-          <div className="flex gap-1 mt-3">
-            {Array(5)
-              .fill(0)
-              .map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 fill-yellow-400"
-                />
-              ))}
-          </div>
-          <p className="mt-2 text-gray-700 text-sm sm:text-base md:text-lg">
-            Based on <span className="font-bold">46 reviews</span>
-          </p>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
-            alt="Google"
-            className="w-20 sm:w-28 mt-3"
-          />
         </div>
 
         <div className="w-full lg:w-[78%] relative flex items-center px-12">
