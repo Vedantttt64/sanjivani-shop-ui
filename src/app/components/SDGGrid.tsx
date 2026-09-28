@@ -54,10 +54,12 @@ export default function SDGGrid() {
               </div>
 
               {/* Hover/Active overlay card */}
-              <div className={`absolute inset-0 ${goal.color} opacity-0 group-hover:opacity-95 flex flex-col justify-center items-center text-white text-center p-3 transition-opacity duration-300`}>
-                <p className="text-2xl font-black">Goal {goal.id}</p>
-                <p className="text-xs sm:text-sm mt-2 font-bold px-1">{goal.title}</p>
-              </div>
+              {goal.id !== 18 && (
+                <div className={`absolute inset-0 ${goal.color} opacity-0 group-hover:opacity-95 flex flex-col justify-center items-center text-white text-center p-3 transition-opacity duration-300`}>
+                  <p className="text-2xl font-black">Goal {goal.id}</p>
+                  <p className="text-xs sm:text-sm mt-2 font-bold px-1">{goal.title}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>

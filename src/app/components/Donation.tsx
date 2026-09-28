@@ -62,7 +62,7 @@ export default function DonationPage() {
     <div className="flex flex-col bg-[#f2f1f9] pt-0 pb-6 md:pt-0 md:pb-6">
       <div className="w-full">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8 px-4 md:px-10">
-          Our Projects
+          Our Portfolios
         </h2>
 
         <div className="relative">
