@@ -78,7 +78,7 @@ export default function Reviews() {
     <section className="w-full bg-[#f2f1f9] pb-12 pt-0 md:pb-16 md:pt-0 px-2 sm:px-4 md:px-6 lg:px-8 flex justify-center">
       <div className="max-w-[1400px] w-full flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
         <div className="w-full lg:w-[22%] flex flex-col items-center text-center lg:items-start lg:text-left lg:pl-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight flex flex-col leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight flex flex-row lg:flex-col items-center justify-center lg:items-start gap-2 lg:gap-0 leading-tight">
             <span>
               <span className="text-[#4285F4]">G</span>
               <span className="text-[#EA4335]">o</span>

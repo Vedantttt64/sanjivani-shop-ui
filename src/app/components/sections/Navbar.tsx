@@ -211,8 +211,12 @@ function NavbarContent() {
                   const stateParam = urlParams.get('state') || sessionStorage.getItem('selectedState');
                   if (item.title.toLowerCase() === 'login') {
                     router.push('/login');
-                  } else if (item.title.toLowerCase() === 'district' && stateParam?.toLowerCase() === 'maharashtra') {
-                    router.push('/district');
+                  } else if (item.title.toLowerCase() === 'district') {
+                    if (window.location.pathname === '/district') {
+                      window.location.reload();
+                    } else {
+                      router.push('/district');
+                    }
                   } else if (item.title.toLowerCase() === 'home' && stateParam) {
                     router.push(`/?state=${encodeURIComponent(stateParam)}`);
                   }

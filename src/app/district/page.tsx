@@ -7,8 +7,11 @@ import Link from 'next/link';
 import { Info, MapPin, Search } from 'lucide-react';
 import Navbar from '@/app/components/sections/Navbar';
 import Footer from '@/app/components/Footer';
-import { maharashtraDistrictsData, DistrictInfo } from '@/app/data/districtData';
+import { maharashtraDistrictsData, karnatakaDistrictsData, madhyaPradeshDistrictsData, rajasthanDistrictsData, DistrictInfo } from '@/app/data/districtData';
 import { maharashtraMapPaths } from '@/app/data/maharashtraMapData';
+import { karnatakaMapPaths } from '@/app/data/karnatakaMapData';
+import { madhyaPradeshMapPaths } from '@/app/data/madhyaPradeshMapData';
+import { rajasthanMapPaths } from '@/app/data/rajasthanMapData';
 
 // Pastel color palette for districts matching the light off-white theme
 const districtColorClasses: string[] = [
@@ -26,22 +29,62 @@ function DistrictContent() {
   const router = useRouter();
   const [hoveredDistrict, setHoveredDistrict] = useState<DistrictInfo | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentState, setCurrentState] = useState<string>('Maharashtra');
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const stateParam = urlParams.get('state') || sessionStorage.getItem('selectedState');
+      if (stateParam) {
+        const st = stateParam.toLowerCase();
+        if (st.includes('karnataka')) {
+          setCurrentState('Karnataka');
+        } else if (st.includes('madhya') || st === 'mp') {
+          setCurrentState('Madhya Pradesh');
+        } else if (st.includes('rajasthan')) {
+          setCurrentState('Rajasthan');
+        } else {
+          setCurrentState('Maharashtra');
+        }
+      }
+    }
+  }, []);
+
+  const isKarnataka = currentState.toLowerCase() === 'karnataka';
+  const isMadhyaPradesh = currentState.toLowerCase().includes('madhya');
+  const isRajasthan = currentState.toLowerCase().includes('rajasthan');
+
+  const activeDistrictsData = isRajasthan
+    ? rajasthanDistrictsData
+    : isMadhyaPradesh
+    ? madhyaPradeshDistrictsData
+    : isKarnataka
+    ? karnatakaDistrictsData
+    : maharashtraDistrictsData;
+
+  const activeMapPaths = isRajasthan
+    ? rajasthanMapPaths
+    : isMadhyaPradesh
+    ? madhyaPradeshMapPaths
+    : isKarnataka
+    ? karnatakaMapPaths
+    : maharashtraMapPaths;
 
   // Combine paths with info
   const pathMap = React.useMemo(() => {
     const map = new Map<string, string>();
-    maharashtraMapPaths.forEach(p => map.set(p.id, p.path));
+    activeMapPaths.forEach(p => map.set(p.id, p.path));
     return map;
-  }, []);
+  }, [activeMapPaths]);
 
   // Filter districts based on search
   const filteredDistricts = React.useMemo(() => {
-    if (!searchQuery.trim()) return maharashtraDistrictsData;
+    if (!searchQuery.trim()) return activeDistrictsData;
     const q = searchQuery.toLowerCase();
-    return maharashtraDistrictsData.filter(
+    return activeDistrictsData.filter(
       d => d.name.toLowerCase().includes(q) || d.marathiName.includes(q) || d.headquarters.toLowerCase().includes(q)
     );
-  }, [searchQuery]);
+  }, [searchQuery, activeDistrictsData]);
 
   return (
     <div className="min-h-screen w-full bg-[#f8fafc] text-slate-800 flex flex-col font-sans relative overflow-x-hidden">
@@ -50,10 +93,10 @@ function DistrictContent() {
       <Navbar />
 
       {/* Main Container with top padding for fixed Navbar */}
-      <main className="flex-1 relative z-10 pt-[88px] sm:pt-24 pb-6 sm:pb-16 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col items-center">
+      <main className="flex-1 relative z-10 pt-[76px] sm:pt-24 pb-6 sm:pb-16 px-3 sm:px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col items-center">
 
         {/* Header / Selection Info Badge */}
-        <div className="text-center mt-2 mb-2 sm:mb-4 flex flex-col items-center">
+        <div className="text-center mt-1 sm:mt-2 mb-2 sm:mb-4 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 text-xs text-slate-700 shadow-md backdrop-blur-md">
             <Info className="w-4 h-4 text-blue-600 shrink-0" />
             <span className="font-extrabold uppercase tracking-wider text-slate-800">
@@ -64,15 +107,15 @@ function DistrictContent() {
           </div>
         </div>
 
-        {/* ── 1. Interactive Maharashtra District Map (Plain Background, No Bounding Card) ── */}
-        <div className="w-full h-[310px] sm:h-[650px] md:h-[700px] flex items-center justify-center relative mb-2 sm:mb-12">
+        {/* ── 1. Interactive State District Map (Plain Background, No Bounding Card) ── */}
+        <div className="w-full h-auto sm:h-[680px] md:h-[750px] flex items-center justify-center relative my-2 sm:my-0 sm:mb-12">
           <svg
             viewBox="0 0 800 650"
-            className="w-full h-full drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500"
+            className="w-full h-auto sm:h-full drop-shadow-[0_8px_24px_rgba(15,23,42,0.06)] select-none transition-transform duration-500 scale-100"
             xmlns="http://www.w3.org/2000/svg"
           >
             {/* Base Layer for All Districts */}
-            {maharashtraDistrictsData.map((d, index) => {
+            {activeDistrictsData.map((d, index) => {
               const pathD = pathMap.get(d.id);
               if (!pathD) return null;
 
@@ -100,7 +143,7 @@ function DistrictContent() {
                     onMouseEnter={() => setHoveredDistrict(d)}
                     onMouseLeave={() => setHoveredDistrict(null)}
                     onClick={() => {
-                      router.push(`/?state=Maharashtra&district=${encodeURIComponent(d.name)}`);
+                      router.push(`/?state=${encodeURIComponent(currentState)}&district=${encodeURIComponent(d.name)}`);
                     }}
                   />
                 </g>
@@ -111,7 +154,7 @@ function DistrictContent() {
             {hoveredDistrict && (() => {
               const pathD = pathMap.get(hoveredDistrict.id);
               if (!pathD) return null;
-              const index = maharashtraDistrictsData.findIndex(item => item.id === hoveredDistrict.id);
+              const index = activeDistrictsData.findIndex(item => item.id === hoveredDistrict.id);
               const colorClass = districtColorClasses[index % districtColorClasses.length];
 
               return (
@@ -131,7 +174,7 @@ function DistrictContent() {
             })()}
 
             {/* District Permanent Labels & Callout Leaders */}
-            {maharashtraDistrictsData.map((d) => {
+            {activeDistrictsData.map((d) => {
               const isHovered = hoveredDistrict?.id === d.id;
 
               if (d.hasCallout && d.labelX !== undefined && d.labelY !== undefined) {
@@ -160,14 +203,14 @@ function DistrictContent() {
                       <text
                         textAnchor="middle"
                         y="-2"
-                        className="text-[9px] font-extrabold fill-slate-900 tracking-tight"
+                        className="text-[10px] sm:text-[11px] font-black fill-slate-900 tracking-tight"
                       >
                         {d.name}
                       </text>
                       <text
                         textAnchor="middle"
-                        y={8}
-                        className="text-[8px] font-semibold fill-blue-700"
+                        y={9}
+                        className="text-[9px] sm:text-[10px] font-extrabold fill-blue-700"
                       >
                         {d.marathiName}
                       </text>
@@ -186,12 +229,12 @@ function DistrictContent() {
                   <text
                     textAnchor="middle"
                     y="-1"
-                    className={`text-[10px] sm:text-[11px] font-black tracking-tight transition-all duration-300 ${isHovered ? 'fill-slate-950 scale-105' : 'fill-slate-900'
+                    className={`text-[11px] sm:text-[13px] font-black tracking-tight transition-all duration-300 ${isHovered ? 'fill-slate-950 scale-110' : 'fill-slate-900'
                       }`}
                     style={{
                       paintOrder: 'stroke',
                       stroke: '#ffffff',
-                      strokeWidth: '3.5px',
+                      strokeWidth: '4px',
                       strokeLinejoin: 'round',
                     }}
                   >
@@ -199,13 +242,13 @@ function DistrictContent() {
                   </text>
                   <text
                     textAnchor="middle"
-                    y={10}
-                    className={`text-[9px] font-bold transition-all duration-300 ${isHovered ? 'fill-blue-900' : 'fill-blue-700'
+                    y={11}
+                    className={`text-[10px] sm:text-[11px] font-extrabold transition-all duration-300 ${isHovered ? 'fill-blue-950' : 'fill-blue-800'
                       }`}
                     style={{
                       paintOrder: 'stroke',
                       stroke: '#ffffff',
-                      strokeWidth: '3px',
+                      strokeWidth: '3.5px',
                       strokeLinejoin: 'round',
                     }}
                   >
@@ -223,10 +266,10 @@ function DistrictContent() {
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-wide uppercase flex items-center gap-2">
                 <MapPin className="w-6 h-6 text-blue-600" />
-                Districts of Maharashtra ({maharashtraDistrictsData.length})
+                Districts of {currentState} ({activeDistrictsData.length})
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                महाराष्ट्रातील जिल्हे — Select any district to view its portfolio page.
+                {isRajasthan ? 'राजस्थान के जिले' : isMadhyaPradesh ? 'मध्य प्रदेश के जिले' : isKarnataka ? 'ಕರ್ನಾಟಕದ ಜಿಲ್ಲೆಗಳು' : 'महाराष्ट्रातील जिल्हे'} — Select any district to view its portfolio page.
               </p>
             </div>
 
@@ -249,7 +292,7 @@ function DistrictContent() {
               <div
                 key={district.id}
                 onClick={() => {
-                  router.push(`/?state=Maharashtra&district=${encodeURIComponent(district.name)}`);
+                  router.push(`/?state=${encodeURIComponent(currentState)}&district=${encodeURIComponent(district.name)}`);
                 }}
                 className="group relative bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 cursor-pointer flex flex-col transform hover:-translate-y-1"
               >

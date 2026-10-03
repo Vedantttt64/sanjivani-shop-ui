@@ -92,7 +92,7 @@ export default function IconSection() {
                   const stateParam = urlParams.get('state') || sessionStorage.getItem('selectedState');
                   if (data.title.toLowerCase() === 'login') {
                     router.push('/login');
-                  } else if (data.title.toLowerCase() === 'district' && stateParam?.toLowerCase() === 'maharashtra') {
+                  } else if (data.title.toLowerCase() === 'district') {
                     // Force navigation even if already at /district
                     if (window.location.pathname === '/district') {
                       window.location.reload();
