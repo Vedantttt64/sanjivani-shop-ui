@@ -1492,3 +1492,757 @@ export const rajasthanDistrictsData: DistrictInfo[] = [
 ];
 
 
+
+
+export const uttarPradeshDistrictsData: DistrictInfo[] = [
+  {
+    "id": "amroha",
+    "name": "Amroha",
+    "marathiName": "अमरोहा",
+    "headquarters": "Amroha",
+    "image": "/assets/districts/uttarpradesh/amroha.jpg",
+    "cx": 181.9,
+    "cy": 179.8,
+    "link": "/district/amroha"
+  },
+  {
+    "id": "hapur",
+    "name": "Hapur",
+    "marathiName": "हापुड़",
+    "headquarters": "Hapur",
+    "image": "/assets/districts/uttarpradesh/hapur.jpg",
+    "cx": 139.2,
+    "cy": 187.4,
+    "link": "/district/hapur"
+  },
+  {
+    "id": "bareilly",
+    "name": "Bareilly",
+    "marathiName": "बरेली",
+    "headquarters": "Bareilly",
+    "image": "/assets/districts/uttarpradesh/bareilly.jpg",
+    "cx": 277.5,
+    "cy": 209.7,
+    "link": "/district/bareilly"
+  },
+  {
+    "id": "pilibhit",
+    "name": "Pilibhit",
+    "marathiName": "पीलीभीत",
+    "headquarters": "Pilibhit",
+    "image": "/assets/districts/uttarpradesh/pilibhit.jpg",
+    "cx": 319.4,
+    "cy": 206.5,
+    "link": "/district/pilibhit"
+  },
+  {
+    "id": "bulandshahr",
+    "name": "Bulandshahr",
+    "marathiName": "बुलंदशहर",
+    "headquarters": "Bulandshahr",
+    "image": "/assets/districts/uttarpradesh/bulandshahr.jpg",
+    "cx": 153.1,
+    "cy": 221.9,
+    "link": "/district/bulandshahr"
+  },
+  {
+    "id": "gautambuddhanagar",
+    "name": "Gautam Buddha Nagar",
+    "marathiName": "गौतम बुद्ध नगर",
+    "headquarters": "Gautam Buddha Nagar",
+    "image": "/assets/districts/uttarpradesh/gautambuddhanagar.jpg",
+    "cx": 111.1,
+    "cy": 217.9,
+    "link": "/district/gautambuddhanagar"
+  },
+  {
+    "id": "lakhimpurkheri",
+    "name": "Lakhimpur Kheri",
+    "marathiName": "Lakhimpur Kheri",
+    "headquarters": "Lakhimpur Kheri",
+    "image": "/assets/districts/uttarpradesh/lakhimpurkheri.jpg",
+    "cx": 386.3,
+    "cy": 243.4,
+    "link": "/district/lakhimpurkheri"
+  },
+  {
+    "id": "budaun",
+    "name": "Budaun",
+    "marathiName": "बदायूं",
+    "headquarters": "Budaun",
+    "image": "/assets/districts/uttarpradesh/budaun.jpg",
+    "cx": 243.8,
+    "cy": 241.8,
+    "link": "/district/budaun"
+  },
+  {
+    "id": "bahraich",
+    "name": "Bahraich",
+    "marathiName": "बहराइच",
+    "headquarters": "Bahraich",
+    "image": "/assets/districts/uttarpradesh/bahraich.jpg",
+    "cx": 458.4,
+    "cy": 281.9,
+    "link": "/district/bahraich"
+  },
+  {
+    "id": "shahjahanpur",
+    "name": "Shahjahanpur",
+    "marathiName": "शाहजहांपुर",
+    "headquarters": "Shahjahanpur",
+    "image": "/assets/districts/uttarpradesh/shahjahanpur.jpg",
+    "cx": 307.8,
+    "cy": 255.3,
+    "link": "/district/shahjahanpur"
+  },
+  {
+    "id": "aligarh",
+    "name": "Aligarh",
+    "marathiName": "अलीगढ़",
+    "headquarters": "Aligarh",
+    "image": "/assets/districts/uttarpradesh/aligarh.jpg",
+    "cx": 154.8,
+    "cy": 257,
+    "link": "/district/aligarh"
+  },
+  {
+    "id": "kasganj",
+    "name": "Kasganj",
+    "marathiName": "कासगंज",
+    "headquarters": "Kasganj",
+    "image": "/assets/districts/uttarpradesh/kasganj.jpg",
+    "cx": 223.6,
+    "cy": 270.5,
+    "link": "/district/kasganj"
+  },
+  {
+    "id": "mathura",
+    "name": "Mathura",
+    "marathiName": "मथुरा",
+    "headquarters": "Mathura",
+    "image": "/assets/districts/uttarpradesh/mathura.jpg",
+    "cx": 122.1,
+    "cy": 288.4,
+    "link": "/district/mathura"
+  },
+  {
+    "id": "shrawasti",
+    "name": "Shrawasti",
+    "marathiName": "Shrawasti",
+    "headquarters": "Shrawasti",
+    "image": "/assets/districts/uttarpradesh/shrawasti.jpg",
+    "cx": 489.8,
+    "cy": 278.7,
+    "link": "/district/shrawasti"
+  },
+  {
+    "id": "sitapur",
+    "name": "Sitapur",
+    "marathiName": "सीतापुर",
+    "headquarters": "Sitapur",
+    "image": "/assets/districts/uttarpradesh/sitapur.jpg",
+    "cx": 406.1,
+    "cy": 293.8,
+    "link": "/district/sitapur"
+  },
+  {
+    "id": "hathras",
+    "name": "Hathras",
+    "marathiName": "हाथरस",
+    "headquarters": "Hathras",
+    "image": "/assets/districts/uttarpradesh/hathras.jpg",
+    "cx": 161.7,
+    "cy": 288,
+    "link": "/district/hathras"
+  },
+  {
+    "id": "etah",
+    "name": "Etah",
+    "marathiName": "एटा",
+    "headquarters": "Etah",
+    "image": "/assets/districts/uttarpradesh/etah.jpg",
+    "cx": 214.3,
+    "cy": 293.5,
+    "link": "/district/etah"
+  },
+  {
+    "id": "hardoi",
+    "name": "Hardoi",
+    "marathiName": "हरदोई",
+    "headquarters": "Hardoi",
+    "image": "/assets/districts/uttarpradesh/hardoi.jpg",
+    "cx": 341.1,
+    "cy": 309,
+    "link": "/district/hardoi"
+  },
+  {
+    "id": "farrukhabad",
+    "name": "Farrukhabad",
+    "marathiName": "फर्रुखाबाद",
+    "headquarters": "Farrukhabad",
+    "image": "/assets/districts/uttarpradesh/farrukhabad.jpg",
+    "cx": 276.2,
+    "cy": 297.9,
+    "link": "/district/farrukhabad"
+  },
+  {
+    "id": "firozabad",
+    "name": "Firozabad",
+    "marathiName": "फिरोजाबाद",
+    "headquarters": "Firozabad",
+    "image": "/assets/districts/uttarpradesh/firozabad.jpg",
+    "cx": 196.9,
+    "cy": 324.3,
+    "link": "/district/firozabad"
+  },
+  {
+    "id": "siddharthnagar",
+    "name": "Siddharthnagar",
+    "marathiName": "सिद्धार्थनगर",
+    "headquarters": "Siddharthnagar",
+    "image": "/assets/districts/uttarpradesh/siddharthnagar.jpg",
+    "cx": 568.2,
+    "cy": 317.4,
+    "link": "/district/siddharthnagar"
+  },
+  {
+    "id": "mainpuri",
+    "name": "Mainpuri",
+    "marathiName": "मैनपुरी",
+    "headquarters": "Mainpuri",
+    "image": "/assets/districts/uttarpradesh/mainpuri.jpg",
+    "cx": 239.8,
+    "cy": 322.4,
+    "link": "/district/mainpuri"
+  },
+  {
+    "id": "maharajganj",
+    "name": "Maharajganj",
+    "marathiName": "महाराजगंज",
+    "headquarters": "Maharajganj",
+    "image": "/assets/districts/uttarpradesh/maharajganj.jpg",
+    "cx": 632.5,
+    "cy": 325.7,
+    "link": "/district/maharajganj"
+  },
+  {
+    "id": "agra",
+    "name": "Agra",
+    "marathiName": "आगरा",
+    "headquarters": "Agra",
+    "image": "/assets/districts/uttarpradesh/agra.jpg",
+    "cx": 158.9,
+    "cy": 335.2,
+    "link": "/district/agra"
+  },
+  {
+    "id": "gonda",
+    "name": "Gonda",
+    "marathiName": "गोंडा",
+    "headquarters": "Gonda",
+    "image": "/assets/districts/uttarpradesh/gonda.jpg",
+    "cx": 507.6,
+    "cy": 327.2,
+    "link": "/district/gonda"
+  },
+  {
+    "id": "barabanki",
+    "name": "Barabanki",
+    "marathiName": "बाराबंकी",
+    "headquarters": "Barabanki",
+    "image": "/assets/districts/uttarpradesh/barabanki.jpg",
+    "cx": 440.6,
+    "cy": 339.5,
+    "link": "/district/barabanki"
+  },
+  {
+    "id": "kushinagar",
+    "name": "Kushinagar",
+    "marathiName": "कुशीनगर",
+    "headquarters": "Kushinagar",
+    "image": "/assets/districts/uttarpradesh/kushinagar.jpg",
+    "cx": 664.1,
+    "cy": 345.1,
+    "link": "/district/kushinagar"
+  },
+  {
+    "id": "kannauj",
+    "name": "Kannauj",
+    "marathiName": "कन्नौज",
+    "headquarters": "Kannauj",
+    "image": "/assets/districts/uttarpradesh/kannauj.jpg",
+    "cx": 297.9,
+    "cy": 337.4,
+    "link": "/district/kannauj"
+  },
+  {
+    "id": "lucknow",
+    "name": "Lucknow",
+    "marathiName": "लखनऊ",
+    "headquarters": "Lucknow",
+    "image": "/assets/districts/uttarpradesh/lucknow.jpg",
+    "cx": 402.9,
+    "cy": 349.7,
+    "link": "/district/lucknow"
+  },
+  {
+    "id": "basti",
+    "name": "Basti",
+    "marathiName": "बस्ती",
+    "headquarters": "Basti",
+    "image": "/assets/districts/uttarpradesh/basti.jpg",
+    "cx": 557.7,
+    "cy": 348.5,
+    "link": "/district/basti"
+  },
+  {
+    "id": "gorakhpur",
+    "name": "Gorakhpur",
+    "marathiName": "गोरखपुर",
+    "headquarters": "Gorakhpur",
+    "image": "/assets/districts/uttarpradesh/gorakhpur.jpg",
+    "cx": 616.5,
+    "cy": 360.8,
+    "link": "/district/gorakhpur"
+  },
+  {
+    "id": "santkabirnagar",
+    "name": "Sant Kabir Nagar",
+    "marathiName": "संत कबीर नगर",
+    "headquarters": "Sant Kabir Nagar",
+    "image": "/assets/districts/uttarpradesh/santkabirnagar.jpg",
+    "cx": 590.4,
+    "cy": 351.8,
+    "link": "/district/santkabirnagar"
+  },
+  {
+    "id": "unnao",
+    "name": "Unnao",
+    "marathiName": "उन्नाव",
+    "headquarters": "Unnao",
+    "image": "/assets/districts/uttarpradesh/unnao.jpg",
+    "cx": 379,
+    "cy": 369.8,
+    "link": "/district/unnao"
+  },
+  {
+    "id": "etawah",
+    "name": "Etawah",
+    "marathiName": "इटावा",
+    "headquarters": "Etawah",
+    "image": "/assets/districts/uttarpradesh/etawah.jpg",
+    "cx": 243.6,
+    "cy": 357.7,
+    "link": "/district/etawah"
+  },
+  {
+    "id": "kanpurnagar",
+    "name": "Kanpur Nagar",
+    "marathiName": "कानपुर नगर",
+    "headquarters": "Kanpur Nagar",
+    "image": "/assets/districts/uttarpradesh/kanpurnagar.jpg",
+    "cx": 336.5,
+    "cy": 383.4,
+    "link": "/district/kanpurnagar"
+  },
+  {
+    "id": "auraiya",
+    "name": "Auraiya",
+    "marathiName": "औरैया",
+    "headquarters": "Auraiya",
+    "image": "/assets/districts/uttarpradesh/auraiya.jpg",
+    "cx": 279.2,
+    "cy": 364.4,
+    "link": "/district/auraiya"
+  },
+  {
+    "id": "ayodhya",
+    "name": "Ayodhya",
+    "marathiName": "अयोध्या",
+    "headquarters": "Ayodhya",
+    "image": "/assets/districts/uttarpradesh/ayodhya.jpg",
+    "cx": 497.7,
+    "cy": 370.1,
+    "link": "/district/ayodhya"
+  },
+  {
+    "id": "kanpurdehat",
+    "name": "Kanpur Dehat",
+    "marathiName": "कानपुर देहात",
+    "headquarters": "Kanpur Dehat",
+    "image": "/assets/districts/uttarpradesh/kanpurdehat.jpg",
+    "cx": 315.7,
+    "cy": 385.1,
+    "link": "/district/kanpurdehat"
+  },
+  {
+    "id": "deoria",
+    "name": "Deoria",
+    "marathiName": "देवरिया",
+    "headquarters": "Deoria",
+    "image": "/assets/districts/uttarpradesh/deoria.jpg",
+    "cx": 658.8,
+    "cy": 388.6,
+    "link": "/district/deoria"
+  },
+  {
+    "id": "sultanpur",
+    "name": "Sultanpur",
+    "marathiName": "सुल्तानपुर",
+    "headquarters": "Sultanpur",
+    "image": "/assets/districts/uttarpradesh/sultanpur.jpg",
+    "cx": 523.7,
+    "cy": 403,
+    "link": "/district/sultanpur"
+  },
+  {
+    "id": "ambedkarnagar",
+    "name": "Ambedkar Nagar",
+    "marathiName": "अम्बेडकर नगर",
+    "headquarters": "Ambedkar Nagar",
+    "image": "/assets/districts/uttarpradesh/ambedkarnagar.jpg",
+    "cx": 556.8,
+    "cy": 391.1,
+    "link": "/district/ambedkarnagar"
+  },
+  {
+    "id": "raebareli",
+    "name": "Rae Bareli",
+    "marathiName": "Rae Bareli",
+    "headquarters": "Rae Bareli",
+    "image": "/assets/districts/uttarpradesh/raebareli.jpg",
+    "cx": 423,
+    "cy": 401.6,
+    "link": "/district/raebareli"
+  },
+  {
+    "id": "jalaun",
+    "name": "Jalaun",
+    "marathiName": "जालौन",
+    "headquarters": "Jalaun",
+    "image": "/assets/districts/uttarpradesh/jalaun.jpg",
+    "cx": 271.3,
+    "cy": 417.4,
+    "link": "/district/jalaun"
+  },
+  {
+    "id": "azamgarh",
+    "name": "Azamgarh",
+    "marathiName": "आजमगढ़",
+    "headquarters": "Azamgarh",
+    "image": "/assets/districts/uttarpradesh/azamgarh.jpg",
+    "cx": 590.1,
+    "cy": 418.3,
+    "link": "/district/azamgarh"
+  },
+  {
+    "id": "mau",
+    "name": "Mau",
+    "marathiName": "मऊ",
+    "headquarters": "Mau",
+    "image": "/assets/districts/uttarpradesh/mau.jpg",
+    "cx": 636.6,
+    "cy": 423.8,
+    "link": "/district/mau"
+  },
+  {
+    "id": "fatehpur",
+    "name": "Fatehpur",
+    "marathiName": "फतेहपुर",
+    "headquarters": "Fatehpur",
+    "image": "/assets/districts/uttarpradesh/fatehpur.jpg",
+    "cx": 392.7,
+    "cy": 437.8,
+    "link": "/district/fatehpur"
+  },
+  {
+    "id": "ballia",
+    "name": "Ballia",
+    "marathiName": "बलिया",
+    "headquarters": "Ballia",
+    "image": "/assets/districts/uttarpradesh/ballia.jpg",
+    "cx": 680.4,
+    "cy": 438.1,
+    "link": "/district/ballia"
+  },
+  {
+    "id": "jaunpur",
+    "name": "Jaunpur",
+    "marathiName": "जौनपुर",
+    "headquarters": "Jaunpur",
+    "image": "/assets/districts/uttarpradesh/jaunpur.jpg",
+    "cx": 550.5,
+    "cy": 446.5,
+    "link": "/district/jaunpur"
+  },
+  {
+    "id": "jhansi",
+    "name": "Jhansi",
+    "marathiName": "झांसी",
+    "headquarters": "Jhansi",
+    "image": "/assets/districts/uttarpradesh/jhansi.jpg",
+    "cx": 227.7,
+    "cy": 472.4,
+    "link": "/district/jhansi"
+  },
+  {
+    "id": "banda",
+    "name": "Banda",
+    "marathiName": "बांदा",
+    "headquarters": "Banda",
+    "image": "/assets/districts/uttarpradesh/banda.jpg",
+    "cx": 367.8,
+    "cy": 481.2,
+    "link": "/district/banda"
+  },
+  {
+    "id": "ghazipur",
+    "name": "Ghazipur",
+    "marathiName": "गाजीपुर",
+    "headquarters": "Ghazipur",
+    "image": "/assets/districts/uttarpradesh/ghazipur.jpg",
+    "cx": 637.1,
+    "cy": 459.5,
+    "link": "/district/ghazipur"
+  },
+  {
+    "id": "kaushambi",
+    "name": "Kaushambi",
+    "marathiName": "कौशांबी",
+    "headquarters": "Kaushambi",
+    "image": "/assets/districts/uttarpradesh/kaushambi.jpg",
+    "cx": 448.7,
+    "cy": 466.8,
+    "link": "/district/kaushambi"
+  },
+  {
+    "id": "prayagraj",
+    "name": "Prayagraj",
+    "marathiName": "प्रयागराज",
+    "headquarters": "Prayagraj",
+    "image": "/assets/districts/uttarpradesh/prayagraj.jpg",
+    "cx": 496.1,
+    "cy": 480.6,
+    "link": "/district/prayagraj"
+  },
+  {
+    "id": "varanasi",
+    "name": "Varanasi",
+    "marathiName": "वाराणसी",
+    "headquarters": "Varanasi",
+    "image": "/assets/districts/uttarpradesh/varanasi.jpg",
+    "cx": 577.4,
+    "cy": 478.9,
+    "link": "/district/varanasi"
+  },
+  {
+    "id": "chitrakoot",
+    "name": "Chitrakoot",
+    "marathiName": "चित्रकूट",
+    "headquarters": "Chitrakoot",
+    "image": "/assets/districts/uttarpradesh/chitrakoot.jpg",
+    "cx": 419.3,
+    "cy": 497.6,
+    "link": "/district/chitrakoot"
+  },
+  {
+    "id": "chandauli",
+    "name": "Chandauli",
+    "marathiName": "चंदौली",
+    "headquarters": "Chandauli",
+    "image": "/assets/districts/uttarpradesh/chandauli.jpg",
+    "cx": 609.8,
+    "cy": 500.8,
+    "link": "/district/chandauli"
+  },
+  {
+    "id": "bhadohi",
+    "name": "Bhadohi",
+    "marathiName": "भदोही",
+    "headquarters": "Bhadohi",
+    "image": "/assets/districts/uttarpradesh/bhadohi.jpg",
+    "cx": 537.9,
+    "cy": 479.6,
+    "link": "/district/bhadohi"
+  },
+  {
+    "id": "mirzapur",
+    "name": "Mirzapur",
+    "marathiName": "मिर्जापुर",
+    "headquarters": "Mirzapur",
+    "image": "/assets/districts/uttarpradesh/mirzapur.jpg",
+    "cx": 547.6,
+    "cy": 513.5,
+    "link": "/district/mirzapur"
+  },
+  {
+    "id": "lalitpur",
+    "name": "Lalitpur",
+    "marathiName": "ललितपुर",
+    "headquarters": "Lalitpur",
+    "image": "/assets/districts/uttarpradesh/lalitpur.jpg",
+    "cx": 201.1,
+    "cy": 545.6,
+    "link": "/district/lalitpur"
+  },
+  {
+    "id": "sonbhadra",
+    "name": "Sonbhadra",
+    "marathiName": "सोनभद्र",
+    "headquarters": "Sonbhadra",
+    "image": "/assets/districts/uttarpradesh/sonbhadra.jpg",
+    "cx": 588.6,
+    "cy": 553.1,
+    "link": "/district/sonbhadra"
+  },
+  {
+    "id": "amethi",
+    "name": "Amethi",
+    "marathiName": "अमेठी",
+    "headquarters": "Amethi",
+    "image": "/assets/districts/uttarpradesh/amethi.jpg",
+    "cx": 469.8,
+    "cy": 397.7,
+    "link": "/district/amethi"
+  },
+  {
+    "id": "ghaziabad",
+    "name": "Ghaziabad",
+    "marathiName": "गाजियाबाद",
+    "headquarters": "Ghaziabad",
+    "image": "/assets/districts/uttarpradesh/ghaziabad.jpg",
+    "cx": 102.5,
+    "cy": 183.8,
+    "link": "/district/ghaziabad"
+  },
+  {
+    "id": "sambhal",
+    "name": "Sambhal",
+    "marathiName": "संभल",
+    "headquarters": "Sambhal",
+    "image": "/assets/districts/uttarpradesh/sambhal.jpg",
+    "cx": 201.2,
+    "cy": 208.8,
+    "link": "/district/sambhal"
+  },
+  {
+    "id": "mahoba",
+    "name": "Mahoba",
+    "marathiName": "महोबा",
+    "headquarters": "Mahoba",
+    "image": "/assets/districts/uttarpradesh/mahoba.jpg",
+    "cx": 294.5,
+    "cy": 483.6,
+    "link": "/district/mahoba"
+  },
+  {
+    "id": "saharanpur",
+    "name": "Saharanpur",
+    "marathiName": "सहारनपुर",
+    "headquarters": "Saharanpur",
+    "image": "/assets/districts/uttarpradesh/saharanpur.jpg",
+    "cx": 111.3,
+    "cy": 80.8,
+    "link": "/district/saharanpur"
+  },
+  {
+    "id": "bijnor",
+    "name": "Bijnor",
+    "marathiName": "बिजनौर",
+    "headquarters": "Bijnor",
+    "image": "/assets/districts/uttarpradesh/bijnor.jpg",
+    "cx": 189.4,
+    "cy": 132.9,
+    "link": "/district/bijnor"
+  },
+  {
+    "id": "muzaffarnagar",
+    "name": "Muzaffarnagar",
+    "marathiName": "मुजफ्फरनगर",
+    "headquarters": "Muzaffarnagar",
+    "image": "/assets/districts/uttarpradesh/muzaffarnagar.jpg",
+    "cx": 126,
+    "cy": 123.9,
+    "link": "/district/muzaffarnagar"
+  },
+  {
+    "id": "baghpat",
+    "name": "Baghpat",
+    "marathiName": "बागपत",
+    "headquarters": "Baghpat",
+    "image": "/assets/districts/uttarpradesh/baghpat.jpg",
+    "cx": 91.1,
+    "cy": 158.9,
+    "link": "/district/baghpat"
+  },
+  {
+    "id": "meerut",
+    "name": "Meerut",
+    "marathiName": "मेरठ",
+    "headquarters": "Meerut",
+    "image": "/assets/districts/uttarpradesh/meerut.jpg",
+    "cx": 128.1,
+    "cy": 161.6,
+    "link": "/district/meerut"
+  },
+  {
+    "id": "moradabad",
+    "name": "Moradabad",
+    "marathiName": "मुरादाबाद",
+    "headquarters": "Moradabad",
+    "image": "/assets/districts/uttarpradesh/moradabad.jpg",
+    "cx": 219.5,
+    "cy": 174.1,
+    "link": "/district/moradabad"
+  },
+  {
+    "id": "rampur",
+    "name": "Rampur",
+    "marathiName": "रामपुर",
+    "headquarters": "Rampur",
+    "image": "/assets/districts/uttarpradesh/rampur.jpg",
+    "cx": 245.6,
+    "cy": 178.4,
+    "link": "/district/rampur"
+  },
+  {
+    "id": "shamli",
+    "name": "Shamli",
+    "marathiName": "शामली",
+    "headquarters": "Shamli",
+    "image": "/assets/districts/uttarpradesh/shamli.jpg",
+    "cx": 87.9,
+    "cy": 120,
+    "link": "/district/shamli"
+  },
+  {
+    "id": "balrampur",
+    "name": "Balrampur",
+    "marathiName": "बलरामपुर",
+    "headquarters": "Balrampur",
+    "image": "/assets/districts/uttarpradesh/balrampur.jpg",
+    "cx": 536.2,
+    "cy": 303.9,
+    "link": "/district/balrampur"
+  },
+  {
+    "id": "hamirpur",
+    "name": "Hamirpur",
+    "marathiName": "हमीरपुर",
+    "headquarters": "Hamirpur",
+    "image": "/assets/districts/uttarpradesh/hamirpur.jpg",
+    "cx": 311.6,
+    "cy": 444.8,
+    "link": "/district/hamirpur"
+  },
+  {
+    "id": "pratapgarh",
+    "name": "Pratapgarh",
+    "marathiName": "प्रतापगढ़",
+    "headquarters": "Pratapgarh",
+    "image": "/assets/districts/uttarpradesh/pratapgarh.jpg",
+    "cx": 488.3,
+    "cy": 434,
+    "link": "/district/pratapgarh"
+  }
+];

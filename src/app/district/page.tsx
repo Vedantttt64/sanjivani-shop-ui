@@ -7,11 +7,12 @@ import Link from 'next/link';
 import { Info, MapPin, Search } from 'lucide-react';
 import Navbar from '@/app/components/sections/Navbar';
 import Footer from '@/app/components/Footer';
-import { maharashtraDistrictsData, karnatakaDistrictsData, madhyaPradeshDistrictsData, rajasthanDistrictsData, DistrictInfo } from '@/app/data/districtData';
+import { maharashtraDistrictsData, karnatakaDistrictsData, madhyaPradeshDistrictsData, rajasthanDistrictsData, uttarPradeshDistrictsData, DistrictInfo } from '@/app/data/districtData';
 import { maharashtraMapPaths } from '@/app/data/maharashtraMapData';
 import { karnatakaMapPaths } from '@/app/data/karnatakaMapData';
 import { madhyaPradeshMapPaths } from '@/app/data/madhyaPradeshMapData';
 import { rajasthanMapPaths } from '@/app/data/rajasthanMapData';
+import { uttarPradeshMapPaths } from '@/app/data/uttarPradeshMapData';
 
 // Pastel color palette for districts matching the light off-white theme
 const districtColorClasses: string[] = [
@@ -43,6 +44,8 @@ function DistrictContent() {
           setCurrentState('Madhya Pradesh');
         } else if (st.includes('rajasthan')) {
           setCurrentState('Rajasthan');
+        } else if (st.includes('uttar') || st === 'up') {
+          setCurrentState('Uttar Pradesh');
         } else {
           setCurrentState('Maharashtra');
         }
@@ -53,8 +56,11 @@ function DistrictContent() {
   const isKarnataka = currentState.toLowerCase() === 'karnataka';
   const isMadhyaPradesh = currentState.toLowerCase().includes('madhya');
   const isRajasthan = currentState.toLowerCase().includes('rajasthan');
+  const isUttarPradesh = currentState.toLowerCase().includes('uttar') || currentState.toLowerCase() === 'up';
 
-  const activeDistrictsData = isRajasthan
+  const activeDistrictsData = isUttarPradesh
+    ? uttarPradeshDistrictsData
+    : isRajasthan
     ? rajasthanDistrictsData
     : isMadhyaPradesh
     ? madhyaPradeshDistrictsData
@@ -62,7 +68,9 @@ function DistrictContent() {
     ? karnatakaDistrictsData
     : maharashtraDistrictsData;
 
-  const activeMapPaths = isRajasthan
+  const activeMapPaths = isUttarPradesh
+    ? uttarPradeshMapPaths
+    : isRajasthan
     ? rajasthanMapPaths
     : isMadhyaPradesh
     ? madhyaPradeshMapPaths
@@ -269,7 +277,7 @@ function DistrictContent() {
                 Districts of {currentState} ({activeDistrictsData.length})
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                {isRajasthan ? 'राजस्थान के जिले' : isMadhyaPradesh ? 'मध्य प्रदेश के जिले' : isKarnataka ? 'ಕರ್ನಾಟಕದ ಜಿಲ್ಲೆಗಳು' : 'महाराष्ट्रातील जिल्हे'} — Select any district to view its portfolio page.
+                {isUttarPradesh ? 'उत्तर प्रदेश के जिले' : isRajasthan ? 'राजस्थान के जिले' : isMadhyaPradesh ? 'मध्य प्रदेश के जिले' : isKarnataka ? 'ಕರ್ನಾಟಕದ ಜಿಲ್ಲೆಗಳು' : 'महाराष्ट्रातील जिल्हे'} — Select any district to view its portfolio page.
               </p>
             </div>
 
