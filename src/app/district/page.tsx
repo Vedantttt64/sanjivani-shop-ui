@@ -7,12 +7,18 @@ import Link from 'next/link';
 import { Info, MapPin, Search } from 'lucide-react';
 import Navbar from '@/app/components/sections/Navbar';
 import Footer from '@/app/components/Footer';
-import { maharashtraDistrictsData, karnatakaDistrictsData, madhyaPradeshDistrictsData, rajasthanDistrictsData, uttarPradeshDistrictsData, DistrictInfo } from '@/app/data/districtData';
+import { maharashtraDistrictsData, karnatakaDistrictsData, madhyaPradeshDistrictsData, rajasthanDistrictsData, uttarPradeshDistrictsData, chhattisgarhDistrictsData, telanganaDistrictsData, andhraPradeshDistrictsData, gujaratDistrictsData, tamilNaduDistrictsData, keralaDistrictsData, DistrictInfo } from '@/app/data/districtData';
 import { maharashtraMapPaths } from '@/app/data/maharashtraMapData';
 import { karnatakaMapPaths } from '@/app/data/karnatakaMapData';
 import { madhyaPradeshMapPaths } from '@/app/data/madhyaPradeshMapData';
 import { rajasthanMapPaths } from '@/app/data/rajasthanMapData';
 import { uttarPradeshMapPaths } from '@/app/data/uttarPradeshMapData';
+import { chhattisgarhMapPaths } from '@/app/data/chhattisgarhMapData';
+import { telanganaMapPaths } from '@/app/data/telanganaMapData';
+import { andhraPradeshMapPaths } from '@/app/data/andhraPradeshMapData';
+import { gujaratMapPaths } from '@/app/data/gujaratMapData';
+import { tamilNaduMapPaths } from '@/app/data/tamilNaduMapData';
+import { keralaMapPaths } from '@/app/data/keralaMapData';
 
 // Pastel color palette for districts matching the light off-white theme
 const districtColorClasses: string[] = [
@@ -46,6 +52,18 @@ function DistrictContent() {
           setCurrentState('Rajasthan');
         } else if (st.includes('uttar') || st === 'up') {
           setCurrentState('Uttar Pradesh');
+        } else if (st.includes('chhattisgarh') || st.includes('chhatisgarh') || st === 'cg' || st === 'ct') {
+          setCurrentState('Chhattisgarh');
+        } else if (st.includes('telangana') || st === 'tg' || st === 'ts') {
+          setCurrentState('Telangana');
+        } else if (st.includes('andhra') || st === 'ap') {
+          setCurrentState('Andhra Pradesh');
+        } else if (st.includes('gujarat') || st === 'gj') {
+          setCurrentState('Gujarat');
+        } else if (st.includes('tamil') || st === 'tn') {
+          setCurrentState('Tamil Nadu');
+        } else if (st.includes('kerala') || st === 'kl') {
+          setCurrentState('Kerala');
         } else {
           setCurrentState('Maharashtra');
         }
@@ -57,8 +75,26 @@ function DistrictContent() {
   const isMadhyaPradesh = currentState.toLowerCase().includes('madhya');
   const isRajasthan = currentState.toLowerCase().includes('rajasthan');
   const isUttarPradesh = currentState.toLowerCase().includes('uttar') || currentState.toLowerCase() === 'up';
+  const isChhattisgarh = currentState.toLowerCase().includes('chhattisgarh') || currentState.toLowerCase().includes('chhatisgarh') || currentState.toLowerCase() === 'cg' || currentState.toLowerCase() === 'ct';
+  const isTelangana = currentState.toLowerCase().includes('telangana') || currentState.toLowerCase() === 'tg' || currentState.toLowerCase() === 'ts';
+  const isAndhraPradesh = currentState.toLowerCase().includes('andhra') || currentState.toLowerCase() === 'ap';
+  const isGujarat = currentState.toLowerCase().includes('gujarat') || currentState.toLowerCase() === 'gj';
+  const isTamilNadu = currentState.toLowerCase().includes('tamil') || currentState.toLowerCase() === 'tn';
+  const isKerala = currentState.toLowerCase().includes('kerala') || currentState.toLowerCase() === 'kl';
 
-  const activeDistrictsData = isUttarPradesh
+  const activeDistrictsData = isKerala
+    ? keralaDistrictsData
+    : isTamilNadu
+    ? tamilNaduDistrictsData
+    : isGujarat
+    ? gujaratDistrictsData
+    : isAndhraPradesh
+    ? andhraPradeshDistrictsData
+    : isTelangana
+    ? telanganaDistrictsData
+    : isChhattisgarh
+    ? chhattisgarhDistrictsData
+    : isUttarPradesh
     ? uttarPradeshDistrictsData
     : isRajasthan
     ? rajasthanDistrictsData
@@ -68,7 +104,19 @@ function DistrictContent() {
     ? karnatakaDistrictsData
     : maharashtraDistrictsData;
 
-  const activeMapPaths = isUttarPradesh
+  const activeMapPaths = isKerala
+    ? keralaMapPaths
+    : isTamilNadu
+    ? tamilNaduMapPaths
+    : isGujarat
+    ? gujaratMapPaths
+    : isAndhraPradesh
+    ? andhraPradeshMapPaths
+    : isTelangana
+    ? telanganaMapPaths
+    : isChhattisgarh
+    ? chhattisgarhMapPaths
+    : isUttarPradesh
     ? uttarPradeshMapPaths
     : isRajasthan
     ? rajasthanMapPaths
@@ -277,7 +325,7 @@ function DistrictContent() {
                 Districts of {currentState} ({activeDistrictsData.length})
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                {isUttarPradesh ? 'उत्तर प्रदेश के जिले' : isRajasthan ? 'राजस्थान के जिले' : isMadhyaPradesh ? 'मध्य प्रदेश के जिले' : isKarnataka ? 'ಕರ್ನಾಟಕದ ಜಿಲ್ಲೆಗಳು' : 'महाराष्ट्रातील जिल्हे'} — Select any district to view its portfolio page.
+                {isKerala ? 'കേരളത്തിലെ ജില്ലകൾ' : isTamilNadu ? 'தமிழ்நாட்டின் மாவட்டங்கள்' : isGujarat ? 'ગુજરાતના જિલ્લાઓ' : isAndhraPradesh ? 'ఆంధ్రప్రదేశ్ జిల్లాలు' : isTelangana ? 'తెలంగాణ జిల్లాలు' : isChhattisgarh ? 'छत्तीसगढ़ के जिले' : isUttarPradesh ? 'उत्तर प्रदेश के जिले' : isRajasthan ? 'राजस्थान के जिले' : isMadhyaPradesh ? 'मध्य प्रदेश के जिले' : isKarnataka ? 'ಕರ್ನಾಟಕದ ಜಿಲ್ಲೆಗಳು' : 'महाराष्ट्रातील जिल्हे'} — Select any district to view its portfolio page.
               </p>
             </div>
 
