@@ -4051,3 +4051,2103 @@ export const keralaDistrictsData: DistrictInfo[] = [
     "link": "/district/kannur"
   }
 ];
+
+export const haryanaDistrictsData: DistrictInfo[] = [
+  {
+    "id": "jhajjar",
+    "name": "Jhajjar",
+    "marathiName": "झज्जर",
+    "headquarters": "Jhajjar",
+    "image": "/assets/districts/haryana/jhajjar.jpg",
+    "cx": 511.8,
+    "cy": 445.4,
+    "link": "/district/jhajjar"
+  },
+  {
+    "id": "gurugram",
+    "name": "Gurugram",
+    "marathiName": "गुरुग्राम",
+    "headquarters": "Gurugram",
+    "image": "/assets/districts/haryana/gurugram.jpg",
+    "cx": 564,
+    "cy": 494.2,
+    "link": "/district/gurugram"
+  },
+  {
+    "id": "faridabad",
+    "name": "Faridabad",
+    "marathiName": "फरीदाबाद",
+    "headquarters": "Faridabad",
+    "image": "/assets/districts/haryana/faridabad.jpg",
+    "cx": 635.9,
+    "cy": 495.3,
+    "link": "/district/faridabad"
+  },
+  {
+    "id": "mahendragarh",
+    "name": "Mahendragarh",
+    "marathiName": "महेंद्रगढ़",
+    "headquarters": "Narnaul",
+    "image": "/assets/districts/haryana/mahendragarh.jpg",
+    "cx": 416.6,
+    "cy": 532.8,
+    "link": "/district/mahendragarh"
+  },
+  {
+    "id": "rewari",
+    "name": "Rewari",
+    "marathiName": "रेवाड़ी",
+    "headquarters": "Rewari",
+    "image": "/assets/districts/haryana/rewari.jpg",
+    "cx": 487.7,
+    "cy": 514.2,
+    "link": "/district/rewari"
+  },
+  {
+    "id": "nuh",
+    "name": "Nuh",
+    "marathiName": "नूंह (मेवात)",
+    "headquarters": "Nuh",
+    "image": "/assets/districts/haryana/nuh.jpg",
+    "cx": 584.4,
+    "cy": 562.5,
+    "link": "/district/nuh"
+  },
+  {
+    "id": "palwal",
+    "name": "Palwal",
+    "marathiName": "पलवल",
+    "headquarters": "Palwal",
+    "image": "/assets/districts/haryana/palwal.jpg",
+    "cx": 639.8,
+    "cy": 543.8,
+    "link": "/district/palwal"
+  },
+  {
+    "id": "charkhidadri",
+    "name": "Charkhi Dadri",
+    "marathiName": "चरखी दादरी",
+    "headquarters": "Charkhi Dadri",
+    "image": "/assets/districts/haryana/charkhidadri.jpg",
+    "cx": 428.4,
+    "cy": 452.9,
+    "link": "/district/charkhidadri"
+  },
+  {
+    "id": "yamunanagar",
+    "name": "Yamunanagar",
+    "marathiName": "यमुनानगर",
+    "headquarters": "Yamunanagar",
+    "image": "/assets/districts/haryana/yamunanagar.jpg",
+    "cx": 621.2,
+    "cy": 152.3,
+    "link": "/district/yamunanagar"
+  },
+  {
+    "id": "kurukshetra",
+    "name": "Kurukshetra",
+    "marathiName": "कुरुक्षेत्र",
+    "headquarters": "Kurukshetra",
+    "image": "/assets/districts/haryana/kurukshetra.jpg",
+    "cx": 536.7,
+    "cy": 188.1,
+    "link": "/district/kurukshetra"
+  },
+  {
+    "id": "kaithal",
+    "name": "Kaithal",
+    "marathiName": "कैथल",
+    "headquarters": "Kaithal",
+    "image": "/assets/districts/haryana/kaithal.jpg",
+    "cx": 462.5,
+    "cy": 223.7,
+    "link": "/district/kaithal"
+  },
+  {
+    "id": "sirsa",
+    "name": "Sirsa",
+    "marathiName": "सिरसा",
+    "headquarters": "Sirsa",
+    "image": "/assets/districts/haryana/sirsa.jpg",
+    "cx": 205.8,
+    "cy": 263.1,
+    "link": "/district/sirsa"
+  },
+  {
+    "id": "karnal",
+    "name": "Karnal",
+    "marathiName": "करनाल",
+    "headquarters": "Karnal",
+    "image": "/assets/districts/haryana/karnal.jpg",
+    "cx": 558.4,
+    "cy": 251.9,
+    "link": "/district/karnal"
+  },
+  {
+    "id": "jind",
+    "name": "Jind",
+    "marathiName": "जींद",
+    "headquarters": "Jind",
+    "image": "/assets/districts/haryana/jind.jpg",
+    "cx": 449.4,
+    "cy": 290.5,
+    "link": "/district/jind"
+  },
+  {
+    "id": "fatehabad",
+    "name": "Fatehabad",
+    "marathiName": "फतेहाबाद",
+    "headquarters": "Fatehabad",
+    "image": "/assets/districts/haryana/fatehabad.jpg",
+    "cx": 312.8,
+    "cy": 276.9,
+    "link": "/district/fatehabad"
+  },
+  {
+    "id": "hisar",
+    "name": "Hisar",
+    "marathiName": "हिसार",
+    "headquarters": "Hisar",
+    "image": "/assets/districts/haryana/hisar.jpg",
+    "cx": 359.7,
+    "cy": 338.1,
+    "link": "/district/hisar"
+  },
+  {
+    "id": "panipat",
+    "name": "Panipat",
+    "marathiName": "पानीपत",
+    "headquarters": "Panipat",
+    "image": "/assets/districts/haryana/panipat.jpg",
+    "cx": 566.9,
+    "cy": 313.9,
+    "link": "/district/panipat"
+  },
+  {
+    "id": "sonipat",
+    "name": "Sonipat",
+    "marathiName": "सोनीपत",
+    "headquarters": "Sonipat",
+    "image": "/assets/districts/haryana/sonipat.jpg",
+    "cx": 556.5,
+    "cy": 373.8,
+    "link": "/district/sonipat"
+  },
+  {
+    "id": "bhiwani",
+    "name": "Bhiwani",
+    "marathiName": "भिवानी",
+    "headquarters": "Bhiwani",
+    "image": "/assets/districts/haryana/bhiwani.jpg",
+    "cx": 373,
+    "cy": 419.5,
+    "link": "/district/bhiwani"
+  },
+  {
+    "id": "rohtak",
+    "name": "Rohtak",
+    "marathiName": "रोहतक",
+    "headquarters": "Rohtak",
+    "image": "/assets/districts/haryana/rohtak.jpg",
+    "cx": 490.5,
+    "cy": 399.3,
+    "link": "/district/rohtak"
+  },
+  {
+    "id": "panchkula",
+    "name": "Panchkula",
+    "marathiName": "पंचकूला",
+    "headquarters": "Panchkula",
+    "image": "/assets/districts/haryana/panchkula.jpg",
+    "cx": 563.7,
+    "cy": 76.4,
+    "link": "/district/panchkula"
+  },
+  {
+    "id": "ambala",
+    "name": "Ambala",
+    "marathiName": "अंबाला",
+    "headquarters": "Ambala",
+    "image": "/assets/districts/haryana/ambala.jpg",
+    "cx": 554.5,
+    "cy": 136.9,
+    "link": "/district/ambala"
+  }
+];
+
+export const punjabDistrictsData: DistrictInfo[] = [
+  {
+    "id": "gurdaspur",
+    "name": "Gurdaspur",
+    "marathiName": "ਗੁਰਦਾਸਪੁਰ",
+    "headquarters": "Gurdaspur",
+    "image": "/assets/districts/punjab/gurdaspur.jpg",
+    "cx": 363.8,
+    "cy": 142.3,
+    "link": "/district/gurdaspur"
+  },
+  {
+    "id": "hoshiarpur",
+    "name": "Hoshiarpur",
+    "marathiName": "ਹੁਸ਼ਿਆਰਪੁਰ",
+    "headquarters": "Hoshiarpur",
+    "image": "/assets/districts/punjab/hoshiarpur.jpg",
+    "cx": 499.2,
+    "cy": 226.9,
+    "link": "/district/hoshiarpur"
+  },
+  {
+    "id": "amritsar",
+    "name": "Amritsar",
+    "marathiName": "ਅੰਮ੍ਰਿਤਸਰ",
+    "headquarters": "Amritsar",
+    "image": "/assets/districts/punjab/amritsar.jpg",
+    "cx": 301,
+    "cy": 180.7,
+    "link": "/district/amritsar"
+  },
+  {
+    "id": "jalandhar",
+    "name": "Jalandhar",
+    "marathiName": "ਜਲੰਧਰ",
+    "headquarters": "Jalandhar",
+    "image": "/assets/districts/punjab/jalandhar.jpg",
+    "cx": 425.2,
+    "cy": 279.6,
+    "link": "/district/jalandhar"
+  },
+  {
+    "id": "tarntaran",
+    "name": "Tarn Taran",
+    "marathiName": "ਤਰਨ ਤਾਰਨ",
+    "headquarters": "Tarn Taran Sahib",
+    "image": "/assets/districts/punjab/tarntaran.jpg",
+    "cx": 287.1,
+    "cy": 260,
+    "link": "/district/tarntaran"
+  },
+  {
+    "id": "rupnagar",
+    "name": "Rupnagar",
+    "marathiName": "ਰੂਪਨਗਰ",
+    "headquarters": "Rupnagar",
+    "image": "/assets/districts/punjab/rupnagar.jpg",
+    "cx": 614.6,
+    "cy": 312.4,
+    "link": "/district/rupnagar"
+  },
+  {
+    "id": "shahidbhagatsinghnagar",
+    "name": "Shahid Bhagat Singh Nagar",
+    "marathiName": "ਸ਼ਹੀਦ ਭਗਤ ਸਿੰਘ ਨਗਰ",
+    "headquarters": "Nawanshahr",
+    "image": "/assets/districts/punjab/shahidbhagatsinghnagar.jpg",
+    "cx": 540.7,
+    "cy": 301.5,
+    "link": "/district/shahidbhagatsinghnagar"
+  },
+  {
+    "id": "fazilka",
+    "name": "Fazilka",
+    "marathiName": "ਫ਼ਾਜ਼ਿਲਕਾ",
+    "headquarters": "Fazilka",
+    "image": "/assets/districts/punjab/fazilka.jpg",
+    "cx": 156.2,
+    "cy": 464.4,
+    "link": "/district/fazilka"
+  },
+  {
+    "id": "moga",
+    "name": "Moga",
+    "marathiName": "ਮੋਗਾ",
+    "headquarters": "Moga",
+    "image": "/assets/districts/punjab/moga.jpg",
+    "cx": 354.7,
+    "cy": 374,
+    "link": "/district/moga"
+  },
+  {
+    "id": "ludhiana",
+    "name": "Ludhiana",
+    "marathiName": "ਲੁਧਿਆਣਾ",
+    "headquarters": "Ludhiana",
+    "image": "/assets/districts/punjab/ludhiana.jpg",
+    "cx": 487.8,
+    "cy": 373.9,
+    "link": "/district/ludhiana"
+  },
+  {
+    "id": "sasnagar",
+    "name": "S.A.S. Nagar",
+    "marathiName": "ਐਸ.ਏ.ਐਸ. ਨਗਰ (ਮੋਹਾਲੀ)",
+    "headquarters": "Sahibzada Ajit Singh Nagar (Mohali)",
+    "image": "/assets/districts/punjab/sasnagar.jpg",
+    "cx": 674.5,
+    "cy": 403.6,
+    "link": "/district/sasnagar"
+  },
+  {
+    "id": "faridkot",
+    "name": "Faridkot",
+    "marathiName": "ਫ਼ਰੀਦਕੋਟ",
+    "headquarters": "Faridkot",
+    "image": "/assets/districts/punjab/faridkot.jpg",
+    "cx": 277.1,
+    "cy": 416.4,
+    "link": "/district/faridkot"
+  },
+  {
+    "id": "fatehgarhsahib",
+    "name": "Fatehgarh Sahib",
+    "marathiName": "ਫ਼ਤਹਿਗੜ੍ਹ ਸਾਹਿਬ",
+    "headquarters": "Fatehgarh Sahib",
+    "image": "/assets/districts/punjab/fatehgarhsahib.jpg",
+    "cx": 592.7,
+    "cy": 399.6,
+    "link": "/district/fatehgarhsahib"
+  },
+  {
+    "id": "srimuktsarsahib",
+    "name": "Sri Muktsar Sahib",
+    "marathiName": "ਸ੍ਰੀ ਮੁਕਤਸਰ ਸਾਹਿਬ",
+    "headquarters": "Sri Muktsar Sahib",
+    "image": "/assets/districts/punjab/srimuktsarsahib.jpg",
+    "cx": 226.5,
+    "cy": 468.3,
+    "link": "/district/srimuktsarsahib"
+  },
+  {
+    "id": "sangrur",
+    "name": "Sangrur",
+    "marathiName": "ਸੰਗਰੂਰ",
+    "headquarters": "Sangrur",
+    "image": "/assets/districts/punjab/sangrur.jpg",
+    "cx": 486,
+    "cy": 506,
+    "link": "/district/sangrur"
+  },
+  {
+    "id": "barnala",
+    "name": "Barnala",
+    "marathiName": "ਬਰਨਾਲਾ",
+    "headquarters": "Barnala",
+    "image": "/assets/districts/punjab/barnala.jpg",
+    "cx": 417.7,
+    "cy": 457,
+    "link": "/district/barnala"
+  },
+  {
+    "id": "bathinda",
+    "name": "Bathinda",
+    "marathiName": "ਬਠਿੰਡਾ",
+    "headquarters": "Bathinda",
+    "image": "/assets/districts/punjab/bathinda.jpg",
+    "cx": 333.9,
+    "cy": 499.8,
+    "link": "/district/bathinda"
+  },
+  {
+    "id": "patiala",
+    "name": "Patiala",
+    "marathiName": "ਪਟਿਆਲਾ",
+    "headquarters": "Patiala",
+    "image": "/assets/districts/punjab/patiala.jpg",
+    "cx": 595.9,
+    "cy": 482.1,
+    "link": "/district/patiala"
+  },
+  {
+    "id": "mansa",
+    "name": "Mansa",
+    "marathiName": "ਮਾਨਸਾ",
+    "headquarters": "Mansa",
+    "image": "/assets/districts/punjab/mansa.jpg",
+    "cx": 402.5,
+    "cy": 553.9,
+    "link": "/district/mansa"
+  },
+  {
+    "id": "ferozepur",
+    "name": "Ferozepur",
+    "marathiName": "ਫ਼ਿਰੋਜ਼ਪੁਰ",
+    "headquarters": "Ferozepur",
+    "image": "/assets/districts/punjab/ferozepur.jpg",
+    "cx": 261,
+    "cy": 346.7,
+    "link": "/district/ferozepur"
+  },
+  {
+    "id": "pathankot",
+    "name": "Pathankot",
+    "marathiName": "ਪਠਾਨਕੋਟ",
+    "headquarters": "Pathankot",
+    "image": "/assets/districts/punjab/pathankot.jpg",
+    "cx": 438.4,
+    "cy": 70.9,
+    "link": "/district/pathankot"
+  },
+  {
+    "id": "kapurthala",
+    "name": "Kapurthala",
+    "marathiName": "ਕਪੂਰਥਲਾ",
+    "headquarters": "Kapurthala",
+    "image": "/assets/districts/punjab/kapurthala.jpg",
+    "cx": 387.9,
+    "cy": 251.4,
+    "link": "/district/kapurthala"
+  },
+  {
+    "id": "malerkotla",
+    "name": "Malerkotla",
+    "marathiName": "ਮਲੇਰਕੋਟਲਾ",
+    "headquarters": "Malerkotla",
+    "image": "/assets/districts/punjab/malerkotla.jpg",
+    "cx": 493.8,
+    "cy": 414.5,
+    "link": "/district/malerkotla"
+  }
+];
+
+export const himachalPradeshDistrictsData: DistrictInfo[] = [
+  {
+    "id": "lahaulspiti",
+    "name": "Lahaul & Spiti",
+    "marathiName": "लाहौल और स्पीति",
+    "headquarters": "Keylong",
+    "image": "/assets/districts/himachalpradesh/lahaulspiti.jpg",
+    "cx": 442,
+    "cy": 185.2,
+    "link": "/district/lahaulspiti"
+  },
+  {
+    "id": "chamba",
+    "name": "Chamba",
+    "marathiName": "चंबा",
+    "headquarters": "Chamba",
+    "image": "/assets/districts/himachalpradesh/chamba.jpg",
+    "cx": 218.8,
+    "cy": 167.2,
+    "link": "/district/chamba"
+  },
+  {
+    "id": "kangra",
+    "name": "Kangra",
+    "marathiName": "कांगड़ा",
+    "headquarters": "Dharamshala",
+    "image": "/assets/districts/himachalpradesh/kangra.jpg",
+    "cx": 213.5,
+    "cy": 264.8,
+    "link": "/district/kangra"
+  },
+  {
+    "id": "kullu",
+    "name": "Kullu",
+    "marathiName": "कुल्लू",
+    "headquarters": "Kullu",
+    "image": "/assets/districts/himachalpradesh/kullu.jpg",
+    "cx": 421.3,
+    "cy": 303.4,
+    "link": "/district/kullu"
+  },
+  {
+    "id": "mandi",
+    "name": "Mandi",
+    "marathiName": "मंडी",
+    "headquarters": "Mandi",
+    "image": "/assets/districts/himachalpradesh/mandi.jpg",
+    "cx": 324,
+    "cy": 361.9,
+    "link": "/district/mandi"
+  },
+  {
+    "id": "kinnaur",
+    "name": "Kinnaur",
+    "marathiName": "किन्नौर",
+    "headquarters": "Reckong Peo",
+    "image": "/assets/districts/himachalpradesh/kinnaur.jpg",
+    "cx": 617.5,
+    "cy": 373.6,
+    "link": "/district/kinnaur"
+  },
+  {
+    "id": "una",
+    "name": "Una",
+    "marathiName": "ऊना",
+    "headquarters": "Una",
+    "image": "/assets/districts/himachalpradesh/una.jpg",
+    "cx": 183.8,
+    "cy": 372.9,
+    "link": "/district/una"
+  },
+  {
+    "id": "shimla",
+    "name": "Shimla",
+    "marathiName": "शिमला",
+    "headquarters": "Shimla",
+    "image": "/assets/districts/himachalpradesh/shimla.jpg",
+    "cx": 460.4,
+    "cy": 449.3,
+    "link": "/district/shimla"
+  },
+  {
+    "id": "solan",
+    "name": "Solan",
+    "marathiName": "सोलन",
+    "headquarters": "Solan",
+    "image": "/assets/districts/himachalpradesh/solan.jpg",
+    "cx": 328.2,
+    "cy": 477.6,
+    "link": "/district/solan"
+  },
+  {
+    "id": "sirmaur",
+    "name": "Sirmaur",
+    "marathiName": "सिरमौर",
+    "headquarters": "Nahan",
+    "image": "/assets/districts/himachalpradesh/sirmaur.jpg",
+    "cx": 422.2,
+    "cy": 555.7,
+    "link": "/district/sirmaur"
+  },
+  {
+    "id": "hamirpur",
+    "name": "Hamirpur",
+    "marathiName": "हमीरपुर",
+    "headquarters": "Hamirpur",
+    "image": "/assets/districts/himachalpradesh/hamirpur.jpg",
+    "cx": 246.5,
+    "cy": 351.6,
+    "link": "/district/hamirpur"
+  },
+  {
+    "id": "bilaspur",
+    "name": "Bilaspur",
+    "marathiName": "बिलासपुर",
+    "headquarters": "Bilaspur",
+    "image": "/assets/districts/himachalpradesh/bilaspur.jpg",
+    "cx": 275.2,
+    "cy": 409.3,
+    "link": "/district/bilaspur"
+  }
+];
+
+export const uttarakhandDistrictsData: DistrictInfo[] = [
+  {
+    "id": "uttarkashi",
+    "name": "Uttarkashi",
+    "marathiName": "उत्तरकाशी",
+    "headquarters": "Uttarkashi",
+    "image": "/assets/districts/uttarakhand/uttarkashi.jpg",
+    "cx": 252.3,
+    "cy": 143.8,
+    "link": "/district/uttarkashi"
+  },
+  {
+    "id": "chamoli",
+    "name": "Chamoli",
+    "marathiName": "चमोली",
+    "headquarters": "Gopeshwar",
+    "image": "/assets/districts/uttarakhand/chamoli.jpg",
+    "cx": 448.9,
+    "cy": 238.3,
+    "link": "/district/chamoli"
+  },
+  {
+    "id": "dehradun",
+    "name": "Dehradun",
+    "marathiName": "देहरादून",
+    "headquarters": "Dehradun",
+    "image": "/assets/districts/uttarakhand/dehradun.jpg",
+    "cx": 114.8,
+    "cy": 234.3,
+    "link": "/district/dehradun"
+  },
+  {
+    "id": "tehrigarhwal",
+    "name": "Tehri Garhwal",
+    "marathiName": "टिहरी गढ़वाल",
+    "headquarters": "New Tehri",
+    "image": "/assets/districts/uttarakhand/tehrigarhwal.jpg",
+    "cx": 225.3,
+    "cy": 253,
+    "link": "/district/tehrigarhwal"
+  },
+  {
+    "id": "rudraprayag",
+    "name": "Rudraprayag",
+    "marathiName": "रुद्रप्रयाग",
+    "headquarters": "Rudraprayag",
+    "image": "/assets/districts/uttarakhand/rudraprayag.jpg",
+    "cx": 349.1,
+    "cy": 240.8,
+    "link": "/district/rudraprayag"
+  },
+  {
+    "id": "pithoragarh",
+    "name": "Pithoragarh",
+    "marathiName": "पिथौरागढ़",
+    "headquarters": "Pithoragarh",
+    "image": "/assets/districts/uttarakhand/pithoragarh.jpg",
+    "cx": 599.6,
+    "cy": 325.1,
+    "link": "/district/pithoragarh"
+  },
+  {
+    "id": "bageshwar",
+    "name": "Bageshwar",
+    "marathiName": "बागेश्वर",
+    "headquarters": "Bageshwar",
+    "image": "/assets/districts/uttarakhand/bageshwar.jpg",
+    "cx": 514,
+    "cy": 348.1,
+    "link": "/district/bageshwar"
+  },
+  {
+    "id": "haridwar",
+    "name": "Haridwar",
+    "marathiName": "हरिद्वार",
+    "headquarters": "Haridwar",
+    "image": "/assets/districts/uttarakhand/haridwar.jpg",
+    "cx": 120.3,
+    "cy": 376.7,
+    "link": "/district/haridwar"
+  },
+  {
+    "id": "garhwal",
+    "name": "Garhwal",
+    "marathiName": "पौड़ी गढ़वाल",
+    "headquarters": "Pauri",
+    "image": "/assets/districts/uttarakhand/garhwal.jpg",
+    "cx": 294.2,
+    "cy": 352.7,
+    "link": "/district/garhwal"
+  },
+  {
+    "id": "almora",
+    "name": "Almora",
+    "marathiName": "अल्मोड़ा",
+    "headquarters": "Almora",
+    "image": "/assets/districts/uttarakhand/almora.jpg",
+    "cx": 434.2,
+    "cy": 406.3,
+    "link": "/district/almora"
+  },
+  {
+    "id": "nainital",
+    "name": "Nainital",
+    "marathiName": "नैनीताल",
+    "headquarters": "Nainital",
+    "image": "/assets/districts/uttarakhand/nainital.jpg",
+    "cx": 441.4,
+    "cy": 483.6,
+    "link": "/district/nainital"
+  },
+  {
+    "id": "champawat",
+    "name": "Champawat",
+    "marathiName": "चंपावत",
+    "headquarters": "Champawat",
+    "image": "/assets/districts/uttarakhand/champawat.jpg",
+    "cx": 551.1,
+    "cy": 498.9,
+    "link": "/district/champawat"
+  },
+  {
+    "id": "udhamsinghnagar",
+    "name": "Udham Singh Nagar",
+    "marathiName": "ऊधम सिंह नगर",
+    "headquarters": "Rudrapur",
+    "image": "/assets/districts/uttarakhand/udhamsinghnagar.jpg",
+    "cx": 417.7,
+    "cy": 542.4,
+    "link": "/district/udhamsinghnagar"
+  }
+];
+
+export const jammuAndKashmirDistrictsData: DistrictInfo[] = [
+  {
+    "id": "kupwara",
+    "name": "Kupwara",
+    "marathiName": "कुपवाड़ा / کپواڑہ",
+    "headquarters": "Kupwara",
+    "image": "/assets/districts/jammuandkashmir/kupwara.jpg",
+    "cx": 213.4,
+    "cy": 167.4,
+    "link": "/district/kupwara"
+  },
+  {
+    "id": "bandipore",
+    "name": "Bandipore",
+    "marathiName": "बांदीपोरा / بانڈی پورہ",
+    "headquarters": "Bandipore",
+    "image": "/assets/districts/jammuandkashmir/bandipore.jpg",
+    "cx": 348.9,
+    "cy": 180.2,
+    "link": "/district/bandipore"
+  },
+  {
+    "id": "baramulla",
+    "name": "Baramulla",
+    "marathiName": "बारामूला / بارہمولہ",
+    "headquarters": "Baramulla",
+    "image": "/assets/districts/jammuandkashmir/baramulla.jpg",
+    "cx": 250.2,
+    "cy": 230.3,
+    "link": "/district/baramulla"
+  },
+  {
+    "id": "ganderbal",
+    "name": "Ganderbal",
+    "marathiName": "गांदरबल / گاندربل",
+    "headquarters": "Ganderbal",
+    "image": "/assets/districts/jammuandkashmir/ganderbal.jpg",
+    "cx": 390.5,
+    "cy": 207.1,
+    "link": "/district/ganderbal"
+  },
+  {
+    "id": "anantnag",
+    "name": "Anantnag",
+    "marathiName": "अनंतनाग / اننت ناگ",
+    "headquarters": "Anantnag",
+    "image": "/assets/districts/jammuandkashmir/anantnag.jpg",
+    "cx": 435.9,
+    "cy": 296.3,
+    "link": "/district/anantnag"
+  },
+  {
+    "id": "kishtwar",
+    "name": "Kishtwar",
+    "marathiName": "किश्तवाड़ / کشتواڑ",
+    "headquarters": "Kishtwar",
+    "image": "/assets/districts/jammuandkashmir/kishtwar.jpg",
+    "cx": 586.8,
+    "cy": 350.6,
+    "link": "/district/kishtwar"
+  },
+  {
+    "id": "srinagar",
+    "name": "Srinagar",
+    "marathiName": "श्रीनगर / سرینگر",
+    "headquarters": "Srinagar",
+    "image": "/assets/districts/jammuandkashmir/srinagar.jpg",
+    "cx": 364.7,
+    "cy": 239.5,
+    "link": "/district/srinagar"
+  },
+  {
+    "id": "budgam",
+    "name": "Budgam",
+    "marathiName": "बडगाम / بڈگام",
+    "headquarters": "Budgam",
+    "image": "/assets/districts/jammuandkashmir/budgam.jpg",
+    "cx": 309.9,
+    "cy": 281.2,
+    "link": "/district/budgam"
+  },
+  {
+    "id": "pulwama",
+    "name": "Pulwama",
+    "marathiName": "पुलवामा / پلوامہ",
+    "headquarters": "Pulwama",
+    "image": "/assets/districts/jammuandkashmir/pulwama.jpg",
+    "cx": 377.6,
+    "cy": 281.5,
+    "link": "/district/pulwama"
+  },
+  {
+    "id": "poonch",
+    "name": "Poonch",
+    "marathiName": "पुंछ / پونچھ",
+    "headquarters": "Poonch",
+    "image": "/assets/districts/jammuandkashmir/poonch.jpg",
+    "cx": 201,
+    "cy": 312.4,
+    "link": "/district/poonch"
+  },
+  {
+    "id": "shopian",
+    "name": "Shopian",
+    "marathiName": "शोपियां / شوپیاں",
+    "headquarters": "Shopian",
+    "image": "/assets/districts/jammuandkashmir/shopian.jpg",
+    "cx": 352.3,
+    "cy": 316,
+    "link": "/district/shopian"
+  },
+  {
+    "id": "kulgam",
+    "name": "Kulgam",
+    "marathiName": "कुलगाम / کلگام",
+    "headquarters": "Kulgam",
+    "image": "/assets/districts/jammuandkashmir/kulgam.jpg",
+    "cx": 365.9,
+    "cy": 337.7,
+    "link": "/district/kulgam"
+  },
+  {
+    "id": "rajouri",
+    "name": "Rajouri",
+    "marathiName": "राजौरी / راجوری",
+    "headquarters": "Rajouri",
+    "image": "/assets/districts/jammuandkashmir/rajouri.jpg",
+    "cx": 271.6,
+    "cy": 411.4,
+    "link": "/district/rajouri"
+  },
+  {
+    "id": "ramban",
+    "name": "Ramban",
+    "marathiName": "रामबन / رام بن",
+    "headquarters": "Ramban",
+    "image": "/assets/districts/jammuandkashmir/ramban.jpg",
+    "cx": 417,
+    "cy": 400,
+    "link": "/district/ramban"
+  },
+  {
+    "id": "reasi",
+    "name": "Reasi",
+    "marathiName": "रियासी / ریاسی",
+    "headquarters": "Reasi",
+    "image": "/assets/districts/jammuandkashmir/reasi.jpg",
+    "cx": 338.5,
+    "cy": 426.6,
+    "link": "/district/reasi"
+  },
+  {
+    "id": "doda",
+    "name": "Doda",
+    "marathiName": "डोडा / ڈوڈہ",
+    "headquarters": "Doda",
+    "image": "/assets/districts/jammuandkashmir/doda.jpg",
+    "cx": 531,
+    "cy": 444.3,
+    "link": "/district/doda"
+  },
+  {
+    "id": "jammu",
+    "name": "Jammu",
+    "marathiName": "जम्मू / جموں",
+    "headquarters": "Jammu",
+    "image": "/assets/districts/jammuandkashmir/jammu.jpg",
+    "cx": 330.8,
+    "cy": 509.2,
+    "link": "/district/jammu"
+  },
+  {
+    "id": "kathua",
+    "name": "Kathua",
+    "marathiName": "कठुआ / کٹھوعہ",
+    "headquarters": "Kathua",
+    "image": "/assets/districts/jammuandkashmir/kathua.jpg",
+    "cx": 490.2,
+    "cy": 552.9,
+    "link": "/district/kathua"
+  },
+  {
+    "id": "udhampur",
+    "name": "Udhampur",
+    "marathiName": "उधमपुर / ادھم پور",
+    "headquarters": "Udhampur",
+    "image": "/assets/districts/jammuandkashmir/udhampur.jpg",
+    "cx": 440.2,
+    "cy": 493.2,
+    "link": "/district/udhampur"
+  },
+  {
+    "id": "samba",
+    "name": "Samba",
+    "marathiName": "सांबा / سانبہ",
+    "headquarters": "Samba",
+    "image": "/assets/districts/jammuandkashmir/samba.jpg",
+    "cx": 398.2,
+    "cy": 549.9,
+    "link": "/district/samba"
+  },
+  {
+    "id": "muzaffarabad",
+    "name": "Muzaffarabad",
+    "marathiName": "मुज़फ़्फ़राबाद / مظفر آباد",
+    "headquarters": "Muzaffarabad",
+    "image": "/assets/districts/jammuandkashmir/muzaffarabad.jpg",
+    "cx": 167.3,
+    "cy": 145,
+    "link": "/district/muzaffarabad"
+  },
+  {
+    "id": "mirpur",
+    "name": "Mirpur",
+    "marathiName": "मीरपुर / میرپور",
+    "headquarters": "New Mirpur City",
+    "image": "/assets/districts/jammuandkashmir/mirpur.jpg",
+    "cx": 163.6,
+    "cy": 410.8,
+    "link": "/district/mirpur"
+  }
+];
+
+export const odishaDistrictsData: DistrictInfo[] = [
+  {
+    "id": "bhadrak",
+    "name": "Bhadrak",
+    "marathiName": "ଭଦ୍ରକ",
+    "headquarters": "Bhadrak",
+    "image": "/assets/districts/odisha/bhadrak.jpg",
+    "cx": 650.2,
+    "cy": 227.5,
+    "link": "/district/bhadrak"
+  },
+  {
+    "id": "dhenkanal",
+    "name": "Dhenkanal",
+    "marathiName": "ଢେଙ୍କାନାଳ",
+    "headquarters": "Dhenkanal",
+    "image": "/assets/districts/odisha/dhenkanal.jpg",
+    "cx": 528.7,
+    "cy": 249.4,
+    "link": "/district/dhenkanal"
+  },
+  {
+    "id": "jajpur",
+    "name": "Jajpur",
+    "marathiName": "ଯାଜପୁର",
+    "headquarters": "Panikoili / Jajpur",
+    "image": "/assets/districts/odisha/jajpur.jpg",
+    "cx": 601.8,
+    "cy": 246.8,
+    "link": "/district/jajpur"
+  },
+  {
+    "id": "subarnapur",
+    "name": "Subarnapur",
+    "marathiName": "ସୁବର୍ଣ୍ଣପୁର",
+    "headquarters": "Sonepur",
+    "image": "/assets/districts/odisha/subarnapur.jpg",
+    "cx": 327.6,
+    "cy": 242.5,
+    "link": "/district/subarnapur"
+  },
+  {
+    "id": "nuapada",
+    "name": "Nuapada",
+    "marathiName": "ନୂଆପଡ଼ା",
+    "headquarters": "Nuapada",
+    "image": "/assets/districts/odisha/nuapada.jpg",
+    "cx": 185.3,
+    "cy": 291.6,
+    "link": "/district/nuapada"
+  },
+  {
+    "id": "balangir",
+    "name": "Balangir",
+    "marathiName": "ବଲାଙ୍ଗୀର",
+    "headquarters": "Balangir",
+    "image": "/assets/districts/odisha/balangir.jpg",
+    "cx": 255.1,
+    "cy": 279.5,
+    "link": "/district/balangir"
+  },
+  {
+    "id": "boudh",
+    "name": "Boudh",
+    "marathiName": "ବୌଦ୍ଧ",
+    "headquarters": "Boudh",
+    "image": "/assets/districts/odisha/boudh.jpg",
+    "cx": 367.5,
+    "cy": 276.6,
+    "link": "/district/boudh"
+  },
+  {
+    "id": "cuttack",
+    "name": "Cuttack",
+    "marathiName": "କଟକ",
+    "headquarters": "Cuttack",
+    "image": "/assets/districts/odisha/cuttack.jpg",
+    "cx": 564,
+    "cy": 298.9,
+    "link": "/district/cuttack"
+  },
+  {
+    "id": "kandhamal",
+    "name": "Kandhamal",
+    "marathiName": "କନ୍ଧମାଳ",
+    "headquarters": "Phulbani",
+    "image": "/assets/districts/odisha/kandhamal.jpg",
+    "cx": 355.2,
+    "cy": 335.5,
+    "link": "/district/kandhamal"
+  },
+  {
+    "id": "nayagarh",
+    "name": "Nayagarh",
+    "marathiName": "ନୟାଗଡ଼",
+    "headquarters": "Nayagarh",
+    "image": "/assets/districts/odisha/nayagarh.jpg",
+    "cx": 471.9,
+    "cy": 323.6,
+    "link": "/district/nayagarh"
+  },
+  {
+    "id": "khordha",
+    "name": "Khordha",
+    "marathiName": "ଖୋର୍ଦ୍ଧା",
+    "headquarters": "Bhubaneswar / Khordha",
+    "image": "/assets/districts/odisha/khordha.jpg",
+    "cx": 529.1,
+    "cy": 335.7,
+    "link": "/district/khordha"
+  },
+  {
+    "id": "kalahandi",
+    "name": "Kalahandi",
+    "marathiName": "କଳାହାଣ୍ଡି",
+    "headquarters": "Bhawanipatna",
+    "image": "/assets/districts/odisha/kalahandi.jpg",
+    "cx": 243.6,
+    "cy": 373.1,
+    "link": "/district/kalahandi"
+  },
+  {
+    "id": "jagatsinghpur",
+    "name": "Jagatsinghpur",
+    "marathiName": "ଜଗତସିଂହପୁର",
+    "headquarters": "Jagatsinghpur",
+    "image": "/assets/districts/odisha/jagatsinghpur.jpg",
+    "cx": 623,
+    "cy": 319.4,
+    "link": "/district/jagatsinghpur"
+  },
+  {
+    "id": "puri",
+    "name": "Puri",
+    "marathiName": "ପୁରୀ",
+    "headquarters": "Puri",
+    "image": "/assets/districts/odisha/puri.jpg",
+    "cx": 559.1,
+    "cy": 347.7,
+    "link": "/district/puri"
+  },
+  {
+    "id": "nabarangapur",
+    "name": "Nabarangapur",
+    "marathiName": "ନବରଙ୍ଗପୁର",
+    "headquarters": "Nabarangpur",
+    "image": "/assets/districts/odisha/nabarangapur.jpg",
+    "cx": 159.4,
+    "cy": 410.5,
+    "link": "/district/nabarangapur"
+  },
+  {
+    "id": "rayagada",
+    "name": "Rayagada",
+    "marathiName": "ରାୟଗଡ଼ା",
+    "headquarters": "Rayagada",
+    "image": "/assets/districts/odisha/rayagada.jpg",
+    "cx": 283.8,
+    "cy": 429.6,
+    "link": "/district/rayagada"
+  },
+  {
+    "id": "koraput",
+    "name": "Koraput",
+    "marathiName": "କୋରାପୁଟ",
+    "headquarters": "Koraput",
+    "image": "/assets/districts/odisha/koraput.jpg",
+    "cx": 207.3,
+    "cy": 485.6,
+    "link": "/district/koraput"
+  },
+  {
+    "id": "malkangiri",
+    "name": "Malkangiri",
+    "marathiName": "ମାଲକାନଗିରି",
+    "headquarters": "Malkangiri",
+    "image": "/assets/districts/odisha/malkangiri.jpg",
+    "cx": 110.6,
+    "cy": 555.7,
+    "link": "/district/malkangiri"
+  },
+  {
+    "id": "angul",
+    "name": "Angul",
+    "marathiName": "ଅନୁଗୋଳ",
+    "headquarters": "Angul",
+    "image": "/assets/districts/odisha/angul.jpg",
+    "cx": 463.6,
+    "cy": 215.7,
+    "link": "/district/angul"
+  },
+  {
+    "id": "kendrapara",
+    "name": "Kendrapara",
+    "marathiName": "କେନ୍ଦ୍ରାପଡ଼ା",
+    "headquarters": "Kendrapara",
+    "image": "/assets/districts/odisha/kendrapara.jpg",
+    "cx": 652,
+    "cy": 282.3,
+    "link": "/district/kendrapara"
+  },
+  {
+    "id": "ganjam",
+    "name": "Ganjam",
+    "marathiName": "ଗଞ୍ଜାମ",
+    "headquarters": "Chhatrapur",
+    "image": "/assets/districts/odisha/ganjam.jpg",
+    "cx": 409.5,
+    "cy": 398.3,
+    "link": "/district/ganjam"
+  },
+  {
+    "id": "gajapati",
+    "name": "Gajapati",
+    "marathiName": "ଗଜପତି",
+    "headquarters": "Paralakhemundi",
+    "image": "/assets/districts/odisha/gajapati.jpg",
+    "cx": 371.4,
+    "cy": 445.2,
+    "link": "/district/gajapati"
+  },
+  {
+    "id": "mayurbhanj",
+    "name": "Mayurbhanj",
+    "marathiName": "ମୟୂରଭଞ୍ଜ",
+    "headquarters": "Baripada",
+    "image": "/assets/districts/odisha/mayurbhanj.jpg",
+    "cx": 635.4,
+    "cy": 121.2,
+    "link": "/district/mayurbhanj"
+  },
+  {
+    "id": "sundargarh",
+    "name": "Sundargarh",
+    "marathiName": "ସୁନ୍ଦରଗଡ଼",
+    "headquarters": "Sundargarh",
+    "image": "/assets/districts/odisha/sundargarh.jpg",
+    "cx": 402.3,
+    "cy": 104,
+    "link": "/district/sundargarh"
+  },
+  {
+    "id": "kendujhar",
+    "name": "Kendujhar",
+    "marathiName": "କେନ୍ଦୁଝର",
+    "headquarters": "Kendujhar",
+    "image": "/assets/districts/odisha/kendujhar.jpg",
+    "cx": 554.9,
+    "cy": 171,
+    "link": "/district/kendujhar"
+  },
+  {
+    "id": "balasore",
+    "name": "Balasore",
+    "marathiName": "ବାଲେଶ୍ୱର",
+    "headquarters": "Baleswar",
+    "image": "/assets/districts/odisha/balasore.jpg",
+    "cx": 697.2,
+    "cy": 163.6,
+    "link": "/district/balasore"
+  },
+  {
+    "id": "jharsuguda",
+    "name": "Jharsuguda",
+    "marathiName": "ଝାରସୁଗୁଡ଼ା",
+    "headquarters": "Jharsuguda",
+    "image": "/assets/districts/odisha/jharsuguda.jpg",
+    "cx": 338,
+    "cy": 131.4,
+    "link": "/district/jharsuguda"
+  },
+  {
+    "id": "bargarh",
+    "name": "Bargarh",
+    "marathiName": "ବରଗଡ଼",
+    "headquarters": "Bargarh",
+    "image": "/assets/districts/odisha/bargarh.jpg",
+    "cx": 264.5,
+    "cy": 206.5,
+    "link": "/district/bargarh"
+  },
+  {
+    "id": "deogarh",
+    "name": "Deogarh",
+    "marathiName": "ଦେବଗଡ଼",
+    "headquarters": "Deogarh",
+    "image": "/assets/districts/odisha/deogarh.jpg",
+    "cx": 438.6,
+    "cy": 178,
+    "link": "/district/deogarh"
+  },
+  {
+    "id": "sambalpur",
+    "name": "Sambalpur",
+    "marathiName": "ସମ୍ବଲପୁର",
+    "headquarters": "Sambalpur",
+    "image": "/assets/districts/odisha/sambalpur.jpg",
+    "cx": 388.9,
+    "cy": 167.3,
+    "link": "/district/sambalpur"
+  }
+];
+
+export const jharkhandDistrictsData: DistrictInfo[] = [
+  {
+    "id": "sahibganj",
+    "name": "Sahibganj",
+    "marathiName": "साहिबगंज",
+    "headquarters": "Sahibganj",
+    "image": "/assets/districts/jharkhand/sahibganj.jpg",
+    "cx": 712.7,
+    "cy": 120.2,
+    "link": "/district/sahibganj"
+  },
+  {
+    "id": "godda",
+    "name": "Godda",
+    "marathiName": "गोड्डा",
+    "headquarters": "Godda",
+    "image": "/assets/districts/jharkhand/godda.jpg",
+    "cx": 659.5,
+    "cy": 145.2,
+    "link": "/district/godda"
+  },
+  {
+    "id": "pakur",
+    "name": "Pakur",
+    "marathiName": "पाकुड़",
+    "headquarters": "Pakur",
+    "image": "/assets/districts/jharkhand/pakur.jpg",
+    "cx": 718.4,
+    "cy": 180.1,
+    "link": "/district/pakur"
+  },
+  {
+    "id": "giridih",
+    "name": "Giridih",
+    "marathiName": "गिरिडीह",
+    "headquarters": "Giridih",
+    "image": "/assets/districts/jharkhand/giridih.jpg",
+    "cx": 472.6,
+    "cy": 228.6,
+    "link": "/district/giridih"
+  },
+  {
+    "id": "dumka",
+    "name": "Dumka",
+    "marathiName": "दुमका",
+    "headquarters": "Dumka",
+    "image": "/assets/districts/jharkhand/dumka.jpg",
+    "cx": 648.6,
+    "cy": 227.5,
+    "link": "/district/dumka"
+  },
+  {
+    "id": "deoghar",
+    "name": "Deoghar",
+    "marathiName": "देवघर",
+    "headquarters": "Deoghar",
+    "image": "/assets/districts/jharkhand/deoghar.jpg",
+    "cx": 570.1,
+    "cy": 223.5,
+    "link": "/district/deoghar"
+  },
+  {
+    "id": "palamu",
+    "name": "Palamu",
+    "marathiName": "पलामू",
+    "headquarters": "Daltonganj (Medininagar)",
+    "image": "/assets/districts/jharkhand/palamu.jpg",
+    "cx": 175.9,
+    "cy": 240.9,
+    "link": "/district/palamu"
+  },
+  {
+    "id": "chatra",
+    "name": "Chatra",
+    "marathiName": "चतरा",
+    "headquarters": "Chatra",
+    "image": "/assets/districts/jharkhand/chatra.jpg",
+    "cx": 292,
+    "cy": 254,
+    "link": "/district/chatra"
+  },
+  {
+    "id": "garhwa",
+    "name": "Garhwa",
+    "marathiName": "गढ़वा",
+    "headquarters": "Garhwa",
+    "image": "/assets/districts/jharkhand/garhwa.jpg",
+    "cx": 103.9,
+    "cy": 261.8,
+    "link": "/district/garhwa"
+  },
+  {
+    "id": "jamtara",
+    "name": "Jamtara",
+    "marathiName": "जामताड़ा",
+    "headquarters": "Jamtara",
+    "image": "/assets/districts/jharkhand/jamtara.jpg",
+    "cx": 598.8,
+    "cy": 277.8,
+    "link": "/district/jamtara"
+  },
+  {
+    "id": "dhanbad",
+    "name": "Dhanbad",
+    "marathiName": "धनबाद",
+    "headquarters": "Dhanbad",
+    "image": "/assets/districts/jharkhand/dhanbad.jpg",
+    "cx": 526.6,
+    "cy": 297.1,
+    "link": "/district/dhanbad"
+  },
+  {
+    "id": "latehar",
+    "name": "Latehar",
+    "marathiName": "लातेहार",
+    "headquarters": "Latehar",
+    "image": "/assets/districts/jharkhand/latehar.jpg",
+    "cx": 220.5,
+    "cy": 315.4,
+    "link": "/district/latehar"
+  },
+  {
+    "id": "bokaro",
+    "name": "Bokaro",
+    "marathiName": "बोकारो",
+    "headquarters": "Bokaro Steel City",
+    "image": "/assets/districts/jharkhand/bokaro.jpg",
+    "cx": 456.1,
+    "cy": 317.5,
+    "link": "/district/bokaro"
+  },
+  {
+    "id": "ramgarh",
+    "name": "Ramgarh",
+    "marathiName": "रामगढ़",
+    "headquarters": "Ramgarh Cantonment",
+    "image": "/assets/districts/jharkhand/ramgarh.jpg",
+    "cx": 387.9,
+    "cy": 328.5,
+    "link": "/district/ramgarh"
+  },
+  {
+    "id": "ranchi",
+    "name": "Ranchi",
+    "marathiName": "राँची",
+    "headquarters": "Ranchi",
+    "image": "/assets/districts/jharkhand/ranchi.jpg",
+    "cx": 350.9,
+    "cy": 378.8,
+    "link": "/district/ranchi"
+  },
+  {
+    "id": "lohardaga",
+    "name": "Lohardaga",
+    "marathiName": "लोहरदगा",
+    "headquarters": "Lohardaga",
+    "image": "/assets/districts/jharkhand/lohardaga.jpg",
+    "cx": 250.8,
+    "cy": 352.2,
+    "link": "/district/lohardaga"
+  },
+  {
+    "id": "gumla",
+    "name": "Gumla",
+    "marathiName": "गुमला",
+    "headquarters": "Gumla",
+    "image": "/assets/districts/jharkhand/gumla.jpg",
+    "cx": 235.2,
+    "cy": 416.8,
+    "link": "/district/gumla"
+  },
+  {
+    "id": "khunti",
+    "name": "Khunti",
+    "marathiName": "खूंटी",
+    "headquarters": "Khunti",
+    "image": "/assets/districts/jharkhand/khunti.jpg",
+    "cx": 332.5,
+    "cy": 437.6,
+    "link": "/district/khunti"
+  },
+  {
+    "id": "saraikelakharsawan",
+    "name": "Saraikela-Kharsawan",
+    "marathiName": "सरायकेला खरसावां",
+    "headquarters": "Saraikela",
+    "image": "/assets/districts/jharkhand/saraikelakharsawan.jpg",
+    "cx": 439.8,
+    "cy": 450.8,
+    "link": "/district/saraikelakharsawan"
+  },
+  {
+    "id": "eastsinghbhum",
+    "name": "East Singhbhum",
+    "marathiName": "पूर्वी सिंहभूम",
+    "headquarters": "Jamshedpur",
+    "image": "/assets/districts/jharkhand/eastsinghbhum.jpg",
+    "cx": 536.2,
+    "cy": 494.4,
+    "link": "/district/eastsinghbhum"
+  },
+  {
+    "id": "westsinghbhum",
+    "name": "West Singhbhum",
+    "marathiName": "पश्चिमी सिंहभूम",
+    "headquarters": "Chaibasa",
+    "image": "/assets/districts/jharkhand/westsinghbhum.jpg",
+    "cx": 379.3,
+    "cy": 518.9,
+    "link": "/district/westsinghbhum"
+  },
+  {
+    "id": "simdega",
+    "name": "Simdega",
+    "marathiName": "सिमडेगा",
+    "headquarters": "Simdega",
+    "image": "/assets/districts/jharkhand/simdega.jpg",
+    "cx": 245.9,
+    "cy": 482.6,
+    "link": "/district/simdega"
+  },
+  {
+    "id": "koderma",
+    "name": "Koderma",
+    "marathiName": "कोडरमा",
+    "headquarters": "Koderma",
+    "image": "/assets/districts/jharkhand/koderma.jpg",
+    "cx": 401.7,
+    "cy": 192.6,
+    "link": "/district/koderma"
+  },
+  {
+    "id": "hazaribagh",
+    "name": "Hazaribagh",
+    "marathiName": "हज़ारीबाग़",
+    "headquarters": "Hazaribagh",
+    "image": "/assets/districts/jharkhand/hazaribagh.jpg",
+    "cx": 365,
+    "cy": 260.4,
+    "link": "/district/hazaribagh"
+  }
+];
+
+export const biharDistrictsData: DistrictInfo[] = [
+  {
+    "id": "westchamparan",
+    "name": "West Champaran",
+    "marathiName": "पश्चिम चम्पारण",
+    "headquarters": "Bettiah",
+    "image": "/assets/districts/bihar/westchamparan.jpg",
+    "cx": 180.8,
+    "cy": 161.8,
+    "link": "/district/westchamparan"
+  },
+  {
+    "id": "eastchamparan",
+    "name": "East Champaran",
+    "marathiName": "पूर्वी चम्पारण",
+    "headquarters": "Motihari",
+    "image": "/assets/districts/bihar/eastchamparan.jpg",
+    "cx": 281,
+    "cy": 226.6,
+    "link": "/district/eastchamparan"
+  },
+  {
+    "id": "sitamarhi",
+    "name": "Sitamarhi",
+    "marathiName": "सीतामढ़ी",
+    "headquarters": "Sitamarhi",
+    "image": "/assets/districts/bihar/sitamarhi.jpg",
+    "cx": 359.1,
+    "cy": 240,
+    "link": "/district/sitamarhi"
+  },
+  {
+    "id": "sheohar",
+    "name": "Sheohar",
+    "marathiName": "शिवहर",
+    "headquarters": "Sheohar",
+    "image": "/assets/districts/bihar/sheohar.jpg",
+    "cx": 326.9,
+    "cy": 241.5,
+    "link": "/district/sheohar"
+  },
+  {
+    "id": "gopalganj",
+    "name": "Gopalganj",
+    "marathiName": "गोपालगंज",
+    "headquarters": "Gopalganj",
+    "image": "/assets/districts/bihar/gopalganj.jpg",
+    "cx": 197.9,
+    "cy": 250.1,
+    "link": "/district/gopalganj"
+  },
+  {
+    "id": "samastipur",
+    "name": "Samastipur",
+    "marathiName": "समस्तीपुर",
+    "headquarters": "Samastipur",
+    "image": "/assets/districts/bihar/samastipur.jpg",
+    "cx": 416,
+    "cy": 343.5,
+    "link": "/district/samastipur"
+  },
+  {
+    "id": "katihar",
+    "name": "Katihar",
+    "marathiName": "कटिहार",
+    "headquarters": "Katihar",
+    "image": "/assets/districts/bihar/katihar.jpg",
+    "cx": 672.6,
+    "cy": 375.3,
+    "link": "/district/katihar"
+  },
+  {
+    "id": "khagaria",
+    "name": "Khagaria",
+    "marathiName": "खगड़िया",
+    "headquarters": "Khagaria",
+    "image": "/assets/districts/bihar/khagaria.jpg",
+    "cx": 508.9,
+    "cy": 378.8,
+    "link": "/district/khagaria"
+  },
+  {
+    "id": "bhojpur",
+    "name": "Bhojpur",
+    "marathiName": "भोजपुर",
+    "headquarters": "Arrah",
+    "image": "/assets/districts/bihar/bhojpur.jpg",
+    "cx": 210.3,
+    "cy": 381,
+    "link": "/district/bhojpur"
+  },
+  {
+    "id": "buxar",
+    "name": "Buxar",
+    "marathiName": "बक्सर",
+    "headquarters": "Buxar",
+    "image": "/assets/districts/bihar/buxar.jpg",
+    "cx": 150.7,
+    "cy": 387.5,
+    "link": "/district/buxar"
+  },
+  {
+    "id": "darbhanga",
+    "name": "Darbhanga",
+    "marathiName": "दरभंगा",
+    "headquarters": "Darbhanga",
+    "image": "/assets/districts/bihar/darbhanga.jpg",
+    "cx": 432.1,
+    "cy": 297.3,
+    "link": "/district/darbhanga"
+  },
+  {
+    "id": "saharsa",
+    "name": "Saharsa",
+    "marathiName": "सहरसा",
+    "headquarters": "Saharsa",
+    "image": "/assets/districts/bihar/saharsa.jpg",
+    "cx": 507.5,
+    "cy": 337.2,
+    "link": "/district/saharsa"
+  },
+  {
+    "id": "kaimur",
+    "name": "Kaimur",
+    "marathiName": "कैमूर (भभुआ)",
+    "headquarters": "Bhabua",
+    "image": "/assets/districts/bihar/kaimur.jpg",
+    "cx": 82,
+    "cy": 444.6,
+    "link": "/district/kaimur"
+  },
+  {
+    "id": "rohtas",
+    "name": "Rohtas",
+    "marathiName": "रोहतास",
+    "headquarters": "Sasaram",
+    "image": "/assets/districts/bihar/rohtas.jpg",
+    "cx": 132.4,
+    "cy": 457.9,
+    "link": "/district/rohtas"
+  },
+  {
+    "id": "jamui",
+    "name": "Jamui",
+    "marathiName": "जमुई",
+    "headquarters": "Jamui",
+    "image": "/assets/districts/bihar/jamui.jpg",
+    "cx": 464.9,
+    "cy": 486.6,
+    "link": "/district/jamui"
+  },
+  {
+    "id": "banka",
+    "name": "Banka",
+    "marathiName": "बाँका",
+    "headquarters": "Banka",
+    "image": "/assets/districts/bihar/banka.jpg",
+    "cx": 542.4,
+    "cy": 479.8,
+    "link": "/district/banka"
+  },
+  {
+    "id": "nawada",
+    "name": "Nawada",
+    "marathiName": "नवादा",
+    "headquarters": "Nawada",
+    "image": "/assets/districts/bihar/nawada.jpg",
+    "cx": 374.1,
+    "cy": 480.4,
+    "link": "/district/nawada"
+  },
+  {
+    "id": "gaya",
+    "name": "Gaya",
+    "marathiName": "गया",
+    "headquarters": "Gaya",
+    "image": "/assets/districts/bihar/gaya.jpg",
+    "cx": 268.9,
+    "cy": 500.5,
+    "link": "/district/gaya"
+  },
+  {
+    "id": "munger",
+    "name": "Munger",
+    "marathiName": "मुंगेर",
+    "headquarters": "Munger",
+    "image": "/assets/districts/bihar/munger.jpg",
+    "cx": 503.9,
+    "cy": 423.8,
+    "link": "/district/munger"
+  },
+  {
+    "id": "vaishali",
+    "name": "Vaishali",
+    "marathiName": "वैशाली",
+    "headquarters": "Hajipur",
+    "image": "/assets/districts/bihar/vaishali.jpg",
+    "cx": 341.8,
+    "cy": 342,
+    "link": "/district/vaishali"
+  },
+  {
+    "id": "begusarai",
+    "name": "Begusarai",
+    "marathiName": "बेगूसराय",
+    "headquarters": "Begusarai",
+    "image": "/assets/districts/bihar/begusarai.jpg",
+    "cx": 449.1,
+    "cy": 379.6,
+    "link": "/district/begusarai"
+  },
+  {
+    "id": "bhagalpur",
+    "name": "Bhagalpur",
+    "marathiName": "भागलपुर",
+    "headquarters": "Bhagalpur",
+    "image": "/assets/districts/bihar/bhagalpur.jpg",
+    "cx": 582,
+    "cy": 411.9,
+    "link": "/district/bhagalpur"
+  },
+  {
+    "id": "lakhisarai",
+    "name": "Lakhisarai",
+    "marathiName": "लखीसराय",
+    "headquarters": "Lakhisarai",
+    "image": "/assets/districts/bihar/lakhisarai.jpg",
+    "cx": 438.8,
+    "cy": 433.1,
+    "link": "/district/lakhisarai"
+  },
+  {
+    "id": "sheikhpura",
+    "name": "Sheikhpura",
+    "marathiName": "शेखपुरा",
+    "headquarters": "Sheikhpura",
+    "image": "/assets/districts/bihar/sheikhpura.jpg",
+    "cx": 403.1,
+    "cy": 438.5,
+    "link": "/district/sheikhpura"
+  },
+  {
+    "id": "arwal",
+    "name": "Arwal",
+    "marathiName": "अरवल",
+    "headquarters": "Arwal",
+    "image": "/assets/districts/bihar/arwal.jpg",
+    "cx": 238.1,
+    "cy": 429.3,
+    "link": "/district/arwal"
+  },
+  {
+    "id": "jehanabad",
+    "name": "Jehanabad",
+    "marathiName": "जहानाबाद",
+    "headquarters": "Jehanabad",
+    "image": "/assets/districts/bihar/jehanabad.jpg",
+    "cx": 289.5,
+    "cy": 431.3,
+    "link": "/district/jehanabad"
+  },
+  {
+    "id": "nalanda",
+    "name": "Nalanda",
+    "marathiName": "नालंदा",
+    "headquarters": "Bihar Sharif",
+    "image": "/assets/districts/bihar/nalanda.jpg",
+    "cx": 354.7,
+    "cy": 422.6,
+    "link": "/district/nalanda"
+  },
+  {
+    "id": "patna",
+    "name": "Patna",
+    "marathiName": "पटना",
+    "headquarters": "Patna",
+    "image": "/assets/districts/bihar/patna.jpg",
+    "cx": 330,
+    "cy": 396.3,
+    "link": "/district/patna"
+  },
+  {
+    "id": "saran",
+    "name": "Saran",
+    "marathiName": "सारण",
+    "headquarters": "Chhapra",
+    "image": "/assets/districts/bihar/saran.jpg",
+    "cx": 255.2,
+    "cy": 325.5,
+    "link": "/district/saran"
+  },
+  {
+    "id": "siwan",
+    "name": "Siwan",
+    "marathiName": "सिवान",
+    "headquarters": "Siwan",
+    "image": "/assets/districts/bihar/siwan.jpg",
+    "cx": 189.7,
+    "cy": 283.3,
+    "link": "/district/siwan"
+  },
+  {
+    "id": "muzaffarpur",
+    "name": "Muzaffarpur",
+    "marathiName": "मुज़फ़्फ़रपुर",
+    "headquarters": "Muzaffarpur",
+    "image": "/assets/districts/bihar/muzaffarpur.jpg",
+    "cx": 334.7,
+    "cy": 281.5,
+    "link": "/district/muzaffarpur"
+  },
+  {
+    "id": "madhepura",
+    "name": "Madhepura",
+    "marathiName": "मधेपुरा",
+    "headquarters": "Madhepura",
+    "image": "/assets/districts/bihar/madhepura.jpg",
+    "cx": 557,
+    "cy": 345.4,
+    "link": "/district/madhepura"
+  },
+  {
+    "id": "araria",
+    "name": "Araria",
+    "marathiName": "अररिया",
+    "headquarters": "Araria",
+    "image": "/assets/districts/bihar/araria.jpg",
+    "cx": 620.2,
+    "cy": 282.6,
+    "link": "/district/araria"
+  },
+  {
+    "id": "supaul",
+    "name": "Supaul",
+    "marathiName": "सुपौल",
+    "headquarters": "Supaul",
+    "image": "/assets/districts/bihar/supaul.jpg",
+    "cx": 535.6,
+    "cy": 278.5,
+    "link": "/district/supaul"
+  },
+  {
+    "id": "madhubani",
+    "name": "Madhubani",
+    "marathiName": "मधुबनी",
+    "headquarters": "Madhubani",
+    "image": "/assets/districts/bihar/madhubani.jpg",
+    "cx": 454.3,
+    "cy": 263.5,
+    "link": "/district/madhubani"
+  },
+  {
+    "id": "purnia",
+    "name": "Purnia",
+    "marathiName": "पूर्णिया",
+    "headquarters": "Purnea",
+    "image": "/assets/districts/bihar/purnia.jpg",
+    "cx": 640.1,
+    "cy": 335.6,
+    "link": "/district/purnia"
+  },
+  {
+    "id": "kishanganj",
+    "name": "Kishanganj",
+    "marathiName": "किशनगंज",
+    "headquarters": "Kishanganj",
+    "image": "/assets/districts/bihar/kishanganj.jpg",
+    "cx": 709.3,
+    "cy": 274.1,
+    "link": "/district/kishanganj"
+  },
+  {
+    "id": "aurangabad",
+    "name": "Aurangabad",
+    "marathiName": "औरंगाबाद",
+    "headquarters": "Aurangabad",
+    "image": "/assets/districts/bihar/aurangabad.jpg",
+    "cx": 201.5,
+    "cy": 490.2,
+    "link": "/district/aurangabad"
+  }
+];
+
+export const westBengalDistrictsData: DistrictInfo[] = [
+  {
+    "id": "south24parganas",
+    "name": "South 24 Parganas",
+    "marathiName": "দক্ষিণ ২৪ পরগনা",
+    "headquarters": "Alipore",
+    "image": "/assets/districts/westbengal/south24parganas.jpg",
+    "cx": 471.2,
+    "cy": 586.5,
+    "link": "/district/south24parganas"
+  },
+  {
+    "id": "paschimmedinipur",
+    "name": "Paschim Medinipur",
+    "marathiName": "পশ্চিম মেদিনীপুর",
+    "headquarters": "Medinipur",
+    "image": "/assets/districts/westbengal/paschimmedinipur.jpg",
+    "cx": 356.4,
+    "cy": 534.5,
+    "link": "/district/paschimmedinipur"
+  },
+  {
+    "id": "purbamedinipur",
+    "name": "Purba Medinipur",
+    "marathiName": "পূর্ব মেদিনীপুর",
+    "headquarters": "Tamluk",
+    "image": "/assets/districts/westbengal/purbamedinipur.jpg",
+    "cx": 384.8,
+    "cy": 563.4,
+    "link": "/district/purbamedinipur"
+  },
+  {
+    "id": "jhargram",
+    "name": "Jhargram",
+    "marathiName": "ঝাড়গ্রাম",
+    "headquarters": "Jhargram",
+    "image": "/assets/districts/westbengal/jhargram.jpg",
+    "cx": 306.1,
+    "cy": 532.5,
+    "link": "/district/jhargram"
+  },
+  {
+    "id": "darjeeling",
+    "name": "Darjeeling",
+    "marathiName": "দার্জিলিং",
+    "headquarters": "Darjeeling",
+    "image": "/assets/districts/westbengal/darjeeling.jpg",
+    "cx": 445.5,
+    "cy": 68,
+    "link": "/district/darjeeling"
+  },
+  {
+    "id": "jalpaiguri",
+    "name": "Jalpaiguri",
+    "marathiName": "জলপাইগুড়ি",
+    "headquarters": "Jalpaiguri",
+    "image": "/assets/districts/westbengal/jalpaiguri.jpg",
+    "cx": 494.4,
+    "cy": 89.8,
+    "link": "/district/jalpaiguri"
+  },
+  {
+    "id": "dakshindinajpur",
+    "name": "Dakshin Dinajpur",
+    "marathiName": "দক্ষিণ দিনাজপুর",
+    "headquarters": "Balurghat",
+    "image": "/assets/districts/westbengal/dakshindinajpur.jpg",
+    "cx": 476,
+    "cy": 219.1,
+    "link": "/district/dakshindinajpur"
+  },
+  {
+    "id": "malda",
+    "name": "Malda",
+    "marathiName": "মালদা",
+    "headquarters": "English Bazar",
+    "image": "/assets/districts/westbengal/malda.jpg",
+    "cx": 433,
+    "cy": 237.7,
+    "link": "/district/malda"
+  },
+  {
+    "id": "murshidabad",
+    "name": "Murshidabad",
+    "marathiName": "মুর্শিদাবাদ",
+    "headquarters": "Baharampur",
+    "image": "/assets/districts/westbengal/murshidabad.jpg",
+    "cx": 431.5,
+    "cy": 346,
+    "link": "/district/murshidabad"
+  },
+  {
+    "id": "birbhum",
+    "name": "Birbhum",
+    "marathiName": "বীরভূম",
+    "headquarters": "Suri",
+    "image": "/assets/districts/westbengal/birbhum.jpg",
+    "cx": 382.8,
+    "cy": 360.5,
+    "link": "/district/birbhum"
+  },
+  {
+    "id": "nadia",
+    "name": "Nadia",
+    "marathiName": "নদিয়া",
+    "headquarters": "Krishnanagar",
+    "image": "/assets/districts/westbengal/nadia.jpg",
+    "cx": 471.6,
+    "cy": 411.5,
+    "link": "/district/nadia"
+  },
+  {
+    "id": "purbabardhaman",
+    "name": "Purba Bardhaman",
+    "marathiName": "পূর্ব বর্ধমান",
+    "headquarters": "Bardhaman",
+    "image": "/assets/districts/westbengal/purbabardhaman.jpg",
+    "cx": 413.8,
+    "cy": 424.9,
+    "link": "/district/purbabardhaman"
+  },
+  {
+    "id": "purulia",
+    "name": "Purulia",
+    "marathiName": "পুরুলিয়া",
+    "headquarters": "Purulia",
+    "image": "/assets/districts/westbengal/purulia.jpg",
+    "cx": 252.6,
+    "cy": 438.3,
+    "link": "/district/purulia"
+  },
+  {
+    "id": "bankura",
+    "name": "Bankura",
+    "marathiName": "বাঁকুড়া",
+    "headquarters": "Bankura",
+    "image": "/assets/districts/westbengal/bankura.jpg",
+    "cx": 327.4,
+    "cy": 456.3,
+    "link": "/district/bankura"
+  },
+  {
+    "id": "north24parganas",
+    "name": "North 24 Parganas",
+    "marathiName": "উত্তর ২৪ পরগনা",
+    "headquarters": "Barasat",
+    "image": "/assets/districts/westbengal/north24parganas.jpg",
+    "cx": 495.8,
+    "cy": 493.2,
+    "link": "/district/north24parganas"
+  },
+  {
+    "id": "hooghly",
+    "name": "Hooghly",
+    "marathiName": "হুগলি",
+    "headquarters": "Chinsurah",
+    "image": "/assets/districts/westbengal/hooghly.jpg",
+    "cx": 416.9,
+    "cy": 477.5,
+    "link": "/district/hooghly"
+  },
+  {
+    "id": "howrah",
+    "name": "Howrah",
+    "marathiName": "হাওড়া",
+    "headquarters": "Howrah",
+    "image": "/assets/districts/westbengal/howrah.jpg",
+    "cx": 425.8,
+    "cy": 512.6,
+    "link": "/district/howrah"
+  },
+  {
+    "id": "kolkata",
+    "name": "Kolkata",
+    "marathiName": "কলকাতা",
+    "headquarters": "Kolkata",
+    "image": "/assets/districts/westbengal/kolkata.jpg",
+    "cx": 451.8,
+    "cy": 512.3,
+    "link": "/district/kolkata",
+    "hasCallout": true,
+    "labelX": 520,
+    "labelY": 535
+  },
+  {
+    "id": "alipurduar",
+    "name": "Alipurduar",
+    "marathiName": "আলিপুরদুয়ার",
+    "headquarters": "Alipurduar",
+    "image": "/assets/districts/westbengal/alipurduar.jpg",
+    "cx": 574.2,
+    "cy": 92.1,
+    "link": "/district/alipurduar"
+  },
+  {
+    "id": "paschimbardhaman",
+    "name": "Paschim Bardhaman",
+    "marathiName": "পশ্চিম বর্ধমান",
+    "headquarters": "Asansol",
+    "image": "/assets/districts/westbengal/paschimbardhaman.jpg",
+    "cx": 332.5,
+    "cy": 396.8,
+    "link": "/district/paschimbardhaman"
+  },
+  {
+    "id": "kalimpong",
+    "name": "Kalimpong",
+    "marathiName": "কালিম্পং",
+    "headquarters": "Kalimpong",
+    "image": "/assets/districts/westbengal/kalimpong.jpg",
+    "cx": 478.3,
+    "cy": 46.5,
+    "link": "/district/kalimpong"
+  },
+  {
+    "id": "coochbehar",
+    "name": "Cooch Behar",
+    "marathiName": "কোচবিহার",
+    "headquarters": "Cooch Behar",
+    "image": "/assets/districts/westbengal/coochbehar.jpg",
+    "cx": 545.9,
+    "cy": 122.7,
+    "link": "/district/coochbehar"
+  },
+  {
+    "id": "uttardinajpur",
+    "name": "Uttar Dinajpur",
+    "marathiName": "উত্তর দিনাজপুর",
+    "headquarters": "Raiganj",
+    "image": "/assets/districts/westbengal/uttardinajpur.jpg",
+    "cx": 435.2,
+    "cy": 163.6,
+    "link": "/district/uttardinajpur"
+  }
+];
