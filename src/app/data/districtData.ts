@@ -6743,3 +6743,419 @@ export const tripuraDistrictsData: DistrictInfo[] = [
     "link": "/district/unakoti"
   }
 ];
+
+export const mizoramDistrictsData: DistrictInfo[] = [
+  {
+    "id": "aizawl",
+    "name": "Aizawl",
+    "marathiName": "Aizawl / ऐज़ॉल",
+    "headquarters": "Aizawl",
+    "image": "/assets/districts/mizoram/aizawl.jpg",
+    "cx": 400.4,
+    "cy": 170.5,
+    "link": "/district/aizawl"
+  },
+  {
+    "id": "champhai",
+    "name": "Champhai",
+    "marathiName": "Champhai / चम्फाई",
+    "headquarters": "Champhai",
+    "image": "/assets/districts/mizoram/champhai.jpg",
+    "cx": 489.4,
+    "cy": 254.4,
+    "link": "/district/champhai"
+  },
+  {
+    "id": "kolasib",
+    "name": "Kolasib",
+    "marathiName": "Kôlasib / कोलासिब",
+    "headquarters": "Kolasib",
+    "image": "/assets/districts/mizoram/kolasib.jpg",
+    "cx": 373.1,
+    "cy": 103.1,
+    "link": "/district/kolasib"
+  },
+  {
+    "id": "lawngtlai",
+    "name": "Lawngtlai",
+    "marathiName": "Lâwngtlai / ल्वांगत्लाई",
+    "headquarters": "Lawngtlai",
+    "image": "/assets/districts/mizoram/lawngtlai.jpg",
+    "cx": 358.2,
+    "cy": 524.9,
+    "link": "/district/lawngtlai"
+  },
+  {
+    "id": "lunglei",
+    "name": "Lunglei",
+    "marathiName": "Lunglei / लुंगलेई",
+    "headquarters": "Lunglei",
+    "image": "/assets/districts/mizoram/lunglei.jpg",
+    "cx": 350.3,
+    "cy": 376.7,
+    "link": "/district/lunglei"
+  },
+  {
+    "id": "mamit",
+    "name": "Mamit",
+    "marathiName": "Mamit / मामित",
+    "headquarters": "Mamit",
+    "image": "/assets/districts/mizoram/mamit.jpg",
+    "cx": 304,
+    "cy": 209.3,
+    "link": "/district/mamit"
+  },
+  {
+    "id": "saiha",
+    "name": "Siaha (Saiha)",
+    "marathiName": "Siaha / सिहा",
+    "headquarters": "Siaha",
+    "image": "/assets/districts/mizoram/saiha.jpg",
+    "cx": 440.4,
+    "cy": 525.8,
+    "link": "/district/saiha"
+  },
+  {
+    "id": "serchhip",
+    "name": "Serchhip",
+    "marathiName": "Serchhip / सेरछिप",
+    "headquarters": "Serchhip",
+    "image": "/assets/districts/mizoram/serchhip.jpg",
+    "cx": 414.2,
+    "cy": 318.1,
+    "link": "/district/serchhip"
+  }
+];
+
+export const manipurDistrictsData: DistrictInfo[] = [
+  {
+    "id": "bishnupur",
+    "name": "Bishnupur",
+    "marathiName": "বিষ্ণুপুর (Bishnupur)",
+    "headquarters": "Bishnupur",
+    "image": "/assets/districts/manipur/bishnupur.jpg",
+    "cx": 388,
+    "cy": 408.7,
+    "link": "/district/bishnupur"
+  },
+  {
+    "id": "chandel",
+    "name": "Chandel",
+    "marathiName": "চান্দেল (Chandel)",
+    "headquarters": "Chandel",
+    "image": "/assets/districts/manipur/chandel.jpg",
+    "cx": 473.8,
+    "cy": 486.1,
+    "link": "/district/chandel"
+  },
+  {
+    "id": "churachandpur",
+    "name": "Churachandpur",
+    "marathiName": "চূড়াচাঁদপুর (Churachandpur)",
+    "headquarters": "Churachandpur",
+    "image": "/assets/districts/manipur/churachandpur.jpg",
+    "cx": 248.7,
+    "cy": 473.6,
+    "link": "/district/churachandpur"
+  },
+  {
+    "id": "imphaleast",
+    "name": "Imphal East",
+    "marathiName": "ইম্ফল পূর্ব (Imphal East)",
+    "headquarters": "Porompat",
+    "image": "/assets/districts/manipur/imphaleast.jpg",
+    "cx": 338.7,
+    "cy": 308.8,
+    "link": "/district/imphaleast"
+  },
+  {
+    "id": "senapati",
+    "name": "Senapati",
+    "marathiName": "সেনাপতি (Senapati)",
+    "headquarters": "Senapati",
+    "image": "/assets/districts/manipur/senapati.jpg",
+    "cx": 454.5,
+    "cy": 225,
+    "link": "/district/senapati"
+  },
+  {
+    "id": "tamenglong",
+    "name": "Tamenglong",
+    "marathiName": "তামেংলং (Tamenglong)",
+    "headquarters": "Tamenglong",
+    "image": "/assets/districts/manipur/tamenglong.jpg",
+    "cx": 283,
+    "cy": 257.3,
+    "link": "/district/tamenglong"
+  },
+  {
+    "id": "thoubal",
+    "name": "Thoubal",
+    "marathiName": "থৌবাল (Thoubal)",
+    "headquarters": "Thoubal",
+    "image": "/assets/districts/manipur/thoubal.jpg",
+    "cx": 437.3,
+    "cy": 396.5,
+    "link": "/district/thoubal"
+  },
+  {
+    "id": "ukhrul",
+    "name": "Ukhrul",
+    "marathiName": "উখরুল (Ukhrul)",
+    "headquarters": "Ukhrul",
+    "image": "/assets/districts/manipur/ukhrul.jpg",
+    "cx": 584.2,
+    "cy": 233.1,
+    "link": "/district/ukhrul"
+  },
+  {
+    "id": "imphalwest",
+    "name": "Imphal West",
+    "marathiName": "ইম্ফল পশ্চিম (Imphal West)",
+    "headquarters": "Lamphelpat",
+    "image": "/assets/districts/manipur/imphalwest.jpg",
+    "cx": 408.4,
+    "cy": 317.4,
+    "link": "/district/imphalwest"
+  }
+];
+
+export const nagalandDistrictsData: DistrictInfo[] = [
+  {
+    "id": "dimapur",
+    "name": "Dimapur",
+    "marathiName": "Dimapur / दिमापुर",
+    "headquarters": "Dimapur",
+    "image": "/assets/districts/nagaland/dimapur.jpg",
+    "cx": 227.7,
+    "cy": 423.8,
+    "link": "/district/dimapur"
+  },
+  {
+    "id": "kohima",
+    "name": "Kohima",
+    "marathiName": "Kohima / कोहिमा",
+    "headquarters": "Kohima",
+    "image": "/assets/districts/nagaland/kohima.jpg",
+    "cx": 239,
+    "cy": 491.5,
+    "link": "/district/kohima"
+  },
+  {
+    "id": "mokokchung",
+    "name": "Mokokchung",
+    "marathiName": "Mokokchung / मोकोकचुंग",
+    "headquarters": "Mokokchung",
+    "image": "/assets/districts/nagaland/mokokchung.jpg",
+    "cx": 475,
+    "cy": 210.8,
+    "link": "/district/mokokchung"
+  },
+  {
+    "id": "mon",
+    "name": "Mon",
+    "marathiName": "Mon / मोन",
+    "headquarters": "Mon",
+    "image": "/assets/districts/nagaland/mon.jpg",
+    "cx": 637.9,
+    "cy": 142.5,
+    "link": "/district/mon"
+  },
+  {
+    "id": "phek",
+    "name": "Phek",
+    "marathiName": "Phek / फेक",
+    "headquarters": "Phek",
+    "image": "/assets/districts/nagaland/phek.jpg",
+    "cx": 489.7,
+    "cy": 482,
+    "link": "/district/phek"
+  },
+  {
+    "id": "tuensang",
+    "name": "Tuensang",
+    "marathiName": "Tuensang / तुएनसांग",
+    "headquarters": "Tuensang",
+    "image": "/assets/districts/nagaland/tuensang.jpg",
+    "cx": 582.6,
+    "cy": 296.6,
+    "link": "/district/tuensang"
+  },
+  {
+    "id": "wokha",
+    "name": "Wokha",
+    "marathiName": "Wokha / वोखा",
+    "headquarters": "Wokha",
+    "image": "/assets/districts/nagaland/wokha.jpg",
+    "cx": 371.4,
+    "cy": 299.3,
+    "link": "/district/wokha"
+  },
+  {
+    "id": "zunheboto",
+    "name": "Zunheboto",
+    "marathiName": "Zünheboto / जुन्हेबोटो",
+    "headquarters": "Zunheboto",
+    "image": "/assets/districts/nagaland/zunheboto.jpg",
+    "cx": 467.9,
+    "cy": 355.2,
+    "link": "/district/zunheboto"
+  }
+];
+
+
+
+
+
+export const arunachalPradeshDistrictsData: DistrictInfo[] = [
+  {
+    "id": "changlang",
+    "name": "Changlang",
+    "marathiName": "Changlang / चांगलांग",
+    "headquarters": "Changlang",
+    "image": "/assets/districts/arunachalpradesh/changlang.jpg",
+    "cx": 642.2,
+    "cy": 414.3,
+    "link": "/district/changlang"
+  },
+  {
+    "id": "eastkameng",
+    "name": "East Kameng",
+    "marathiName": "East Kameng / पूर्व कामेंग",
+    "headquarters": "Seppa",
+    "image": "/assets/districts/arunachalpradesh/eastkameng.jpg",
+    "cx": 217.1,
+    "cy": 412.9,
+    "link": "/district/eastkameng"
+  },
+  {
+    "id": "eastsiang",
+    "name": "East Siang",
+    "marathiName": "East Siang / पूर्व सियांग",
+    "headquarters": "Pasighat",
+    "image": "/assets/districts/arunachalpradesh/eastsiang.jpg",
+    "cx": 474.8,
+    "cy": 313,
+    "link": "/district/eastsiang"
+  },
+  {
+    "id": "kurungkumey",
+    "name": "Kurung Kumey",
+    "marathiName": "Kurung Kumey / कुरुंग कुमे",
+    "headquarters": "Koloriang",
+    "image": "/assets/districts/arunachalpradesh/kurungkumey.jpg",
+    "cx": 242.3,
+    "cy": 326.4,
+    "link": "/district/kurungkumey"
+  },
+  {
+    "id": "lohit",
+    "name": "Lohit",
+    "marathiName": "Lohit / लोहित",
+    "headquarters": "Tezu",
+    "image": "/assets/districts/arunachalpradesh/lohit.jpg",
+    "cx": 670.4,
+    "cy": 339.4,
+    "link": "/district/lohit"
+  },
+  {
+    "id": "lowerdibangvalley",
+    "name": "Lower Dibang Valley",
+    "marathiName": "Lower Dibang Valley / निचली दिबांग घाटी",
+    "headquarters": "Roing",
+    "image": "/assets/districts/arunachalpradesh/lowerdibangvalley.jpg",
+    "cx": 564.3,
+    "cy": 290.9,
+    "link": "/district/lowerdibangvalley"
+  },
+  {
+    "id": "lowersubansiri",
+    "name": "Lower Subansiri",
+    "marathiName": "Lower Subansiri / निचला सुबनसिरी",
+    "headquarters": "Ziro",
+    "image": "/assets/districts/arunachalpradesh/lowersubansiri.jpg",
+    "cx": 333.9,
+    "cy": 369.9,
+    "link": "/district/lowersubansiri"
+  },
+  {
+    "id": "papumpare",
+    "name": "Papum Pare",
+    "marathiName": "Papum Pare / पपुम पारे",
+    "headquarters": "Yupia",
+    "image": "/assets/districts/arunachalpradesh/papumpare.jpg",
+    "cx": 280.6,
+    "cy": 425.4,
+    "link": "/district/papumpare"
+  },
+  {
+    "id": "tawang",
+    "name": "Tawang",
+    "marathiName": "Tawang / तवांग",
+    "headquarters": "Tawang",
+    "image": "/assets/districts/arunachalpradesh/tawang.jpg",
+    "cx": 60.9,
+    "cy": 373.4,
+    "link": "/district/tawang"
+  },
+  {
+    "id": "tirap",
+    "name": "Tirap",
+    "marathiName": "Tirap / तिरप",
+    "headquarters": "Khonsa",
+    "image": "/assets/districts/arunachalpradesh/tirap.jpg",
+    "cx": 519.5,
+    "cy": 467.5,
+    "link": "/district/tirap"
+  },
+  {
+    "id": "upperdibangvalley",
+    "name": "Upper Dibang Valley",
+    "marathiName": "Upper Dibang Valley / ऊपरी दिबांग घाटी",
+    "headquarters": "Anini",
+    "image": "/assets/districts/arunachalpradesh/upperdibangvalley.jpg",
+    "cx": 592.7,
+    "cy": 202.3,
+    "link": "/district/upperdibangvalley"
+  },
+  {
+    "id": "uppersiang",
+    "name": "Upper Siang",
+    "marathiName": "Upper Siang / ऊपरी सियांग",
+    "headquarters": "Yingkiong",
+    "image": "/assets/districts/arunachalpradesh/uppersiang.jpg",
+    "cx": 466.7,
+    "cy": 226.5,
+    "link": "/district/uppersiang"
+  },
+  {
+    "id": "uppersubansiri",
+    "name": "Upper Subansiri",
+    "marathiName": "Upper Subansiri / ऊपरी सुबनसिरी",
+    "headquarters": "Daporijo",
+    "image": "/assets/districts/arunachalpradesh/uppersubansiri.jpg",
+    "cx": 325.9,
+    "cy": 297.2,
+    "link": "/district/uppersubansiri"
+  },
+  {
+    "id": "westkameng",
+    "name": "West Kameng",
+    "marathiName": "West Kameng / पश्चिम कामेंग",
+    "headquarters": "Bomdila",
+    "image": "/assets/districts/arunachalpradesh/westkameng.jpg",
+    "cx": 166.3,
+    "cy": 401,
+    "link": "/district/westkameng"
+  },
+  {
+    "id": "westsiang",
+    "name": "West Siang",
+    "marathiName": "West Siang / पश्चिम सियांग",
+    "headquarters": "Aalo (Along)",
+    "image": "/assets/districts/arunachalpradesh/westsiang.jpg",
+    "cx": 407.1,
+    "cy": 319,
+    "link": "/district/westsiang"
+  }
+];
