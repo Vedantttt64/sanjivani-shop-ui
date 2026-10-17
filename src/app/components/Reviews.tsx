@@ -76,9 +76,9 @@ export default function Reviews() {
 
   return (
     <section className="w-full bg-[#f2f1f9] pb-12 pt-0 md:pb-16 md:pt-0 px-2 sm:px-4 md:px-6 lg:px-8 flex justify-center">
-      <div className="max-w-[1400px] w-full flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
-        <div className="w-full lg:w-[22%] flex flex-col items-center text-center lg:items-start lg:text-left lg:pl-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight flex flex-row lg:flex-col items-center justify-center lg:items-start gap-2 lg:gap-0 leading-tight">
+      <div className="max-w-[1400px] w-full flex flex-col items-center gap-6">
+        <div className="w-full flex flex-col items-center text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight flex items-center justify-center gap-2 leading-tight">
             <span>
               <span className="text-[#4285F4]">G</span>
               <span className="text-[#EA4335]">o</span>
@@ -91,10 +91,10 @@ export default function Reviews() {
           </h2>
         </div>
 
-        <div className="w-full lg:w-[78%] relative flex items-center px-12">
+        <div className="w-full relative flex items-center px-10 sm:px-12">
           <button
             onClick={() => scroll('left')}
-            className="absolute left-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
+            className="absolute left-1 sm:left-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition z-10"
             aria-label="Previous review"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
@@ -107,7 +107,7 @@ export default function Reviews() {
             {reviews.map((review) => (
               <div
                 key={review.id}
-                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 border border-slate-100 rounded-2xl overflow-hidden bg-white shadow-md p-5 sm:p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 snap-center min-w-0 min-h-[190px]"
+                className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] flex-shrink-0 border border-slate-100 rounded-2xl overflow-hidden bg-white shadow-md p-5 sm:p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 snap-center min-w-0 min-h-[190px]"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2">
