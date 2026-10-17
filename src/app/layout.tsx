@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description: "Sanjivani NGO",
   icons: {
     icon: [
-      { url: "/icon.png", type: "image/png" },
       { url: "/images/sanjivani-logo.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
-    shortcut: "/icon.png",
-    apple: "/apple-icon.png",
+    shortcut: "/images/sanjivani-logo.png",
+    apple: "/images/sanjivani-logo.png",
   },
 };
 

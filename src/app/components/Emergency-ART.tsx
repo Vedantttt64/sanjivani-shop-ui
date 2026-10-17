@@ -36,48 +36,56 @@ const EmergencyART = () => {
   return (
     <section
       aria-labelledby="emergency-response-heading"
-      className="relative w-full py-5 sm:py-6 md:py-8 px-4 sm:px-6 lg:px-12 border-y border-[#DCE5DC]"
+      className="relative w-full overflow-hidden bg-cover bg-center py-6 sm:py-8 md:py-10 px-4 sm:px-6 lg:px-12"
       style={{
-        background: 'linear-gradient(180deg, #F7F9F5 0%, #EDF4EA 100%)',
+        backgroundImage: "url('/images/placetovisit1.jpg')",
       }}
     >
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
-        {/* Left Column: Heading only */}
-        <div className="lg:col-span-6 flex flex-col justify-center text-left">
+      {/* Carefully balanced dark gradient overlay for crisp readability */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, rgba(12, 38, 24, 0.82) 0%, rgba(15, 23, 42, 0.76) 100%)',
+        }}
+      />
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+        {/* Left Column: Section Heading only */}
+        <div className="lg:col-span-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           <h2
             id="emergency-response-heading"
-            className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#176B42] tracking-tight leading-tight"
+            className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight drop-shadow-sm"
           >
             Emergency Response Team
           </h2>
         </div>
 
-        {/* Right Column: Compact Form Card */}
+        {/* Right Column: Clean White Form Card Surface */}
         <div className="lg:col-span-6 w-full">
-          <div className="bg-white rounded-xl p-4 sm:p-5 border border-[#DCE5DC] shadow-[0_4px_20px_rgba(23,107,66,0.05)] transition-all">
+          <div className="bg-white/95 rounded-2xl p-5 sm:p-6 border border-white/20 shadow-2xl backdrop-blur-xs transition-all">
             {submitted ? (
               <div
                 role="status"
                 aria-live="polite"
-                className="py-5 px-3 text-center rounded-lg bg-[#EDF4EA] border border-[#DCE5DC] space-y-1.5"
+                className="py-6 px-4 text-center rounded-xl bg-emerald-50 border border-emerald-200 space-y-2"
               >
-                <div className="w-9 h-9 rounded-full bg-[#176B42] text-white flex items-center justify-center mx-auto shadow-2xs">
+                <div className="w-10 h-10 rounded-full bg-[#176B42] text-white flex items-center justify-center mx-auto shadow-xs">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
-                <h4 className="text-sm font-bold text-[#176B42]">
+                <h4 className="text-base font-bold text-[#176B42]">
                   Emergency Alert Received
                 </h4>
-                <p className="text-xs text-[#26352D]">
-                  Our coordinator has been notified and is calling your mobile number now.
+                <p className="text-xs text-slate-700">
+                  Our emergency coordinator has been notified and is calling your mobile number now.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-2.5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  <div>
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="text-left">
                     <label
                       htmlFor="emergency-name"
-                      className="block text-[11px] font-bold text-[#26352D] uppercase tracking-wider mb-1"
+                      className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1"
                     >
                       Your Name <span className="text-red-500">*</span>
                     </label>
@@ -89,14 +97,14 @@ const EmergencyART = () => {
                       onChange={handleChange}
                       placeholder="Your Name"
                       required
-                      className="w-full h-9 px-3 rounded-md border border-[#DCE5DC] bg-[#F7F9F5]/40 text-[#26352D] placeholder-[#647067]/70 text-xs font-medium focus:bg-white focus:outline-none focus:ring-1.5 focus:ring-[#176B42] focus:border-transparent transition-all"
+                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all"
                     />
                   </div>
 
-                  <div>
+                  <div className="text-left">
                     <label
                       htmlFor="emergency-mobile"
-                      className="block text-[11px] font-bold text-[#26352D] uppercase tracking-wider mb-1"
+                      className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1"
                     >
                       Mobile Number <span className="text-red-500">*</span>
                     </label>
@@ -108,15 +116,15 @@ const EmergencyART = () => {
                       onChange={handleChange}
                       placeholder="Mobile Number"
                       required
-                      className="w-full h-9 px-3 rounded-md border border-[#DCE5DC] bg-[#F7F9F5]/40 text-[#26352D] placeholder-[#647067]/70 text-xs font-medium focus:bg-white focus:outline-none focus:ring-1.5 focus:ring-[#176B42] focus:border-transparent transition-all"
+                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
 
-                <div>
+                <div className="text-left">
                   <label
                     htmlFor="emergency-problem"
-                    className="block text-[11px] font-bold text-[#26352D] uppercase tracking-wider mb-1"
+                    className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1"
                   >
                     Tell Us About Your Problem <span className="text-red-500">*</span>
                   </label>
@@ -128,7 +136,7 @@ const EmergencyART = () => {
                     onChange={handleChange}
                     placeholder="Tell us about your problem"
                     required
-                    className="w-full p-2.5 rounded-md border border-[#DCE5DC] bg-[#F7F9F5]/40 text-[#26352D] placeholder-[#647067]/70 text-xs font-medium focus:bg-white focus:outline-none focus:ring-1.5 focus:ring-[#176B42] focus:border-transparent transition-all resize-none"
+                    className="w-full p-2.5 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all resize-none"
                   />
                 </div>
 
@@ -136,7 +144,7 @@ const EmergencyART = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-1/2 h-9 bg-[#176B42] hover:bg-[#125433] active:bg-[#0d3f26] text-white font-bold text-xs uppercase tracking-wider rounded-md shadow-2xs hover:shadow-xs transition-all duration-200 flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-full sm:w-1/2 h-9.5 bg-[#176B42] hover:bg-[#125433] active:bg-[#0d3f26] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
                     <span>{isSubmitting ? 'Submitting...' : 'CALL ME'}</span>
