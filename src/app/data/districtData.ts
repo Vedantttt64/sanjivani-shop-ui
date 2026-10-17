@@ -6151,3 +6151,595 @@ export const westBengalDistrictsData: DistrictInfo[] = [
     "link": "/district/uttardinajpur"
   }
 ];
+
+export const sikkimDistrictsData: DistrictInfo[] = [
+  {
+    "id": "mangan",
+    "name": "Mangan",
+    "marathiName": "मङ्गन",
+    "headquarters": "Mangan",
+    "image": "/assets/districts/sikkim/mangan.jpg",
+    "cx": 462.3,
+    "cy": 295.4,
+    "link": "/district/mangan"
+  },
+  {
+    "id": "gyalshing",
+    "name": "Gyalshing",
+    "marathiName": "ग्यालसिङ",
+    "headquarters": "Gyalshing (Geyzing)",
+    "image": "/assets/districts/sikkim/gyalshing.jpg",
+    "cx": 193.4,
+    "cy": 432,
+    "link": "/district/gyalshing"
+  },
+  {
+    "id": "soreng",
+    "name": "Soreng",
+    "marathiName": "सोरेङ",
+    "headquarters": "Soreng",
+    "image": "/assets/districts/sikkim/soreng.jpg",
+    "cx": 211.8,
+    "cy": 570.5,
+    "link": "/district/soreng"
+  },
+  {
+    "id": "namchi",
+    "name": "Namchi",
+    "marathiName": "नाम्ची",
+    "headquarters": "Namchi",
+    "image": "/assets/districts/sikkim/namchi.jpg",
+    "cx": 378,
+    "cy": 522.8,
+    "link": "/district/namchi"
+  },
+  {
+    "id": "gangtok",
+    "name": "Gangtok",
+    "marathiName": "गान्तोक",
+    "headquarters": "Gangtok",
+    "image": "/assets/districts/sikkim/gangtok.jpg",
+    "cx": 512.5,
+    "cy": 449.2,
+    "link": "/district/gangtok"
+  },
+  {
+    "id": "pakyong",
+    "name": "Pakyong",
+    "marathiName": "पाक्योङ",
+    "headquarters": "Pakyong",
+    "image": "/assets/districts/sikkim/pakyong.jpg",
+    "cx": 516.8,
+    "cy": 553.9,
+    "link": "/district/pakyong"
+  }
+];
+
+export const meghalayaDistrictsData: DistrictInfo[] = [
+  {
+    "id": "ribhoi",
+    "name": "Ri Bhoi",
+    "marathiName": "রি ভোই / Ri Bhoi",
+    "headquarters": "Nongpoh",
+    "image": "/assets/districts/meghalaya/ribhoi.jpg",
+    "cx": 532.1,
+    "cy": 247.6,
+    "link": "/district/ribhoi"
+  },
+  {
+    "id": "westkhasihills",
+    "name": "West Khasi Hills",
+    "marathiName": "পশ্চিম খাসি পাহাড় / West Khasi Hills",
+    "headquarters": "Nongstoin",
+    "image": "/assets/districts/meghalaya/westkhasihills.jpg",
+    "cx": 368.6,
+    "cy": 318.6,
+    "link": "/district/westkhasihills"
+  },
+  {
+    "id": "eastjaintiahills",
+    "name": "East Jaintia Hills",
+    "marathiName": "পূর্ব জয়ন্তীয়া পাহাড় / East Jaintia Hills",
+    "headquarters": "Khliehriat",
+    "image": "/assets/districts/meghalaya/eastjaintiahills.jpg",
+    "cx": 694.6,
+    "cy": 397,
+    "link": "/district/eastjaintiahills"
+  },
+  {
+    "id": "eastkhasihills",
+    "name": "East Khasi Hills",
+    "marathiName": "পূর্ব খাসি পাহাড় / East Khasi Hills",
+    "headquarters": "Shillong",
+    "image": "/assets/districts/meghalaya/eastkhasihills.jpg",
+    "cx": 509.5,
+    "cy": 376.4,
+    "link": "/district/eastkhasihills"
+  },
+  {
+    "id": "southgarohills",
+    "name": "South Garo Hills",
+    "marathiName": "দক্ষিণ গারো পাহাড় / South Garo Hills",
+    "headquarters": "Baghmara",
+    "image": "/assets/districts/meghalaya/southgarohills.jpg",
+    "cx": 248.3,
+    "cy": 386.3,
+    "link": "/district/southgarohills"
+  },
+  {
+    "id": "westgarohills",
+    "name": "West Garo Hills",
+    "marathiName": "পশ্চিম গারো পাহাড় / West Garo Hills",
+    "headquarters": "Tura",
+    "image": "/assets/districts/meghalaya/westgarohills.jpg",
+    "cx": 123.7,
+    "cy": 297.6,
+    "link": "/district/westgarohills"
+  },
+  {
+    "id": "eastgarohills",
+    "name": "East Garo Hills",
+    "marathiName": "পূর্ব গারো পাহাড় / East Garo Hills",
+    "headquarters": "Williamnagar",
+    "image": "/assets/districts/meghalaya/eastgarohills.jpg",
+    "cx": 231.2,
+    "cy": 309.9,
+    "link": "/district/eastgarohills"
+  },
+  {
+    "id": "westjaintiahills",
+    "name": "West Jaintia Hills",
+    "marathiName": "পশ্চিম জয়ন্তীয়া পাহাড় / West Jaintia Hills",
+    "headquarters": "Jowai",
+    "image": "/assets/districts/meghalaya/westjaintiahills.jpg",
+    "cx": 642.9,
+    "cy": 347.2,
+    "link": "/district/westjaintiahills"
+  },
+  {
+    "id": "southwestkhasihills",
+    "name": "South West Khasi Hills",
+    "marathiName": "দক্ষিণ পশ্চিম খাসি পাহাড় / South West Khasi Hills",
+    "headquarters": "Mawkyrwat",
+    "image": "/assets/districts/meghalaya/southwestkhasihills.jpg",
+    "cx": 366.7,
+    "cy": 384.5,
+    "link": "/district/southwestkhasihills"
+  },
+  {
+    "id": "northgarohills",
+    "name": "North Garo Hills",
+    "marathiName": "উত্তর গারো পাহাড় / North Garo Hills",
+    "headquarters": "Resubelpara",
+    "image": "/assets/districts/meghalaya/northgarohills.jpg",
+    "cx": 257.2,
+    "cy": 254.2,
+    "link": "/district/northgarohills"
+  },
+  {
+    "id": "southwestgarohills",
+    "name": "South West Garo Hills",
+    "marathiName": "দক্ষিণ পশ্চিম গারো পাহাড় / South West Garo Hills",
+    "headquarters": "Ampati",
+    "image": "/assets/districts/meghalaya/southwestgarohills.jpg",
+    "cx": 85.2,
+    "cy": 349.3,
+    "link": "/district/southwestgarohills"
+  }
+];
+
+export const assamDistrictsData: DistrictInfo[] = [
+  {
+    "id": "tinsukia",
+    "name": "Tinsukia",
+    "marathiName": "তিনিচুকীয়া",
+    "headquarters": "Tinsukia",
+    "image": "/assets/districts/assam/tinsukia.jpg",
+    "cx": 720.1,
+    "cy": 153.2,
+    "link": "/district/tinsukia"
+  },
+  {
+    "id": "dhemaji",
+    "name": "Dhemaji",
+    "marathiName": "ধেমা Carte / ধেমাজি",
+    "headquarters": "Dhemaji",
+    "image": "/assets/districts/assam/dhemaji.jpg",
+    "cx": 607.2,
+    "cy": 153.1,
+    "link": "/district/dhemaji"
+  },
+  {
+    "id": "dibrugarh",
+    "name": "Dibrugarh",
+    "marathiName": "ডিব্ৰুগড়",
+    "headquarters": "Dibrugarh",
+    "image": "/assets/districts/assam/dibrugarh.jpg",
+    "cx": 655.8,
+    "cy": 183.4,
+    "link": "/district/dibrugarh"
+  },
+  {
+    "id": "lakhimpur",
+    "name": "Lakhimpur",
+    "marathiName": "লখিমপুৰ",
+    "headquarters": "North Lakhimpur",
+    "image": "/assets/districts/assam/lakhimpur.jpg",
+    "cx": 547.1,
+    "cy": 200.5,
+    "link": "/district/lakhimpur"
+  },
+  {
+    "id": "sivasagar",
+    "name": "Sivasagar",
+    "marathiName": "শিৱসাগৰ",
+    "headquarters": "Sivasagar",
+    "image": "/assets/districts/assam/sivasagar.jpg",
+    "cx": 608.5,
+    "cy": 221.9,
+    "link": "/district/sivasagar"
+  },
+  {
+    "id": "jorhat",
+    "name": "Jorhat",
+    "marathiName": "যোৰহাট",
+    "headquarters": "Jorhat",
+    "image": "/assets/districts/assam/jorhat.jpg",
+    "cx": 563.6,
+    "cy": 253.8,
+    "link": "/district/jorhat"
+  },
+  {
+    "id": "sonitpur",
+    "name": "Sonitpur",
+    "marathiName": "শোণিতপুৰ",
+    "headquarters": "Tezpur",
+    "image": "/assets/districts/assam/sonitpur.jpg",
+    "cx": 371.3,
+    "cy": 249.5,
+    "link": "/district/sonitpur"
+  },
+  {
+    "id": "golaghat",
+    "name": "Golaghat",
+    "marathiName": "গোলাঘাট",
+    "headquarters": "Golaghat",
+    "image": "/assets/districts/assam/golaghat.jpg",
+    "cx": 509.3,
+    "cy": 279.3,
+    "link": "/district/golaghat"
+  },
+  {
+    "id": "udalguri",
+    "name": "Udalguri",
+    "marathiName": "ওদালগুৰি",
+    "headquarters": "Udalguri",
+    "image": "/assets/districts/assam/udalguri.jpg",
+    "cx": 312.9,
+    "cy": 257.5,
+    "link": "/district/udalguri"
+  },
+  {
+    "id": "chirang",
+    "name": "Chirang",
+    "marathiName": "চিৰাং",
+    "headquarters": "Kajalgaon",
+    "image": "/assets/districts/assam/chirang.jpg",
+    "cx": 144.1,
+    "cy": 266.9,
+    "link": "/district/chirang"
+  },
+  {
+    "id": "baksa",
+    "name": "Baksa",
+    "marathiName": "বাক্সা",
+    "headquarters": "Mushalpur",
+    "image": "/assets/districts/assam/baksa.jpg",
+    "cx": 225.5,
+    "cy": 266.3,
+    "link": "/district/baksa"
+  },
+  {
+    "id": "nagaon",
+    "name": "Nagaon",
+    "marathiName": "নগাঁও",
+    "headquarters": "Nagaon",
+    "image": "/assets/districts/assam/nagaon.jpg",
+    "cx": 402.2,
+    "cy": 289.4,
+    "link": "/district/nagaon"
+  },
+  {
+    "id": "kokrajhar",
+    "name": "Kokrajhar",
+    "marathiName": "কোকৰাঝাৰ",
+    "headquarters": "Kokrajhar",
+    "image": "/assets/districts/assam/kokrajhar.jpg",
+    "cx": 90.5,
+    "cy": 285.2,
+    "link": "/district/kokrajhar"
+  },
+  {
+    "id": "darrang",
+    "name": "Darrang",
+    "marathiName": "দৰং",
+    "headquarters": "Mangaldoi",
+    "image": "/assets/districts/assam/darrang.jpg",
+    "cx": 305.1,
+    "cy": 275.2,
+    "link": "/district/darrang"
+  },
+  {
+    "id": "barpeta",
+    "name": "Barpeta",
+    "marathiName": "বৰপেটা",
+    "headquarters": "Barpeta",
+    "image": "/assets/districts/assam/barpeta.jpg",
+    "cx": 192.1,
+    "cy": 283.4,
+    "link": "/district/barpeta"
+  },
+  {
+    "id": "nalbari",
+    "name": "Nalbari",
+    "marathiName": "নলবাৰী",
+    "headquarters": "Nalbari",
+    "image": "/assets/districts/assam/nalbari.jpg",
+    "cx": 228.4,
+    "cy": 287,
+    "link": "/district/nalbari"
+  },
+  {
+    "id": "morigaon",
+    "name": "Morigaon",
+    "marathiName": "মৰিগাঁও",
+    "headquarters": "Morigaon",
+    "image": "/assets/districts/assam/morigaon.jpg",
+    "cx": 331.9,
+    "cy": 300.2,
+    "link": "/district/morigaon"
+  },
+  {
+    "id": "kamrup",
+    "name": "Kamrup",
+    "marathiName": "কামৰূপ",
+    "headquarters": "Amingaon",
+    "image": "/assets/districts/assam/kamrup.jpg",
+    "cx": 242.7,
+    "cy": 314.6,
+    "link": "/district/kamrup"
+  },
+  {
+    "id": "bongaigaon",
+    "name": "Bongaigaon",
+    "marathiName": "বঙাইগাঁও",
+    "headquarters": "Bongaigaon",
+    "image": "/assets/districts/assam/bongaigaon.jpg",
+    "cx": 141.2,
+    "cy": 289.3,
+    "link": "/district/bongaigaon"
+  },
+  {
+    "id": "dhubri",
+    "name": "Dhubri",
+    "marathiName": "ধুবুৰী",
+    "headquarters": "Dhubri",
+    "image": "/assets/districts/assam/dhubri.jpg",
+    "cx": 80,
+    "cy": 307,
+    "link": "/district/dhubri"
+  },
+  {
+    "id": "kamrupmetropolitan",
+    "name": "Kamrup Metropolitan",
+    "marathiName": "কামৰূপ মহানগৰ",
+    "headquarters": "Guwahati / Dispur",
+    "image": "/assets/districts/assam/kamrupmetropolitan.jpg",
+    "cx": 285.7,
+    "cy": 315.8,
+    "link": "/district/kamrupmetropolitan"
+  },
+  {
+    "id": "goalpara",
+    "name": "Goalpara",
+    "marathiName": "গোৱালপাৰা",
+    "headquarters": "Goalpara",
+    "image": "/assets/districts/assam/goalpara.jpg",
+    "cx": 139.7,
+    "cy": 327.3,
+    "link": "/district/goalpara"
+  },
+  {
+    "id": "dimahasao",
+    "name": "Dima Hasao",
+    "marathiName": "ডিমা হাছাও",
+    "headquarters": "Haflong",
+    "image": "/assets/districts/assam/dimahasao.jpg",
+    "cx": 414.4,
+    "cy": 396,
+    "link": "/district/dimahasao"
+  },
+  {
+    "id": "cachar",
+    "name": "Cachar",
+    "marathiName": "কাছাৰ",
+    "headquarters": "Silchar",
+    "image": "/assets/districts/assam/cachar.jpg",
+    "cx": 408.1,
+    "cy": 474.6,
+    "link": "/district/cachar"
+  },
+  {
+    "id": "karimganj",
+    "name": "Karimganj",
+    "marathiName": "কৰিমগঞ্জ",
+    "headquarters": "Karimganj",
+    "image": "/assets/districts/assam/karimganj.jpg",
+    "cx": 346.1,
+    "cy": 485.7,
+    "link": "/district/karimganj"
+  },
+  {
+    "id": "hailakandi",
+    "name": "Hailakandi",
+    "marathiName": "হাইলাকান্দি",
+    "headquarters": "Hailakandi",
+    "image": "/assets/districts/assam/hailakandi.jpg",
+    "cx": 367.4,
+    "cy": 505,
+    "link": "/district/hailakandi"
+  },
+  {
+    "id": "charaideo",
+    "name": "Charaideo",
+    "marathiName": "চৰাইদেউ",
+    "headquarters": "Sonari",
+    "image": "/assets/districts/assam/charaideo.jpg",
+    "cx": 654.7,
+    "cy": 207.7,
+    "link": "/district/charaideo"
+  },
+  {
+    "id": "majuli",
+    "name": "Majuli",
+    "marathiName": "মাজুলী",
+    "headquarters": "Garamur",
+    "image": "/assets/districts/assam/majuli.jpg",
+    "cx": 559.6,
+    "cy": 217.1,
+    "link": "/district/majuli"
+  },
+  {
+    "id": "biswanath",
+    "name": "Biswanath",
+    "marathiName": "বিশ্বনাথ",
+    "headquarters": "Biswanath Chariali",
+    "image": "/assets/districts/assam/biswanath.jpg",
+    "cx": 464.8,
+    "cy": 237.4,
+    "link": "/district/biswanath"
+  },
+  {
+    "id": "hojai",
+    "name": "Hojai",
+    "marathiName": "হোজাই",
+    "headquarters": "Hojai",
+    "image": "/assets/districts/assam/hojai.jpg",
+    "cx": 405.4,
+    "cy": 333.3,
+    "link": "/district/hojai"
+  },
+  {
+    "id": "southsalmaramankachar",
+    "name": "South Salmara Mankachar",
+    "marathiName": "দক্ষিণ শালমৰা-মানকাচৰ",
+    "headquarters": "Hatsingimari",
+    "image": "/assets/districts/assam/southsalmaramankachar.jpg",
+    "cx": 71.2,
+    "cy": 354.3,
+    "link": "/district/southsalmaramankachar"
+  },
+  {
+    "id": "karbianglong",
+    "name": "Karbi Anglong",
+    "marathiName": "কাৰ্বি আংলং",
+    "headquarters": "Diphu",
+    "image": "/assets/districts/assam/karbianglong.jpg",
+    "cx": 459.7,
+    "cy": 306.8,
+    "link": "/district/karbianglong"
+  },
+  {
+    "id": "westkarbianglong",
+    "name": "West Karbi Anglong",
+    "marathiName": "পশ্চিম কাৰ্বি আংলং",
+    "headquarters": "Hamren",
+    "image": "/assets/districts/assam/westkarbianglong.jpg",
+    "cx": 371.8,
+    "cy": 346.5,
+    "link": "/district/westkarbianglong"
+  }
+];
+
+export const tripuraDistrictsData: DistrictInfo[] = [
+  {
+    "id": "northtripura",
+    "name": "North Tripura",
+    "marathiName": "উত্তর ত্রিপুরা / North Tripura",
+    "headquarters": "Dharmanagar",
+    "image": "/assets/districts/tripura/northtripura.jpg",
+    "cx": 570.7,
+    "cy": 196.2,
+    "link": "/district/northtripura"
+  },
+  {
+    "id": "dhalai",
+    "name": "Dhalai",
+    "marathiName": "ধলাই / Dhalai",
+    "headquarters": "Ambassa",
+    "image": "/assets/districts/tripura/dhalai.jpg",
+    "cx": 469.6,
+    "cy": 295.8,
+    "link": "/district/dhalai"
+  },
+  {
+    "id": "sepahijala",
+    "name": "Sepahijala",
+    "marathiName": "সিপাহীজলা / Sepahijala",
+    "headquarters": "Bishramganj",
+    "image": "/assets/districts/tripura/sepahijala.jpg",
+    "cx": 252.9,
+    "cy": 391.5,
+    "link": "/district/sepahijala"
+  },
+  {
+    "id": "gomati",
+    "name": "Gomati",
+    "marathiName": "গোমতী / Gomati",
+    "headquarters": "Udaipur",
+    "image": "/assets/districts/tripura/gomati.jpg",
+    "cx": 355.9,
+    "cy": 400.4,
+    "link": "/district/gomati"
+  },
+  {
+    "id": "khowai",
+    "name": "Khowai",
+    "marathiName": "খোয়াই / Khowai",
+    "headquarters": "Khowai",
+    "image": "/assets/districts/tripura/khowai.jpg",
+    "cx": 361.6,
+    "cy": 242.7,
+    "link": "/district/khowai"
+  },
+  {
+    "id": "westtripura",
+    "name": "West Tripura",
+    "marathiName": "পশ্চিম ত্রিপুরা / West Tripura",
+    "headquarters": "Agartala",
+    "image": "/assets/districts/tripura/westtripura.jpg",
+    "cx": 268.2,
+    "cy": 261.9,
+    "link": "/district/westtripura"
+  },
+  {
+    "id": "southtripura",
+    "name": "South Tripura",
+    "marathiName": "দক্ষিণ ত্রিপুরা / South Tripura",
+    "headquarters": "Belonia",
+    "image": "/assets/districts/tripura/southtripura.jpg",
+    "cx": 317.3,
+    "cy": 528.1,
+    "link": "/district/southtripura"
+  },
+  {
+    "id": "unakoti",
+    "name": "Unakoti",
+    "marathiName": "ঊনকোটি / Unakoti",
+    "headquarters": "Kailashahar",
+    "image": "/assets/districts/tripura/unakoti.jpg",
+    "cx": 519.8,
+    "cy": 163.7,
+    "link": "/district/unakoti"
+  }
+];

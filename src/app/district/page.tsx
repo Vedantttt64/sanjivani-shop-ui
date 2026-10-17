@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Info, MapPin, Search } from 'lucide-react';
 import Navbar from '@/app/components/sections/Navbar';
 import Footer from '@/app/components/Footer';
-import { maharashtraDistrictsData, karnatakaDistrictsData, madhyaPradeshDistrictsData, rajasthanDistrictsData, uttarPradeshDistrictsData, chhattisgarhDistrictsData, telanganaDistrictsData, andhraPradeshDistrictsData, gujaratDistrictsData, tamilNaduDistrictsData, keralaDistrictsData, haryanaDistrictsData, punjabDistrictsData, himachalPradeshDistrictsData, uttarakhandDistrictsData, jammuAndKashmirDistrictsData, odishaDistrictsData, jharkhandDistrictsData, biharDistrictsData, westBengalDistrictsData, DistrictInfo } from '@/app/data/districtData';
+import { maharashtraDistrictsData, karnatakaDistrictsData, madhyaPradeshDistrictsData, rajasthanDistrictsData, uttarPradeshDistrictsData, chhattisgarhDistrictsData, telanganaDistrictsData, andhraPradeshDistrictsData, gujaratDistrictsData, tamilNaduDistrictsData, keralaDistrictsData, haryanaDistrictsData, punjabDistrictsData, himachalPradeshDistrictsData, uttarakhandDistrictsData, jammuAndKashmirDistrictsData, odishaDistrictsData, jharkhandDistrictsData, biharDistrictsData, westBengalDistrictsData, sikkimDistrictsData, meghalayaDistrictsData, assamDistrictsData, tripuraDistrictsData, DistrictInfo } from '@/app/data/districtData';
 import { maharashtraMapPaths } from '@/app/data/maharashtraMapData';
 import { karnatakaMapPaths } from '@/app/data/karnatakaMapData';
 import { madhyaPradeshMapPaths } from '@/app/data/madhyaPradeshMapData';
@@ -28,6 +28,10 @@ import { odishaMapPaths } from '@/app/data/odishaMapData';
 import { jharkhandMapPaths } from '@/app/data/jharkhandMapData';
 import { biharMapPaths } from '@/app/data/biharMapData';
 import { westBengalMapPaths } from '@/app/data/westBengalMapData';
+import { sikkimMapPaths } from '@/app/data/sikkimMapData';
+import { meghalayaMapPaths } from '@/app/data/meghalayaMapData';
+import { assamMapPaths } from '@/app/data/assamMapData';
+import { tripuraMapPaths } from '@/app/data/tripuraMapData';
 
 // Pastel color palette for districts matching the light off-white theme
 const districtColorClasses: string[] = [
@@ -91,6 +95,14 @@ function DistrictContent() {
           setCurrentState('Bihar');
         } else if (st.includes('bengal') || st.includes('wb') || st === 'wb') {
           setCurrentState('West Bengal');
+        } else if (st.includes('sikkim') || st === 'sk') {
+          setCurrentState('Sikkim');
+        } else if (st.includes('meghalaya') || st === 'ml') {
+          setCurrentState('Meghalaya');
+        } else if (st.includes('assam') || st === 'as') {
+          setCurrentState('Assam');
+        } else if (st.includes('tripura') || st === 'tr') {
+          setCurrentState('Tripura');
         } else {
           setCurrentState('Maharashtra');
         }
@@ -117,8 +129,20 @@ function DistrictContent() {
   const isJharkhand = currentState.toLowerCase().includes('jharkhand') || currentState.toLowerCase() === 'jh';
   const isBihar = currentState.toLowerCase().includes('bihar') || currentState.toLowerCase() === 'br';
   const isWestBengal = currentState.toLowerCase().includes('bengal') || currentState.toLowerCase() === 'wb';
+  const isSikkim = currentState.toLowerCase().includes('sikkim') || currentState.toLowerCase() === 'sk';
+  const isMeghalaya = currentState.toLowerCase().includes('meghalaya') || currentState.toLowerCase() === 'ml';
+  const isAssam = currentState.toLowerCase().includes('assam') || currentState.toLowerCase() === 'as';
+  const isTripura = currentState.toLowerCase().includes('tripura') || currentState.toLowerCase() === 'tr';
 
-  const activeDistrictsData = isWestBengal
+  const activeDistrictsData = isTripura
+    ? tripuraDistrictsData
+    : isAssam
+    ? assamDistrictsData
+    : isMeghalaya
+    ? meghalayaDistrictsData
+    : isSikkim
+    ? sikkimDistrictsData
+    : isWestBengal
     ? westBengalDistrictsData
     : isBihar
     ? biharDistrictsData
@@ -158,7 +182,15 @@ function DistrictContent() {
     ? karnatakaDistrictsData
     : maharashtraDistrictsData;
 
-  const activeMapPaths = isWestBengal
+  const activeMapPaths = isTripura
+    ? tripuraMapPaths
+    : isAssam
+    ? assamMapPaths
+    : isMeghalaya
+    ? meghalayaMapPaths
+    : isSikkim
+    ? sikkimMapPaths
+    : isWestBengal
     ? westBengalMapPaths
     : isBihar
     ? biharMapPaths
@@ -397,7 +429,7 @@ function DistrictContent() {
                 Districts of {currentState} ({activeDistrictsData.length})
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                {isWestBengal ? 'পশ্চিমবঙ্গের জেলাসমূহ' : isBihar ? 'बिहार के जिले' : isJharkhand ? 'झारखंड के जिले' : isOdisha ? 'ଓଡ଼ିଶାର ଜିଲ୍ଲାସମୂହ' : isJammuAndKashmir ? 'جموں و کشمیر کے اضلاع / जम्मू और कश्मीर के ज़िले' : isUttarakhand ? 'उत्तराखंड के जिले' : isHimachalPradesh ? 'हिमाचल प्रदेश के जिले' : isPunjab ? 'ਪੰਜਾਬ ਦੇ ਜ਼ਿਲ੍ਹੇ' : isHaryana ? 'हरियाणा के जिले' : isKerala ? 'കേരളത്തിലെ ജില്ലകൾ' : isTamilNadu ? 'தமிழ்நாட்டின் மாவட்டங்கள்' : isGujarat ? 'ગુજરાતના જિલ્લાઓ' : isAndhraPradesh ? 'ఆంధ్రప్రదేశ్ జిల్లాలు' : isTelangana ? 'తెలంగాణ జిల్లాలు' : isChhattisgarh ? 'छत्तीसगढ़ के जिले' : isUttarPradesh ? 'उत्तर प्रदेश के जिले' : isRajasthan ? 'राजस्थान के जिले' : isMadhyaPradesh ? 'मध्य प्रदेश के जिले' : isKarnataka ? 'ಕರ್ನಾಟಕದ ಜಿಲ್ಲೆಗಳು' : 'महाराष्ट्रातील जिल्हे'} — Select any district to view its portfolio page.
+                {isTripura ? 'ত্রিপুরা জেলাসমূহ' : isAssam ? 'অসমৰ জিলাসমূহ' : isMeghalaya ? 'Ki Distrik jong ka Meghalaya / मेघालय के जिले' : isSikkim ? 'सिक्किमका जिल्लाहरू' : isWestBengal ? 'পশ্চিমবঙ্গের জেলাসমূহ' : isBihar ? 'बिहार के जिले' : isJharkhand ? 'झारखंड के जिले' : isOdisha ? 'ଓଡ଼ିଶାର ଜିଲ୍ଲାସମୂହ' : isJammuAndKashmir ? 'جموں و کشمیر के اضلاع / जम्मू और कश्मीर के ज़िले' : isUttarakhand ? 'उत्तराखंड के जिले' : isHimachalPradesh ? 'हिमाचल प्रदेश के जिले' : isPunjab ? 'ਪੰਜਾਬ ਦੇ ਜ਼ਿਲ੍ਹੇ' : isHaryana ? 'हरियाणा के जिले' : isKerala ? 'കേരളത്തിലെ ജില്ലകൾ' : isTamilNadu ? 'தமிழ்நாட்டின் மாவட்டங்கள்' : isGujarat ? 'ગુજરાતના જિલ્લાઓ' : isAndhraPradesh ? 'ఆంధ్రప్రదేశ్ జిల్లాలు' : isTelangana ? 'తెలంగాణ జిల్లాలు' : isChhattisgarh ? 'छत्तीसगढ़ के जिले' : isUttarPradesh ? 'उत्तर प्रदेश के जिले' : isRajasthan ? 'राजस्थान के जिले' : isMadhyaPradesh ? 'मध्य प्रदेश के जिले' : isKarnataka ? 'ಕರ್ನಾಟಕದ ಜಿಲ್ಲೆಗಳು' : 'महाराष्ट्रातील जिल्हे'} — Select any district to view its portfolio page.
               </p>
             </div>
 
