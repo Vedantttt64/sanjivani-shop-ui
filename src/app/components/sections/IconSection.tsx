@@ -97,7 +97,7 @@ export default function IconSection() {
                     if (window.location.pathname === '/district') {
                       window.location.reload();
                     } else {
-                      router.push('/district');
+                      router.push(stateParam ? `/district?state=${encodeURIComponent(stateParam)}` : '/district');
                     }
                   } else if (data.title.toLowerCase() === 'home' && stateParam) {
                     router.push(`/?state=${encodeURIComponent(stateParam)}`);
