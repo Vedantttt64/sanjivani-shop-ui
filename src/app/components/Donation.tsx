@@ -146,7 +146,7 @@ export default function DonationPage() {
                           <span className="font-semibold text-white">Goal: ₹{(item.goal / 1000).toFixed(0)}K</span>
                         </div>
                         <progress
-                          className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-700 [&::-webkit-progress-value]:bg-[#E87B35] [&::-moz-progress-bar]:bg-[#E87B35]"
+                          className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-700 [&::-webkit-progress-value]:bg-[#FED127] [&::-moz-progress-bar]:bg-[#FED127]"
                           value={progressPercent}
                           max={100}
                         />
@@ -157,15 +157,17 @@ export default function DonationPage() {
                         <span>{item.daysLeft} days left</span>
                       </div>
 
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          router.push(`/donation/${item.id}`);
-                        }}
-                        className="w-full bg-[#FED127] hover:bg-[#E8BE1B] active:bg-[#D4AC10] text-[#1E1E1E] font-extrabold py-3 rounded-full transition-all shadow-md hover:shadow-lg cursor-pointer"
-                      >
-                        DONATE NOW
-                      </button>
+                      <div className="flex justify-center w-full">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            router.push(`/donation/${item.id}`);
+                          }}
+                          className="w-[94%] bg-[#FED127] hover:bg-[#E8BE1B] active:bg-[#D4AC10] text-[#1E1E1E] font-extrabold py-3 rounded-full transition-all shadow-md hover:shadow-lg cursor-pointer"
+                        >
+                          DONATE NOW
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

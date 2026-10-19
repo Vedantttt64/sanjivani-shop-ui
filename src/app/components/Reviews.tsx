@@ -98,7 +98,7 @@ export default function Reviews() {
       <div className="max-w-[1400px] w-full flex flex-col items-center">
         {/* Centered Heading with minimal top whitespace */}
         <div className="w-full flex flex-col items-center text-center mb-4 sm:mb-5">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight flex items-center justify-center gap-2 leading-tight">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight flex items-center justify-center gap-2 leading-tight">
             <span>
               <span className="text-[#4285F4]">G</span>
               <span className="text-[#EA4335]">o</span>

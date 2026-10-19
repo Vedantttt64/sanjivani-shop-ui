@@ -38,7 +38,7 @@ const EmergencyART = () => {
       aria-labelledby="emergency-response-heading"
       className="relative w-full overflow-hidden bg-cover bg-center py-6 sm:py-8 md:py-10 px-4 sm:px-6 lg:px-12"
       style={{
-        backgroundImage: "url('/images/placetovisit1.jpg')",
+        backgroundImage: "url('/images/banner/b2.jpg')",
       }}
     >
       {/* Subtle low-opacity tint to keep photo naturally bright & clear */}
@@ -144,7 +144,7 @@ const EmergencyART = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-1/2 h-9.5 bg-gradient-to-r from-[#E04E26] to-[#DC2626] hover:from-[#C93B14] hover:to-[#B91C1C] active:from-[#A82E0D] active:to-[#991B1B] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-[86%] sm:w-[40%] h-9.5 bg-gradient-to-r from-[#E04E26] to-[#DC2626] hover:from-[#C93B14] hover:to-[#B91C1C] active:from-[#A82E0D] active:to-[#991B1B] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
                     <span>{isSubmitting ? 'Submitting...' : 'CALL ME'}</span>

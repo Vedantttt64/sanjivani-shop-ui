@@ -145,7 +145,7 @@ export default function OutingPlanner() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-1/2 h-9.5 bg-black hover:bg-neutral-800 active:bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-[86%] sm:w-[40%] h-9.5 bg-black hover:bg-neutral-800 active:bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
                     <span>{isSubmitting ? 'Submitting...' : 'CALL ME'}</span>
