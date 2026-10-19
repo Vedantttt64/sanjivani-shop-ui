@@ -42,11 +42,11 @@ export default function OutingPlanner() {
         backgroundImage: "url('/images/food1.jpg')",
       }}
     >
-      {/* Warm amber/navy gradient overlay tailored for community & social work */}
+      {/* Subtle low-opacity tint to keep photo naturally bright & clear */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(30, 41, 59, 0.78) 100%)',
+          background: 'linear-gradient(to right, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.08) 55%, rgba(0, 0, 0, 0.15) 100%)',
         }}
       />
 
@@ -55,7 +55,7 @@ export default function OutingPlanner() {
         <div className="lg:col-span-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           <h2
             id="weekend-social-heading"
-            className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight drop-shadow-sm"
+            className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight [text-shadow:_0_2px_12px_rgba(0,0,0,0.7)]"
           >
             Weekend Social Work
           </h2>
@@ -98,7 +98,7 @@ export default function OutingPlanner() {
                       onChange={handleChange}
                       placeholder="Your Name"
                       required
-                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all"
+                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -117,7 +117,7 @@ export default function OutingPlanner() {
                       onChange={handleChange}
                       placeholder="Mobile Number"
                       required
-                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all"
+                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function OutingPlanner() {
                     onChange={handleChange}
                     placeholder="Tell us your weekend social work plan"
                     required
-                    className="w-full p-2.5 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all resize-none"
+                    className="w-full p-2.5 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all resize-none"
                   />
                 </div>
 
@@ -145,7 +145,7 @@ export default function OutingPlanner() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-1/2 h-9.5 bg-[#176B42] hover:bg-[#125433] active:bg-[#0d3f26] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-full sm:w-1/2 h-9.5 bg-black hover:bg-neutral-800 active:bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
                     <span>{isSubmitting ? 'Submitting...' : 'CALL ME'}</span>

@@ -41,11 +41,11 @@ const EmergencyART = () => {
         backgroundImage: "url('/images/placetovisit1.jpg')",
       }}
     >
-      {/* Carefully balanced dark gradient overlay for crisp readability */}
+      {/* Subtle low-opacity tint to keep photo naturally bright & clear */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(135deg, rgba(12, 38, 24, 0.82) 0%, rgba(15, 23, 42, 0.76) 100%)',
+          background: 'linear-gradient(to right, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.08) 55%, rgba(0, 0, 0, 0.15) 100%)',
         }}
       />
 
@@ -54,7 +54,7 @@ const EmergencyART = () => {
         <div className="lg:col-span-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           <h2
             id="emergency-response-heading"
-            className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight drop-shadow-sm"
+            className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-tight [text-shadow:_0_2px_12px_rgba(0,0,0,0.7)]"
           >
             Emergency Response Team
           </h2>
@@ -97,7 +97,7 @@ const EmergencyART = () => {
                       onChange={handleChange}
                       placeholder="Your Name"
                       required
-                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all"
+                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#E04E26] focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -116,7 +116,7 @@ const EmergencyART = () => {
                       onChange={handleChange}
                       placeholder="Mobile Number"
                       required
-                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all"
+                      className="w-full h-9.5 px-3 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#E04E26] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
@@ -136,7 +136,7 @@ const EmergencyART = () => {
                     onChange={handleChange}
                     placeholder="Tell us about your problem"
                     required
-                    className="w-full p-2.5 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#176B42] focus:border-transparent transition-all resize-none"
+                    className="w-full p-2.5 rounded-lg border border-slate-300 bg-slate-50/60 text-slate-800 placeholder-slate-400 text-xs sm:text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#E04E26] focus:border-transparent transition-all resize-none"
                   />
                 </div>
 
@@ -144,7 +144,7 @@ const EmergencyART = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-1/2 h-9.5 bg-[#176B42] hover:bg-[#125433] active:bg-[#0d3f26] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-full sm:w-1/2 h-9.5 bg-gradient-to-r from-[#E04E26] to-[#DC2626] hover:from-[#C93B14] hover:to-[#B91C1C] active:from-[#A82E0D] active:to-[#991B1B] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
                     <span>{isSubmitting ? 'Submitting...' : 'CALL ME'}</span>

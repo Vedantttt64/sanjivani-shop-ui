@@ -162,7 +162,7 @@ export default function DonationPage() {
                           e.stopPropagation();
                           router.push(`/donation/${item.id}`);
                         }}
-                        className="w-full bg-[#E87B35] hover:bg-[#FB923C] text-white font-bold py-3 rounded-full transition-all"
+                        className="w-full bg-[#FEF08A] hover:bg-[#FDE047] active:bg-[#FACC15] text-slate-900 font-extrabold py-3 rounded-full transition-all shadow-md hover:shadow-lg"
                       >
                         DONATE NOW
                       </button>
