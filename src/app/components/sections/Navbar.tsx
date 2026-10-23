@@ -4,7 +4,7 @@ import React, { Suspense, useState } from 'react'
 import IconSection from './IconSection'
 import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { X } from 'lucide-react'
+import { ShoppingCart, X } from 'lucide-react'
 
 // Icon imports for mobile drawer to match desktop
 import { FaPlaneUp } from "react-icons/fa6"
@@ -85,7 +85,8 @@ function NavbarContent() {
     { title: 'Shelter' },
     { title: 'Solar' },
     { title: 'Education' },
-    { title: 'Work' },
+    { title: 'Training' },
+    { title: 'Shop' },
     { title: 'Medical' },
     { title: 'Legal' },
     { title: 'Login' },
@@ -103,7 +104,8 @@ function NavbarContent() {
     if (t === 'shelter') return <PiStudentBold size={20} />;
     if (t === 'solar') return <MdOutlineSolarPower size={20} />;
     if (t === 'education') return <GiTeacher size={20} />;
-    if (t === 'work') return <FaLaptopCode size={20} />;
+    if (t === 'training') return <FaLaptopCode size={20} />;
+    if (t === 'shop') return <ShoppingCart size={20} />;
     if (t === 'medical') return <FaBriefcaseMedical size={20} />;
     if (t === 'legal') return <GoLaw size={20} />;
     if (t === 'login') return <FiPower size={20} />;
@@ -136,8 +138,8 @@ function NavbarContent() {
             )}
           </div>
 
-          {/* Desktop nav (hidden on mobile) */}
-          <div className="hidden sm:flex flex-1">
+          {/* Desktop nav (hidden on mobile and tablet) */}
+          <div className="hidden lg:flex flex-1">
             <IconSection />
           </div>
 
@@ -146,7 +148,7 @@ function NavbarContent() {
             {/* Hamburger — mobile only */}
             <button
               onClick={openMenu}
-              className="sm:hidden flex flex-col justify-center items-center gap-[5px] w-9 h-9 rounded-lg hover:bg-slate-100 transition"
+              className="lg:hidden flex flex-col justify-center items-center gap-[5px] w-9 h-9 rounded-lg hover:bg-slate-100 transition"
               aria-label="Open menu"
             >
               <span className="block w-6 h-[2.5px] bg-slate-700 rounded-full" />
@@ -162,7 +164,7 @@ function NavbarContent() {
       {/* ── Mobile drawer backdrop ── Fix 5: -webkit-backdrop-filter for iOS Safari blur support */}
       {menuOpen && (
         <div
-          className="fixed top-0 left-0 w-full z-[60] bg-black/40 backdrop-blur-sm sm:hidden"
+          className="fixed top-0 left-0 w-full z-[60] bg-black/40 backdrop-blur-sm lg:hidden"
           style={{
             height: '100vh',
             // @ts-ignore
@@ -174,7 +176,7 @@ function NavbarContent() {
       )}
 
       <div
-        className={`fixed top-0 left-0 h-[100dvh] max-h-[100dvh] overflow-y-auto rounded-br-3xl w-[58vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out sm:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 left-0 h-[100dvh] max-h-[100dvh] overflow-y-auto rounded-br-3xl w-[58vw] max-w-xs z-[70] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
       >
         {/* Drawer header */}
@@ -211,6 +213,8 @@ function NavbarContent() {
                   const stateParam = urlParams.get('state') || sessionStorage.getItem('selectedState');
                   if (item.title.toLowerCase() === 'login') {
                     router.push('/login');
+                  } else if (item.title.toLowerCase() === 'shop') {
+                    router.push('/shop');
                   } else if (item.title.toLowerCase() === 'legal') {
                     router.push(stateParam ? `/legal?state=${encodeURIComponent(stateParam)}` : '/legal');
                   } else if (item.title.toLowerCase() === 'district') {
@@ -245,4 +249,3 @@ export default function Navbar() {
     </Suspense>
   );
 }
-

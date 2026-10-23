@@ -2,6 +2,7 @@
 
 import React, { ReactElement, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { ShoppingCart } from 'lucide-react';
 import { FaPlaneUp } from "react-icons/fa6";
 import { FaBriefcaseMedical } from "react-icons/fa";
 import { GoLaw } from "react-icons/go";
@@ -47,7 +48,8 @@ export default function IconSection() {
     { title: 'Shelter', iconPath: <PiStudentBold  fontSize={25}/>},
     { title: 'Solar', iconPath: <MdOutlineSolarPower  fontSize={25}/> },
     { title: 'Education', iconPath: <GiTeacher  fontSize={25}/> },
-    { title: 'Work', iconPath: <FaLaptopCode  fontSize={25}/> },
+    { title: 'Training', iconPath: <FaLaptopCode  fontSize={25}/> },
+    { title: 'Shop', iconPath: <ShoppingCart size={25} /> },
     { title: 'Medical', iconPath: <FaBriefcaseMedical fontSize={25} /> },
     { title: 'Legal', iconPath: <GoLaw  fontSize={25}/> },
     { title: 'Login', iconPath: <FiPower  fontSize={25}/>},
@@ -92,6 +94,8 @@ export default function IconSection() {
                   const stateParam = urlParams.get('state') || sessionStorage.getItem('selectedState');
                   if (data.title.toLowerCase() === 'login') {
                     router.push('/login');
+                  } else if (data.title.toLowerCase() === 'shop') {
+                    router.push('/shop');
                   } else if (data.title.toLowerCase() === 'district') {
                     // Force navigation even if already at /district
                     if (window.location.pathname === '/district') {
