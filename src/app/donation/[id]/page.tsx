@@ -80,13 +80,21 @@ function TransactionPopup({
   const [tab, setTab] = useState<'once' | 'monthly'>('monthly');
   const [selectedAmount, setSelectedAmount] = useState(9999);
   const [customAmount, setCustomAmount] = useState('9999');
+  const razorpayRedirectStarted = useRef(false);
 
   if (!isOpen) return null;
 
   const handleDonate = () => {
+    if (tab === 'once') {
+      if (razorpayRedirectStarted.current) return;
+      razorpayRedirectStarted.current = true;
+      window.location.href = 'https://razorpay.me/@sanjivani';
+      return;
+    }
+
     const amount = parseInt(customAmount) || selectedAmount;
     if (amount < 10) return;
-    onDonate(amount, tab === 'monthly');
+    onDonate(amount, true);
   };
 
   return (
@@ -119,36 +127,44 @@ function TransactionPopup({
             </div>
           </div>
           <div className="h-px bg-slate-100" />
-          <p className="mt-4 mb-3 text-sm font-bold text-slate-900">CHOOSE AMOUNT</p>
-          <div className="mb-4 flex flex-wrap gap-2">
-            {[1800, 4000, 7500, 9999].map((amt) => (
-              <button
-                key={amt}
-                onClick={() => { setSelectedAmount(amt); setCustomAmount(amt.toString()); }}
-                className={`cursor-pointer rounded-full px-4 py-2.5 text-sm font-semibold transition-all ${
-                  selectedAmount === amt
-                    ? 'border-2 border-[#E87B35] bg-[#E87B35] text-white shadow-md'
-                    : 'border border-slate-200 bg-white text-slate-700 hover:border-[#E87B35]/40'
-                }`}
-              >
-                &#8377;{amt.toLocaleString('en-IN')}
+          {tab === 'monthly' ? (
+            <>
+              <p className="mt-4 mb-3 text-sm font-bold text-slate-900">CHOOSE AMOUNT</p>
+              <div className="mb-4 flex flex-wrap gap-2">
+                {[1800, 4000, 7500, 9999].map((amt) => (
+                  <button
+                    key={amt}
+                    onClick={() => { setSelectedAmount(amt); setCustomAmount(amt.toString()); }}
+                    className={`cursor-pointer rounded-full px-4 py-2.5 text-sm font-semibold transition-all ${
+                      selectedAmount === amt
+                        ? 'border-2 border-[#E87B35] bg-[#E87B35] text-white shadow-md'
+                        : 'border border-slate-200 bg-white text-slate-700 hover:border-[#E87B35]/40'
+                    }`}
+                  >
+                    &#8377;{amt.toLocaleString('en-IN')}
+                  </button>
+                ))}
+              </div>
+              <div className="mb-6 flex gap-2">
+                <div className="flex items-center rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm font-semibold text-slate-500">&#8377; INR</div>
+                <input
+                  type="number"
+                  aria-label="Custom donation amount"
+                  placeholder="Enter amount"
+                  value={customAmount}
+                  onChange={(e) => { setCustomAmount(e.target.value); setSelectedAmount(parseInt(e.target.value) || 0); }}
+                  className="flex-1 rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-[#E87B35]"
+                />
+              </div>
+              <button onClick={handleDonate} className="w-full rounded-full bg-[#E87B35] py-4 text-base font-extrabold text-white shadow-lg transition-all hover:bg-[#D96B26] active:scale-[0.98]">
+                DONATE &#8377;{(parseInt(customAmount) || selectedAmount).toLocaleString('en-IN')}
               </button>
-            ))}
-          </div>
-          <div className="mb-6 flex gap-2">
-            <div className="flex items-center rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm font-semibold text-slate-500">&#8377; INR</div>
-            <input
-              type="number"
-              aria-label="Custom donation amount"
-              placeholder="Enter amount"
-              value={customAmount}
-              onChange={(e) => { setCustomAmount(e.target.value); setSelectedAmount(parseInt(e.target.value) || 0); }}
-              className="flex-1 rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-[#E87B35]"
-            />
-          </div>
-          <button onClick={handleDonate} className="w-full rounded-full bg-[#E87B35] py-4 text-base font-extrabold text-white shadow-lg transition-all hover:bg-[#D96B26] active:scale-[0.98]">
-            DONATE &#8377;{(parseInt(customAmount) || selectedAmount).toLocaleString('en-IN')}
-          </button>
+            </>
+          ) : (
+            <button onClick={handleDonate} className="w-full rounded-full bg-[#E87B35] py-4 text-base font-extrabold text-white shadow-lg transition-all hover:bg-[#D96B26] active:scale-[0.98]">
+              DONATE NOW
+            </button>
+          )}
           <p className="mt-4 text-center text-[11px] leading-relaxed text-slate-400">
             By proceeding, you agree to Sanjivani&apos;s{' '}
             <span className="font-semibold text-[#E87B35]">Terms of Use</span>,{' '}
