@@ -1,8 +1,75 @@
 @import "tailwindcss";
+@import "./styles/spacing.css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Core Marketplace Palette */
+  --canvas-bg: #FDFBF7;
+  --canvas-bg-2: #F5F1EB;
+  --forest-green: #1B4332;
+  --forest-green-hover: #2d6a4f;
+  --forest-green-deep: #122d22;
+  --olive-green: #556B2F;
+  --terracotta-gold: #C8773D;
+  --terracotta-hover: #b06530;
+  --card-bg: #FFFFFF;
+  --border-subtle: #E8E5DF;
+  --border-medium: #D4CFC6;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 24px rgba(27, 67, 50, 0.07), 0 1px 4px rgba(27, 67, 50, 0.04);
+  --shadow-soft-lg: 0 12px 40px rgba(27, 67, 50, 0.11), 0 4px 8px rgba(27, 67, 50, 0.05);
+  --shadow-card-hover: 0 20px 60px rgba(27, 67, 50, 0.14), 0 6px 16px rgba(27, 67, 50, 0.07);
+
+  /* Radii */
+  --radius-card: 1.25rem;
+  --radius-card-inner: calc(1.25rem - 6px);
+}
+
+.font-serif-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Regional Indian Scripts Fallback Stack for Festival Greetings */
+.font-vernacular {
+  font-family: var(--font-geist-sans), 'Noto Sans Devanagari', 'Noto Sans Gurmukhi', 'Noto Sans Gujarati', 'Noto Sans Tamil', 'Noto Sans Kannada', 'Noto Sans Malayalam', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+}
+
+/* Double-Bezel Card Shell */
+.card-shell {
+  background: rgba(27, 67, 50, 0.035);
+  border: 1px solid rgba(27, 67, 50, 0.07);
+  padding: 6px;
+  border-radius: var(--radius-card);
+  transition: transform 400ms cubic-bezier(0.32, 0.72, 0, 1), box-shadow 400ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.card-shell:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(27, 67, 50, 0.14), 0 6px 16px rgba(27, 67, 50, 0.07);
+}
+
+.card-inner {
+  background: var(--card-bg);
+  border-radius: var(--radius-card-inner);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+.eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(27, 67, 50, 0.07);
+  border: 1px solid rgba(27, 67, 50, 0.12);
+  color: var(--forest-green);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 @theme inline {
@@ -62,4 +129,3 @@ body {
     transform: translateX(100%);
   }
 }
-

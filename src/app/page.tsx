@@ -16,6 +16,7 @@ import Categories from "./components/screens/Categories";
 import Donation from '@/app/components/Donation';
 import OurJourney from '@/app/components/OurJourney';
 import Portfo from '@/app/components/Portfo';
+import PartyNoticeBoard from '@/app/components/PartyNoticeBoard';
 import ChatBot from '@/app/components/ChatBot';
 import Reviews from '@/app/components/Reviews';
 import Testimonial from '@/app/components/Testimonial';
@@ -46,8 +47,9 @@ function MainHomePage() {
       </div>
       <OurJourney />
       <Rank />
-      <Portfo />
       <Donation />
+      <PartyNoticeBoard />
+      <Portfo />
       <VideoTravelBlogs />
       {/* <Businesspartner /> */}
       {/* <Vehicle />     */}

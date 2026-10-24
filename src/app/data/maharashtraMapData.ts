@@ -2,6 +2,7 @@ export interface DistrictPath {
   id: string;
   name: string;
   path: string;
+  centroid?: { x: number; y: number };
 }
 
 export const maharashtraMapPaths: DistrictPath[] = [
