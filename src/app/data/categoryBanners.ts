@@ -59,8 +59,8 @@ export const CATEGORY_BANNERS: Record<string, CategoryBanner> = {
   'dal-pulses': {
     categoryKey: 'dal-pulses',
     subKey: 'all',
-    imageDesktop: '/images/banners/dal-pulses-d.webp',
-    imageMobile: '/images/banners/dal-pulses-m.webp',
+    imageDesktop: '/images/products/pulses and dal/toor-dal-.jpg',
+    imageMobile: '/images/products/pulses and dal/toor-dal-.jpg',
     alt: 'Unpolished protein-rich heirloom pulses and whole dals',
     eyebrow: 'NATURAL DRYING · NO LEATHER POLISH',
     title: 'Unpolished Heirloom Dals',
@@ -73,8 +73,8 @@ export const CATEGORY_BANNERS: Record<string, CategoryBanner> = {
   'oil-ghee': {
     categoryKey: 'oil-ghee',
     subKey: 'all',
-    imageDesktop: '/images/banners/oil-ghee-d.webp',
-    imageMobile: '/images/banners/oil-ghee-m.webp',
+    imageDesktop: '/images/products/oil and pure ghee/cow ghee.jpeg',
+    imageMobile: '/images/products/oil and pure ghee/cow ghee.jpeg',
     alt: 'Traditional bilona A2 desi cow ghee and cold pressed kachi ghani oils',
     eyebrow: 'WOOD-PRESSED · BILONA METHOD',
     title: 'Bilona Ghee & Cold-Pressed Oils',

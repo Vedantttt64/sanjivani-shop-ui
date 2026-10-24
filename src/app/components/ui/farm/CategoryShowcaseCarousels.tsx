@@ -38,13 +38,13 @@ const FEATURED_SHOWCASE_CATEGORIES: CategoryConfig[] = [
     id: 'dal-pulses',
     title: 'Pulses & Dal',
     subtitle: 'Pure unpolished desi dals with natural dietary fiber',
-    plateImage: '/images/categories/pulses-dal.webp',
+    plateImage: '/images/products/pulses and dal/toor-dal-.jpg',
   },
   {
     id: 'oil-ghee',
     title: 'Wood-Pressed Oil & Pure Ghee',
     subtitle: 'Traditional bilona desi cow ghee & cold-pressed oils',
-    plateImage: '/images/categories/oil-ghee.webp',
+    plateImage: '/images/products/oil and pure ghee/cow ghee.jpeg',
   },
   {
     id: 'masala-spices',
