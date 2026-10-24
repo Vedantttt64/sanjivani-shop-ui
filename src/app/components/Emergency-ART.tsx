@@ -38,7 +38,7 @@ const EmergencyART = () => {
       aria-labelledby="emergency-response-heading"
       className="relative w-full overflow-hidden bg-cover bg-center py-6 sm:py-8 md:py-10 px-4 sm:px-6 lg:px-12"
       style={{
-        backgroundImage: "url('/images/banner/b2.jpg')",
+        backgroundImage: "url('/images/banner/b3.jpg')",
       }}
     >
       {/* Subtle low-opacity tint to keep photo naturally bright & clear */}
