@@ -1,0 +1,326 @@
+{
+  "Andaman and Nicobar Islands": {
+    "viewBox": "495 508 52 202",
+    "center": {
+      "x": 521,
+      "y": 609
+    },
+    "width": 36,
+    "height": 174
+  },
+  "Andhra Pradesh": {
+    "viewBox": "166 417 194 166",
+    "center": {
+      "x": 263,
+      "y": 500
+    },
+    "width": 167,
+    "height": 143
+  },
+  "Arunachal Pradesh": {
+    "viewBox": "479 183 143 83",
+    "center": {
+      "x": 550,
+      "y": 224
+    },
+    "width": 123,
+    "height": 67
+  },
+  "Assam": {
+    "viewBox": "440 218 154 106",
+    "center": {
+      "x": 516,
+      "y": 271
+    },
+    "width": 132,
+    "height": 90
+  },
+  "Bihar": {
+    "viewBox": "308 229 121 91",
+    "center": {
+      "x": 369,
+      "y": 275
+    },
+    "width": 104,
+    "height": 75
+  },
+  "Chandigarh": {
+    "viewBox": "170 150 19 19",
+    "center": {
+      "x": 179,
+      "y": 160
+    },
+    "width": 3,
+    "height": 3
+  },
+  "Chhattisgarh": {
+    "viewBox": "244 305 103 165",
+    "center": {
+      "x": 296,
+      "y": 388
+    },
+    "width": 87,
+    "height": 142
+  },
+  "Dadra and Nagar Haveli": {
+    "viewBox": "91 394 22 23",
+    "center": {
+      "x": 102,
+      "y": 405
+    },
+    "width": 6,
+    "height": 7
+  },
+  "Daman and Diu": {
+    "viewBox": "44 379 21 23",
+    "center": {
+      "x": 54,
+      "y": 391
+    },
+    "width": 5,
+    "height": 7
+  },
+  "Delhi": {
+    "viewBox": "173 197 27 27",
+    "center": {
+      "x": 186,
+      "y": 210
+    },
+    "width": 11,
+    "height": 11
+  },
+  "Goa": {
+    "viewBox": "107 494 30 36",
+    "center": {
+      "x": 122,
+      "y": 512
+    },
+    "width": 14,
+    "height": 20
+  },
+  "Gujarat": {
+    "viewBox": "-11 295 153 121",
+    "center": {
+      "x": 66,
+      "y": 355
+    },
+    "width": 132,
+    "height": 104
+  },
+  "Haryana": {
+    "viewBox": "123 147 81 95",
+    "center": {
+      "x": 164,
+      "y": 195
+    },
+    "width": 65,
+    "height": 79
+  },
+  "Himachal Pradesh": {
+    "viewBox": "147 90 88 87",
+    "center": {
+      "x": 191,
+      "y": 133
+    },
+    "width": 72,
+    "height": 71
+  },
+  "Jammu and Kashmir": {
+    "viewBox": "80 -10 185 142",
+    "center": {
+      "x": 173,
+      "y": 61
+    },
+    "width": 160,
+    "height": 122
+  },
+  "Jharkhand": {
+    "viewBox": "309 280 113 93",
+    "center": {
+      "x": 366,
+      "y": 327
+    },
+    "width": 97,
+    "height": 77
+  },
+  "Karnataka": {
+    "viewBox": "116 432 110 173",
+    "center": {
+      "x": 171,
+      "y": 519
+    },
+    "width": 94,
+    "height": 149
+  },
+  "Kerala": {
+    "viewBox": "132 559 69 112",
+    "center": {
+      "x": 166,
+      "y": 615
+    },
+    "width": 53,
+    "height": 96
+  },
+  "Lakshadweep": {
+    "viewBox": "74 583 50 89",
+    "center": {
+      "x": 99,
+      "y": 627
+    },
+    "width": 34,
+    "height": 73
+  },
+  "Madhya Pradesh": {
+    "viewBox": "108 242 213 154",
+    "center": {
+      "x": 214,
+      "y": 319
+    },
+    "width": 184,
+    "height": 133
+  },
+  "Maharashtra": {
+    "viewBox": "80 353 200 165",
+    "center": {
+      "x": 180,
+      "y": 435
+    },
+    "width": 173,
+    "height": 142
+  },
+  "Manipur": {
+    "viewBox": "511 272 53 59",
+    "center": {
+      "x": 537,
+      "y": 301
+    },
+    "width": 37,
+    "height": 43
+  },
+  "Meghalaya": {
+    "viewBox": "445 262 78 41",
+    "center": {
+      "x": 484,
+      "y": 283
+    },
+    "width": 62,
+    "height": 25
+  },
+  "Mizoram": {
+    "viewBox": "496 299 41 75",
+    "center": {
+      "x": 516,
+      "y": 337
+    },
+    "width": 25,
+    "height": 59
+  },
+  "Nagaland": {
+    "viewBox": "518 240 56 59",
+    "center": {
+      "x": 546,
+      "y": 270
+    },
+    "width": 40,
+    "height": 43
+  },
+  "Odisha": {
+    "viewBox": "266 343 148 123",
+    "center": {
+      "x": 340,
+      "y": 405
+    },
+    "width": 128,
+    "height": 106
+  },
+  "Puducherry": {
+    "viewBox": "232 471 72 149",
+    "center": {
+      "x": 268,
+      "y": 546
+    },
+    "width": 56,
+    "height": 128
+  },
+  "Punjab": {
+    "viewBox": "111 107 80 90",
+    "center": {
+      "x": 151,
+      "y": 152
+    },
+    "width": 64,
+    "height": 74
+  },
+  "Rajasthan": {
+    "viewBox": "12 160 213 194",
+    "center": {
+      "x": 119,
+      "y": 257
+    },
+    "width": 184,
+    "height": 168
+  },
+  "Sikkim": {
+    "viewBox": "407 215 35 41",
+    "center": {
+      "x": 425,
+      "y": 235
+    },
+    "width": 19,
+    "height": 25
+  },
+  "Tamil Nadu": {
+    "viewBox": "160 542 102 135",
+    "center": {
+      "x": 211,
+      "y": 609
+    },
+    "width": 86,
+    "height": 117
+  },
+  "Telangana": {
+    "viewBox": "181 404 111 106",
+    "center": {
+      "x": 237,
+      "y": 457
+    },
+    "width": 95,
+    "height": 90
+  },
+  "Tripura": {
+    "viewBox": "473 299 41 52",
+    "center": {
+      "x": 493,
+      "y": 325
+    },
+    "width": 25,
+    "height": 36
+  },
+  "Uttar Pradesh": {
+    "viewBox": "174 155 183 179",
+    "center": {
+      "x": 265,
+      "y": 245
+    },
+    "width": 158,
+    "height": 154
+  },
+  "Uttarakhand": {
+    "viewBox": "188 134 88 83",
+    "center": {
+      "x": 232,
+      "y": 175
+    },
+    "width": 72,
+    "height": 67
+  },
+  "West Bengal": {
+    "viewBox": "361 234 101 152",
+    "center": {
+      "x": 412,
+      "y": 310
+    },
+    "width": 85,
+    "height": 131
+  }
+}

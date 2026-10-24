@@ -214,7 +214,7 @@ function NavbarContent() {
                   if (item.title.toLowerCase() === 'login') {
                     router.push('/login');
                   } else if (item.title.toLowerCase() === 'shop') {
-                    router.push('/shop');
+                    router.push(stateParam ? `/shop?state=${encodeURIComponent(stateParam)}` : '/shop');
                   } else if (item.title.toLowerCase() === 'legal') {
                     router.push(stateParam ? `/legal?state=${encodeURIComponent(stateParam)}` : '/legal');
                   } else if (item.title.toLowerCase() === 'district') {

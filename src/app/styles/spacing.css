@@ -1,0 +1,25 @@
+:root {
+  --section-py: 16px;
+  --section-gap: 16px;
+  --heading-mb: 12px;
+  --heading-sub-mb: 8px;
+  --card-gap: 8px;
+  --page-px: 12px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --section-py: 24px;
+    --card-gap: 12px;
+    --page-px: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-py: 32px;
+    --heading-mb: 16px;
+    --card-gap: 16px;
+    --page-px: 32px;
+  }
+}

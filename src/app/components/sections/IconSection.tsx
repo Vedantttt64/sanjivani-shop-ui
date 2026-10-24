@@ -1,32 +1,21 @@
 "use client"
 
-import React, { ReactElement, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { ReactElement, useEffect, useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import { ShoppingCart } from 'lucide-react';
 import { FaPlaneUp } from "react-icons/fa6";
 import { FaBriefcaseMedical } from "react-icons/fa";
 import { GoLaw } from "react-icons/go";
 import { FiPower } from "react-icons/fi";
 import { GiTeacher } from "react-icons/gi";
-
 import { PiStudentBold } from "react-icons/pi";
-
 import { PiPlantLight } from "react-icons/pi";
-
 import { GiBroom } from "react-icons/gi";
-
 import { MdBabyChangingStation } from "react-icons/md";
-
 import { MdOutlineSolarPower } from "react-icons/md";
-
 import { FaLaptopCode } from "react-icons/fa";
-
 import { FaPersonMilitaryRifle } from "react-icons/fa6";
-
 import { GiShipBow } from "react-icons/gi";
-
-
-
 
 interface IconData {
   title: string;
@@ -35,29 +24,42 @@ interface IconData {
 
 export default function IconSection() {
   const router = useRouter();
+  const pathname = usePathname();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const IconsData: IconData[] = [
-    
-    { title: 'Home', iconPath: <FaPersonMilitaryRifle  fontSize={25}/> },
-    { title: 'District', iconPath: <MdBabyChangingStation  fontSize={25}/>},
-    { title: 'Air', iconPath: <FaPlaneUp  fontSize={25}/>},
-    { title: 'water', iconPath: <GiShipBow  fontSize={25}/> },
-    { title: 'Food', iconPath:<PiPlantLight  fontSize={25}/> },
-    { title: 'Cloths', iconPath: <GiBroom  fontSize={25}/>},
-    { title: 'Shelter', iconPath: <PiStudentBold  fontSize={25}/>},
-    { title: 'Solar', iconPath: <MdOutlineSolarPower  fontSize={25}/> },
-    { title: 'Education', iconPath: <GiTeacher  fontSize={25}/> },
-    { title: 'Training', iconPath: <FaLaptopCode  fontSize={25}/> },
+    { title: 'Home', iconPath: <FaPersonMilitaryRifle fontSize={25}/> },
+    { title: 'District', iconPath: <MdBabyChangingStation fontSize={25}/>},
+    { title: 'Air', iconPath: <FaPlaneUp fontSize={25}/>},
+    { title: 'water', iconPath: <GiShipBow fontSize={25}/> },
+    { title: 'Food', iconPath:<PiPlantLight fontSize={25}/> },
+    { title: 'Cloths', iconPath: <GiBroom fontSize={25}/>},
+    { title: 'Shelter', iconPath: <PiStudentBold fontSize={25}/>},
+    { title: 'Solar', iconPath: <MdOutlineSolarPower fontSize={25}/> },
+    { title: 'Education', iconPath: <GiTeacher fontSize={25}/> },
+    { title: 'Training', iconPath: <FaLaptopCode fontSize={25}/> },
     { title: 'Shop', iconPath: <ShoppingCart size={25} /> },
     { title: 'Medical', iconPath: <FaBriefcaseMedical fontSize={25} /> },
-    { title: 'Legal', iconPath: <GoLaw  fontSize={25}/> },
-    { title: 'Login', iconPath: <FiPower  fontSize={25}/>},
-    
-    
-    
-
+    { title: 'Legal', iconPath: <GoLaw fontSize={25}/> },
+    { title: 'Login', iconPath: <FiPower fontSize={25}/>},
   ];
+
+  // Keep active navbar icon synchronized with current URL path
+  useEffect(() => {
+    if (pathname === '/shop') {
+      const idx = IconsData.findIndex((i) => i.title.toLowerCase() === 'shop');
+      if (idx !== -1) setSelectedIndex(idx);
+    } else if (pathname === '/district') {
+      const idx = IconsData.findIndex((i) => i.title.toLowerCase() === 'district');
+      if (idx !== -1) setSelectedIndex(idx);
+    } else if (pathname === '/login') {
+      const idx = IconsData.findIndex((i) => i.title.toLowerCase() === 'login');
+      if (idx !== -1) setSelectedIndex(idx);
+    } else if (pathname === '/') {
+      const idx = IconsData.findIndex((i) => i.title.toLowerCase() === 'home');
+      if (idx !== -1) setSelectedIndex(idx);
+    }
+  }, [pathname]);
 
   return (
     <div className="w-full">
@@ -95,7 +97,7 @@ export default function IconSection() {
                   if (data.title.toLowerCase() === 'login') {
                     router.push('/login');
                   } else if (data.title.toLowerCase() === 'shop') {
-                    router.push('/shop');
+                    router.push(stateParam ? `/shop?state=${encodeURIComponent(stateParam)}` : '/shop');
                   } else if (data.title.toLowerCase() === 'district') {
                     // Force navigation even if already at /district
                     if (window.location.pathname === '/district') {
@@ -123,12 +125,6 @@ export default function IconSection() {
           group-hover:bg-blue-50
           transition-colors duration-300
         `}>
-                {/* <img
-                  src={data.iconPath}
-                  alt={data.title}
-                  className="w-6 h-6 sm:w-5 sm:h-5"
-                  draggable={false}
-                /> */}
                 {data.iconPath}
               </div>
               <span className={`
