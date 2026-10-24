@@ -23,7 +23,7 @@ const volunteers = [
   { file: 'Vedant.jpeg', objectPosition: 'center 18%' },
   { file: 'Yash.jpeg', objectPosition: 'center 50%' },
   { file: 'harsh.jpeg' },
-  { file: 'Pramit.PNG', objectPosition: 'center 35%' },
+  { file: 'Pramit.PNG', objectPosition: 'center 35%',  },
 ].map(({ file, objectPosition }) => ({
   name: nameFromFilename(file),
   image: `/images/volunteers/${file}`,

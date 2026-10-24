@@ -217,6 +217,51 @@ function NavbarContent() {
                     router.push('/shop');
                   } else if (item.title.toLowerCase() === 'legal') {
                     router.push(stateParam ? `/legal?state=${encodeURIComponent(stateParam)}` : '/legal');
+                  } else if (item.title.toLowerCase() === 'air') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'air');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'water') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'water');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'food') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'food');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'clothes') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'clothes');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'shelter') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'shelter');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'solar') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'solar');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'education') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'education');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'training') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'work');
+                    router.push(`/projects?${query.toString()}`);
+                  } else if (item.title.toLowerCase() === 'medical') {
+                    const query = new URLSearchParams();
+                    if (stateParam) query.set('state', stateParam);
+                    query.set('section', 'medical');
+                    router.push(`/projects?${query.toString()}`);
                   } else if (item.title.toLowerCase() === 'district') {
                     if (window.location.pathname === '/district') {
                       window.location.reload();
